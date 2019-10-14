@@ -1,0 +1,17 @@
+define basesympat s_%s
+define lensympat l_%s
+sectopt .ctors padafter 00,00
+sectopt .dtors padafter 00,00
+section .init load 0000
+section .text
+section .data
+section .ctors_start
+section .ctors
+section .ctors_end
+section .dtors_start
+section .dtors
+section .dtors_end
+section *,!bss
+section *,bss
+entry __start
+stacksize 0400
