@@ -19,18 +19,18 @@ void abort()
 
 void waitvideochip()
 {
-	while(!(*((volatile unsigned char *)HW_EF9365_BASE) & 0x04));
+	while(!(*((volatile unsigned char *)HW_EF9365) & 0x04));
 }
 
 void printstr(char * str,unsigned char x,unsigned char y,unsigned char csize,unsigned char color)
 {
 	volatile unsigned char * ptr;
 
-	ptr = (volatile unsigned char *)HW_EF9365_BASE;
+	ptr = (volatile unsigned char *)HW_EF9365;
 
 	waitvideochip();
 
-	*((volatile unsigned char *)HW_CTRL_REG_BASE) = color | ledclavier;
+	*((volatile unsigned char *)HW_CTLHRD_REG) = color | ledclavier;
 
 	ptr[0x9] = x;
 	ptr[0xB] = y;
@@ -51,7 +51,7 @@ void line(unsigned char x1,unsigned char y1,unsigned char x2,unsigned char y2)
 	volatile unsigned char * ptr;
 
 	waitvideochip();
-	ptr = (volatile unsigned char *)HW_EF9365_BASE;
+	ptr = (volatile unsigned char *)HW_EF9365;
 
 	ptr[0x9] = x1;
 	ptr[0xB] = y1;
@@ -82,8 +82,8 @@ void line(unsigned char x1,unsigned char y1,unsigned char x2,unsigned char y2)
 
 void vblank()
 {
-	while((*((volatile unsigned char *)HW_EF9365_BASE) & 0x02));
-	while(!(*((volatile unsigned char *)HW_EF9365_BASE) & 0x02));
+	while((*((volatile unsigned char *)HW_EF9365) & 0x02));
+	while(!(*((volatile unsigned char *)HW_EF9365) & 0x02));
 }
 
 void printhex(unsigned char value,unsigned char x,unsigned char y,unsigned char csize,unsigned char color)
@@ -95,9 +95,9 @@ void printhex(unsigned char value,unsigned char x,unsigned char y,unsigned char 
 
 	waitvideochip();
 
-	*((volatile unsigned char *)HW_CTRL_REG_BASE) = color | ledclavier;
+	*((volatile unsigned char *)HW_CTLHRD_REG) = color | ledclavier;
 
-	ptr = (volatile unsigned char *)HW_EF9365_BASE;
+	ptr = (volatile unsigned char *)HW_EF9365;
 
 	ptr[0x9] = x;
 	ptr[0xB] = y;
@@ -136,9 +136,9 @@ void printhex_int(unsigned int value,unsigned char x,unsigned char y,unsigned ch
 
 	waitvideochip();
 
-	*((volatile unsigned char *)HW_CTRL_REG_BASE) = color | ledclavier;
+	*((volatile unsigned char *)HW_CTLHRD_REG) = color | ledclavier;
 
-	ptr = (volatile unsigned char *)HW_EF9365_BASE;
+	ptr = (volatile unsigned char *)HW_EF9365;
 
 	ptr[0x9] = x;
 	ptr[0xB] = y;
@@ -254,9 +254,9 @@ void printhex_int_fast(unsigned int value,unsigned char x,unsigned char y,unsign
 	{
 		waitvideochip();
 
-		ptr = (volatile unsigned char *)HW_EF9365_BASE;
+		ptr = (volatile unsigned char *)HW_EF9365;
 
-		*((volatile unsigned char *)HW_CTRL_REG_BASE) = 0xF | ledclavier;
+		*((volatile unsigned char *)HW_CTLHRD_REG) = 0xF | ledclavier;
 
 		ptr[0x9] = x + (unsigned char)(60*(digit_ptr&3));
 		ptr[0xB] = y;
@@ -269,7 +269,7 @@ void printhex_int_fast(unsigned int value,unsigned char x,unsigned char y,unsign
 		erase_t=erase_t+3;
 		waitvideochip();
 
-		*((volatile unsigned char *)HW_CTRL_REG_BASE) = color | ledclavier;
+		*((volatile unsigned char *)HW_CTLHRD_REG) = color | ledclavier;
 
 		ptr[0x9] = x + (unsigned char)(60*(digit_ptr&3));
 		ptr[0xB] = y;
@@ -299,7 +299,7 @@ int main()
 	old_digits[2] = 'Z';
 	old_digits[3] = 'Z';
 
-	ptr = (volatile unsigned char *)HW_EF9365_BASE;
+	ptr = (volatile unsigned char *)HW_EF9365;
 
 	waitvideochip();
 
@@ -309,7 +309,7 @@ int main()
 	for(i=0;i<16;i++)
 	{
 		waitvideochip();
-		*((volatile unsigned char *)HW_CTRL_REG_BASE) = (unsigned char)i | ledclavier;
+		*((volatile unsigned char *)HW_CTLHRD_REG) = (unsigned char)i | ledclavier;
 
 		ptr[0x9] = 0 + (unsigned char)(i*16);
 
