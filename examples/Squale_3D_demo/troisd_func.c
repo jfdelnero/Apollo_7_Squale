@@ -20,25 +20,16 @@
 // Change History (most recent first):
 ///////////////////////////////////////////////////////////////////////////////////
 
-#include "stdint.h"
+#include <stdint.h>
+#include <squale_hw.h>
+
 #include "deuxd_func.h"
 #include "troisd_func.h"
 #include "cossintab.h"
 
 lines_buffer double_lines_buffer[2];
 
-const int16_t	Zoff = 100;//64*2;
-
-//Proc ; 3D -> 2D
-
-void Show3DPoint(dot * point,dot2d * point2D)
-{
-	point2D->x= ((point->x<<6) / (point->z+Zoff));
-	point2D->y= ((point->y<<6) / (point->z+Zoff));
-
-	point2D->x=point2D->x+(256/2);
-	point2D->y=point2D->y+(256/2);
-}
+#define ZOFF 85
 
 void rotateXYZ(dot * point,uint8_t xang,uint8_t yang,uint8_t zang)
 {
@@ -202,14 +193,14 @@ void calcpolygone(lines_buffer * ln_buffer, const int8_t * polygone,uint8_t xrot
 
 			//rotat
 			if(xrotate)
-				rotateX(&temppoint[i],xrotate);
+				rotateX(&temppoint[i],xrotate + 64);
 			if(yrotate)
-				rotateY(&temppoint[i],yrotate);
+				rotateY(&temppoint[i],yrotate + 64);
 			if(zrotate)
-				rotateZ(&temppoint[i],zrotate);
+				rotateZ(&temppoint[i],zrotate + 64);
 			
-			points2d[i].x= ((((temppoint[i].x<<6) / (temppoint[i].z+100)))) + (256/2);
-			points2d[i].y= ((((temppoint[i].y<<6) / (temppoint[i].z+100)))) + (256/2);
+			points2d[i].x= ((((temppoint[i].x<<6) / (temppoint[i].z+ZOFF)))) + (256/2);
+			points2d[i].y= ((((temppoint[i].y<<6) / (temppoint[i].z+ZOFF)))) + (256/2);
 			
 			polygone_ptr++;
 		}
@@ -277,7 +268,7 @@ void drawobject(lines_buffer * ln_buffer)
 		//y1 = *lines_ptr++;
 		//y2 = *lines_ptr++;
 
-		ptr = (volatile unsigned char *)0xF000;
+		ptr = (volatile unsigned char *)HW_EF9365;
 
 		ptr[0x9] = lines_ptr[0]; //x1
 		ptr[0xB] = lines_ptr[1]; //y1
