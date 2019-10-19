@@ -254,48 +254,45 @@ void calcobject(lines_buffer * ln_buffer, const d3dtype * obj,uint8_t xrotate,ui
 void drawobject(lines_buffer * ln_buffer)
 {
 	uint8_t i;
-	volatile unsigned char * ptr;
 	unsigned char cmd;
-	uint8_t x1,x2,y1,y2;
 	uint8_t * lines_ptr;
 
 	lines_ptr = &ln_buffer->lines[0];
 
-	for(i=0; i< ln_buffer->nblines;i++)
+	for(i=0; i<ln_buffer->nblines; i++)
 	{
-		//x1 = *lines_ptr++;
-		//x2 = *lines_ptr++;
-		//y1 = *lines_ptr++;
-		//y2 = *lines_ptr++;
+		waitvideochip();
 
-		ptr = (volatile unsigned char *)HW_EF9365;
-
-		ptr[0x9] = lines_ptr[0]; //x1
-		ptr[0xB] = lines_ptr[1]; //y1
 		cmd = 0x11;
+
+		WR_BYTE(HW_EF9365 + 0x9,lines_ptr[0]);
+		WR_BYTE(HW_EF9365 + 0xB,lines_ptr[1]);
 
 		if( lines_ptr[0] > lines_ptr[2] )
 		{
-			cmd = cmd | 0x02;
-			ptr[0x5] = lines_ptr[0] - lines_ptr[2]; // x1 - x2
+			cmd = 0x13;
+			WR_BYTE(HW_EF9365 + 0x5,lines_ptr[0] - lines_ptr[2]);
 		}
 		else
 		{
-			ptr[0x5] = lines_ptr[2] - lines_ptr[0]; // x2 - x1
+			WR_BYTE(HW_EF9365 + 0x5,lines_ptr[2] - lines_ptr[0]);
 		}
 
 		if( lines_ptr[1] > lines_ptr[3] ) // y1 > y2 ?
 		{
 			cmd = cmd | 0x04;
-			ptr[0x7] = lines_ptr[1] - lines_ptr[3];
+			WR_BYTE(HW_EF9365 + 0x7,lines_ptr[1] - lines_ptr[3]);
 		}
 		else
 		{
-			ptr[0x7] = lines_ptr[3] - lines_ptr[1];
+			WR_BYTE(HW_EF9365 + 0x7,lines_ptr[3] - lines_ptr[1]);
 		}
 
 		lines_ptr+=4;
 
-		*ptr = cmd;
+		WR_BYTE(HW_EF9365 + 0x0,cmd);
 	}
+
+	// Wait to finish the last line...
+	waitvideochip();
 }
