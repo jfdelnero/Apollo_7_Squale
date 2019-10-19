@@ -24,12 +24,21 @@ int erase_t;
 
 unsigned char ledclavier;
 extern lines_buffer double_lines_buffer[2];
+unsigned char * ymptr;
 
-void irq_handler (void) __attribute__ ((interrupt)); 
+
+void irq_handler (void) __attribute__ ((interrupt));
 
 void irq_handler()
 {
+	RD_BYTE( HW_EF9365 );
 
+	progymregs_asm_func(ymptr);
+
+	ymptr = ymptr + 14;
+
+	if(ymptr >= (&ymmusic + sizeof(ymmusic) ) )
+		ymptr = (unsigned char *)&ymmusic;
 }
 
 void abort()
@@ -51,7 +60,7 @@ char * strings[]=
 	"Apollo 7 Squale",
 	"CPU: 6809",
 	"RAM: 64KB",
-	"Video: EF9365P", 
+	"Video: EF9365P",
 	"       32KB",
 	"       16 colors",
 	"Video RAM: 32KB",
@@ -329,7 +338,6 @@ int main()
 {
 	unsigned int i,object, objimagecnt;
 	unsigned char j,col;
-	unsigned char * ymptr;
 	volatile unsigned char * reg, *ptr;
 
 	ledclavier = 0;
@@ -352,6 +360,10 @@ int main()
 	ptr[0x3] = 0x39;
 
 	WR_WORD( IRQ_VECTOR, &irq_handler);
+
+	ymptr = (unsigned char *)&ymmusic;
+
+	WR_BYTE( HW_EF9365 + 0x1, 0x23 );
 
 	for(i=0;i<16;i++)
 	{
@@ -376,13 +388,9 @@ int main()
 	col = 1;
 	for(;;)
 	{
-		ymptr = (unsigned char *)&ymmusic;
 
 		for(i=0;i<1834;i++)
 		{
-			progymregs_asm_func(ymptr);
-			ymptr = ymptr + 14;
-
 			vblank();
 
 			// Erase the old object

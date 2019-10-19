@@ -1,1 +1,2 @@
-extern const unsigned char ymmusic[];
+extern const unsigned char ymmusic[25690];
+
