@@ -1,5 +1,5 @@
 OUTPUT=Squale_3D_demo
-OBJECTS=demo.o vid_asm_func.o progymregs_asm_func.o ym_music.o deuxd_func.o troisd_func.o
+OBJECTS=demo.o vid_asm_func.o progymregs_asm_func.o deuxd_func.o troisd_func.o ym/packed_ym.o
 CFLAGS=-O2 -I$(CUR_FOLDER)/include
 
 PREFIX=m6809-unknown

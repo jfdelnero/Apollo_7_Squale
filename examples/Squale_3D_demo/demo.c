@@ -5,7 +5,6 @@
 #include <squale_hw.h>
 
 #include "asm_funcs.h"
-#include "ym_music.h"
 
 #include "deuxd_func.h"
 #include "troisd_func.h"
@@ -17,6 +16,8 @@
 #include "obj3D_Piramid01.h"
 #include "obj3D_Hedra01.h"
 
+#include "ym/packed_ym.h"
+
 unsigned char cur_digits[4];
 unsigned char old_digits[4];
 int digit_ptr;
@@ -24,21 +25,44 @@ int erase_t;
 
 unsigned char ledclavier;
 extern lines_buffer double_lines_buffer[2];
-unsigned char * ymptr;
 
+unsigned char ymptrbuf[14];
+unsigned char * cur_blockmaps[14];
+unsigned short blocknum;
+unsigned char blockpos;
 
 void irq_handler (void) __attribute__ ((interrupt));
 
 void irq_handler()
 {
+	unsigned char i;
+
 	RD_BYTE( HW_EF9365 );
 
-	progymregs_asm_func(ymptr);
+	progymregs_asm_func(&ymptrbuf);
 
-	ymptr = ymptr + 14;
+	for(i=0;i<14;i++)
+	{
+		ymptrbuf[i] = *cur_blockmaps[i];
+		cur_blockmaps[i]++;
+	}
 
-	if(ymptr >= (&ymmusic + sizeof(ymmusic) ) )
-		ymptr = (unsigned char *)&ymmusic;
+	blockpos += 1;
+
+	if( blockpos >= YM_PAGES_SIZE)
+	{
+		blockpos = 0;
+
+		blocknum++;
+
+		if( blocknum >= YM_PAGES_NUMBERS )
+			blocknum = 0;
+
+		for(i=0;i<14;i++)
+		{
+			cur_blockmaps[i] = ym_reg_blocks[i] + ((((unsigned short)(ym_reg_blockmaps[i][blocknum])) * YM_PAGES_SIZE));
+		}
+	}
 }
 
 void abort()
@@ -361,7 +385,12 @@ int main()
 
 	WR_WORD( IRQ_VECTOR, &irq_handler);
 
-	ymptr = (unsigned char *)&ymmusic;
+	blocknum = 0;
+	blockpos = 0;
+	for(j=0;j<14;j++)
+	{
+		cur_blockmaps[j] = ym_reg_blocks[j] + (YM_PAGES_SIZE) * *(ym_reg_blockmaps[j]);
+	}
 
 	WR_BYTE( HW_EF9365 + 0x1, 0x23 );
 
@@ -388,7 +417,6 @@ int main()
 	col = 1;
 	for(;;)
 	{
-
 		for(i=0;i<1834;i++)
 		{
 			vblank();
@@ -419,6 +447,7 @@ int main()
 				ledclavier = 0x00;
 			else
 				ledclavier = 0x80;
+
 		}
 
 		col++;
