@@ -51,8 +51,8 @@ void rotateXYZ(dot * point,uint8_t xang,uint8_t yang,uint8_t zang)
 	cosv = SinCos[xang];
 	sinv = SinCos[xang + 64];
 
-	yt = ( ( y * cosv ) - ( z * sinv ) ) / 127 ;
-	zt = ( ( y * sinv ) + ( z * cosv ) ) / 127 ;
+	yt = ( ( y * cosv ) - ( z * sinv ) ) / 128 ;
+	zt = ( ( y * sinv ) + ( z * cosv ) ) / 128 ;
 
 	y = yt;
 	z = zt;
@@ -60,8 +60,8 @@ void rotateXYZ(dot * point,uint8_t xang,uint8_t yang,uint8_t zang)
 	cosv = SinCos[yang];
 	sinv = SinCos[yang + 64];
 
-	xt = ( ( x * cosv ) - ( z * sinv ) ) / 127 ;
-	zt = ( ( x * sinv ) + ( z * cosv ) ) / 127 ;
+	xt = ( ( x * cosv ) - ( z * sinv ) ) / 128 ;
+	zt = ( ( x * sinv ) + ( z * cosv ) ) / 128 ;
 
 	x = xt;
 	z = zt;
@@ -69,8 +69,8 @@ void rotateXYZ(dot * point,uint8_t xang,uint8_t yang,uint8_t zang)
 	cosv = SinCos[zang];
 	sinv = SinCos[zang + 64];
 
-	xt = ( ( x * cosv ) - ( y * sinv ) ) >> 7 ;
-	yt = ( ( x * sinv ) + ( y * cosv ) ) >> 7 ;
+	xt = ( ( x * cosv ) - ( y * sinv ) ) / 128 ;
+	yt = ( ( x * sinv ) + ( y * cosv ) ) / 128 ;
 
 	point->x = xt;
 	point->y = yt;
@@ -93,8 +93,8 @@ void rotateX(dot * point,uint8_t xang)
 	xang += 64;
 	sinv = SinCos[xang];
 
-	yt = ( ( point->y * cosv ) - ( point->z * sinv ) ) / 127;
-	zt = ( ( point->y * sinv ) + ( point->z * cosv ) ) / 127;
+	yt = ( ( point->y * cosv ) - ( point->z * sinv ) ) / 128;
+	zt = ( ( point->y * sinv ) + ( point->z * cosv ) ) / 128;
 
 	point->y = yt;
 	point->z = zt;
@@ -116,8 +116,8 @@ void rotateY(dot * point,uint8_t yang)
 	yang += 64;
 	sinv = SinCos[yang];
 
-	xt = ( ( point->x * cosv ) - ( point->z * sinv ) ) / 127 ;
-	zt = ( ( point->x * sinv ) + ( point->z * cosv ) ) / 127 ;
+	xt = ( ( point->x * cosv ) - ( point->z * sinv ) ) / 128;
+	zt = ( ( point->x * sinv ) + ( point->z * cosv ) ) / 128;
 
 	point->x = xt;
 	point->z = zt;
@@ -139,8 +139,8 @@ void rotateZ(dot * point,uint8_t zang)
 	zang += 64;
 	sinv = SinCos[zang];
 
-	xt = ( ( point->x * cosv ) - ( point->y * sinv ) ) / 127;
-	yt = ( ( point->x * sinv ) + ( point->y * cosv ) ) / 127;
+	xt = ( ( point->x * cosv ) - ( point->y * sinv ) ) / 128;
+	yt = ( ( point->x * sinv ) + ( point->y * cosv ) ) / 128;
 
 	point->x = xt;
 	point->y = yt;
