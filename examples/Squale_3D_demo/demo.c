@@ -31,6 +31,8 @@ unsigned char * cur_blockmaps[14];
 unsigned short blocknum;
 unsigned char blockpos;
 
+volatile unsigned char vbl_tick;
+
 void irq_handler (void) __attribute__ ((interrupt));
 
 void irq_handler()
@@ -63,6 +65,8 @@ void irq_handler()
 			cur_blockmaps[i] = ym_reg_blocks[i] + ((((unsigned short)(ym_reg_blockmaps[i][blocknum])) * YM_PAGES_SIZE));
 		}
 	}
+
+	vbl_tick++;	
 }
 
 void abort()
@@ -158,8 +162,10 @@ void line(unsigned char x1,unsigned char y1,unsigned char x2,unsigned char y2)
 
 void vblank()
 {
-	while( ( RD_BYTE( HW_EF9365 ) & 0x02 ) );
-	while(!( RD_BYTE( HW_EF9365 ) & 0x02 ) );
+	unsigned char old_vbl_tick;
+
+	old_vbl_tick = vbl_tick;
+	while( old_vbl_tick == vbl_tick );
 }
 
 void printhex(unsigned char value,unsigned char x,unsigned char y,unsigned char csize,unsigned char color)
@@ -392,6 +398,7 @@ int main()
 		cur_blockmaps[j] = ym_reg_blocks[j] + (YM_PAGES_SIZE) * *(ym_reg_blockmaps[j]);
 	}
 
+	vbl_tick = 0;
 	WR_BYTE( HW_EF9365 + 0x1, 0x23 );
 
 	for(i=0;i<16;i++)
