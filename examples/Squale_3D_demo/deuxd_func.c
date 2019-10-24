@@ -20,7 +20,9 @@
 // Change History (most recent first):
 ///////////////////////////////////////////////////////////////////////////////////
 
-#include "stdint.h"
+#include <stdint.h>
+#include <squale_hw.h>
+
 #include "deuxd_func.h"
 
 extern volatile uint8_t buffernb;
@@ -84,10 +86,10 @@ dot2d points2d[3];
 
 void Ligne(dot2d * pointA,dot2d * pointB,uint8_t state)
 {
-	LigneFast(pointA,pointB); 
+	LigneFast(pointA,pointB);
 }
 
-void LigneFast(dot2d * pointA,dot2d * pointB) 
+void LigneFast(dot2d * pointA,dot2d * pointB)
 {
 	uint8_t x1,x2,y1,y2;
 	unsigned char cmd;
@@ -99,11 +101,11 @@ void LigneFast(dot2d * pointA,dot2d * pointB)
 	y2=  pointB->y;
 
 	ptr = (volatile unsigned char *)0xF000;
-	
+
 	ptr[0x9] = x1;
 	ptr[0xB] = y1;
 	cmd = 0x11;
-	
+
 	if( x1 > x2 )
 	{
 		cmd = cmd | 0x02;
@@ -123,9 +125,9 @@ void LigneFast(dot2d * pointA,dot2d * pointB)
 	{
 		ptr[0x7] = y2 - y1;
 	}
-	
+
 	*ptr = cmd;
-	
+
 }
 
 void cercle(int16_t rayon,int16_t x_centre,int16_t y_centre,uint8_t state)
@@ -168,4 +170,48 @@ void cercle(int16_t rayon,int16_t x_centre,int16_t y_centre,uint8_t state)
 		}
 	}
 	return;
+}
+
+extern unsigned char ledclavier;
+
+void display_vectsprite(unsigned char * vectorized_sprite, unsigned char x, unsigned char y)
+{
+	unsigned char i,j;
+
+	unsigned char nb_lines;
+	unsigned char nb_vects;
+	unsigned char cnt,color;
+
+// [NUMBER_OF_LINES] [NUMBER_OF_VECTORS] [ _CNT|_COL] [ _CNT|_COL] [ _CNT|_COL] [ COUNT__ (if CNT==0)] ... [NUMBER_OF_VECTORS]....
+
+	nb_lines = *vectorized_sprite++;
+
+	waitvideochip();
+
+	WR_BYTE(HW_EF9365 + 0x7, 0x00);
+
+	for(i=0;i<nb_lines;i++)
+	{
+		waitvideochip();
+
+		WR_BYTE(HW_EF9365 + 0x9,x);
+		WR_BYTE(HW_EF9365 + 0xB,(255 - (y + i)));
+
+		nb_vects = *vectorized_sprite++;
+		for(j=0;j<nb_vects;j++)
+		{
+			waitvideochip();
+
+			color = (*vectorized_sprite & 0xF);
+			cnt = (*vectorized_sprite++ >> 4);
+			if(!cnt)
+				cnt = (*vectorized_sprite++);
+
+			WR_BYTE(HW_EF9365 + 0x5, cnt);
+
+			WR_BYTE( HW_CTLHRD_REG, color | ledclavier);
+
+			WR_BYTE(HW_EF9365 + 0x0, 0x11);
+		}
+	}
 }

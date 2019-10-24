@@ -31,3 +31,5 @@ void setpixelFast(uint8_t x,uint8_t y);
 void Ligne(dot2d * pointA,dot2d * pointB,uint8_t state);
 void LigneFast(dot2d * pointA,dot2d * pointB);
 void cercle(int16_t rayon,int16_t x_centre,int16_t y_centre,uint8_t state);
+void display_vectsprite(unsigned char * vectorized_sprite, unsigned char x, unsigned char y);
+
