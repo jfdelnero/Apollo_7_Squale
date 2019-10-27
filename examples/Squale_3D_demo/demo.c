@@ -19,6 +19,9 @@
 #include "music/warp_5.h"
 
 #include "images/mo5_logo.h"
+#include "images/squale_logo.h"
+#include "images/apollo_7_logo.h"
+#include "images/footpage.h"
 
 unsigned char cur_digits[4];
 int digit_ptr;
@@ -40,9 +43,10 @@ void irq_handler (void) __attribute__ ((interrupt));
 #define DEMO_LOGO_ENDPOS   ( YM_PAGES_NUMBERS )
 
 
-#define DEMO_SPLASH_SCREEN 0
-#define DEMO_3D_OBJECT_1   1
-#define DEMO_3D_OBJECT_2   2
+#define DEMO_MO5LOGO_SCREEN 0
+#define DEMO_SQUALELOGO_SCREEN 1
+#define DEMO_3D_OBJECT_1   2
+#define DEMO_3D_OBJECT_2   3
 
 typedef struct _demo_triggers
 {
@@ -52,8 +56,9 @@ typedef struct _demo_triggers
 
 const demo_triggers demo_program[]=
 {
-	{ DEMO_SPLASH_SCREEN, YM_PAGES_NUMBERS - 23 },
-	{ DEMO_3D_OBJECT_1, 0 },
+	{ DEMO_MO5LOGO_SCREEN, YM_PAGES_NUMBERS - 23 },
+	{ DEMO_SQUALELOGO_SCREEN, 0 },	
+	{ DEMO_3D_OBJECT_1, 47 },
 	{ DEMO_3D_OBJECT_2, 100 },
 	{ 0x00000000, 0xFFFF }
 };
@@ -122,8 +127,7 @@ const d3dtype * objectlist[]=
 
 char * strings[]=
 {
-	"Apollo 7 Squale",
-	"CPU: 6809",
+	"CPU: 6809 @ 3.5 MHz",
 	"RAM: 64KB",
 	"Video: EF9365P",
 	"       32KB",
@@ -131,6 +135,7 @@ char * strings[]=
 	"Video RAM: 32KB",
 	"Sound: AY-3-8910A",
 	"V24/V25/V54 modem",
+	"Tape / Cartridge support",
 	0
 };
 
@@ -393,7 +398,6 @@ void printhex_int_fast(unsigned int value,unsigned char x,unsigned char y,unsign
 	digit_ptr++;
 }
 
-
 void demo_logo_splash_part()
 {
 	vblank();
@@ -407,12 +411,36 @@ void demo_squale_presentation_part()
 {
 	unsigned char i;
 
+	waitvideochip();
+	WR_BYTE( HW_CTLHRD_REG, 7 | ledclavier);
+	WR_BYTE( HW_EF9365 + 0x0, 0x0C ); // Clear screen
+
+	waitvideochip();
+
+	display_vectsprite((unsigned char *) &bmp_data_footpage, 0, 256-33 );	
+	display_vectsprite((unsigned char *) &bmp_data_apollo_7_logo, 26, 10 );
+
 	i = 0;
 	while ( strings[i] )
 	{
-		printstr(strings[i],0,255-((i+1)*8),0x11,0x04);
+		printstr(strings[i],40,100-((i+1)*8),0x11,0x04);
 		i++;
 	}
+	
+	do
+	{
+		for(i=0;i<10 && ( new_trigger == old_trigger );i++)
+		{
+			vblank();
+			display_vectsprite((unsigned char *) &bmp_data_squale_logo, 40, i + 64 );
+		}
+
+		for(i=0;i<10 && ( new_trigger == old_trigger );i++)
+		{
+			vblank();
+			display_vectsprite((unsigned char *) &bmp_data_squale_logo, 40, 64 + 10 - (i) );
+		}
+	}while( new_trigger == old_trigger );
 }
 
 void demo_3D_oject_part(int object)
@@ -424,9 +452,13 @@ void demo_3D_oject_part(int object)
 
 	waitvideochip();
 
+	display_vectsprite((unsigned char *) &bmp_data_footpage, 0, 256-33 );
+
 	i = 0;
 	do
 	{
+		vblank();
+
 		// Erase the old object
 		WR_BYTE( HW_CTLHRD_REG, 7 | ledclavier);
 		drawobject(&double_lines_buffer[i&1]);
@@ -486,8 +518,11 @@ int main()
 		vblank();
 		switch(demo_program[new_trigger].effect_code)
 		{
-			case DEMO_SPLASH_SCREEN:
+			case DEMO_MO5LOGO_SCREEN:
 				demo_logo_splash_part();
+			break;
+			case DEMO_SQUALELOGO_SCREEN:
+				demo_squale_presentation_part();
 			break;
 			case DEMO_3D_OBJECT_1:
 				demo_3D_oject_part( 0 );
