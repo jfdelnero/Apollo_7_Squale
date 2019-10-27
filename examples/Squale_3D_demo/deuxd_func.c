@@ -182,7 +182,7 @@ void display_vectsprite(unsigned char * vectorized_sprite, unsigned char x, unsi
 	unsigned char nb_vects;
 	unsigned char cnt,color;
 
-// [NUMBER_OF_LINES] [NUMBER_OF_VECTORS] [ _CNT|_COL] [ _CNT|_COL] [ _CNT|_COL] [ COUNT__ (if CNT==0)] ... [NUMBER_OF_VECTORS]....
+	// [NUMBER_OF_LINES] [NUMBER_OF_VECTORS] [ _CNT|_COL] [ _CNT|_COL] [ _CNT|_COL] [ COUNT__ (if CNT==0)] ... [NUMBER_OF_VECTORS]....
 
 	nb_lines = *vectorized_sprite++;
 
@@ -194,7 +194,10 @@ void display_vectsprite(unsigned char * vectorized_sprite, unsigned char x, unsi
 	{
 		waitvideochip();
 
+		WR_BYTE(HW_EF9365 + 0x8,0);
 		WR_BYTE(HW_EF9365 + 0x9,x);
+
+		WR_BYTE(HW_EF9365 + 0xA,0);
 		WR_BYTE(HW_EF9365 + 0xB,(255 - (y + i)));
 
 		nb_vects = *vectorized_sprite++;
