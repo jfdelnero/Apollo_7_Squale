@@ -1,5 +1,5 @@
 OUTPUT=Squale_3D_demo
-OBJECTS=images/mo5_logo.o images/apollo_7_logo.o images/squale_logo.o music/warp_5.o demo.o vid_asm_func.o progymregs_asm_func.o deuxd_func.o troisd_func.o
+OBJECTS=images/mo5_logo.o images/apollo_7_logo.o images/squale_logo.o images/footpage.o music/warp_5.o demo.o vid_asm_func.o progymregs_asm_func.o deuxd_func.o troisd_func.o
 CFLAGS=-O2 -I$(CUR_FOLDER)/include
 
 PREFIX=m6809-unknown
