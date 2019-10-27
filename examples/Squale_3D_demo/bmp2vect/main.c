@@ -243,7 +243,10 @@ unsigned char * pack_bmp( bitmap_data * bdata, int * size )
 
 	start_ptr = outbuffer;
 
-	*outbuffer++ = bdata->ysize - 1;
+	if(bdata->ysize > 255)
+		*outbuffer++ = 255;
+	else
+		*outbuffer++ = bdata->ysize;
 
 	for(y = 0; y < bdata->ysize ;y++)
 	{
