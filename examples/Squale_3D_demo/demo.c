@@ -16,10 +16,11 @@
 #include "obj3D_Piramid01.h"
 #include "obj3D_Hedra01.h"
 
-#include "ym/packed_ym.h"
+#include "music/warp_5.h"
+
+#include "images/mo5_logo.h"
 
 unsigned char cur_digits[4];
-unsigned char old_digits[4];
 int digit_ptr;
 int erase_t;
 
@@ -28,12 +29,38 @@ extern lines_buffer double_lines_buffer[2];
 
 unsigned char ymptrbuf[14];
 unsigned char * cur_blockmaps[14];
-unsigned short blocknum;
+volatile unsigned short blocknum;
 unsigned char blockpos;
 
 volatile unsigned char vbl_tick;
 
 void irq_handler (void) __attribute__ ((interrupt));
+
+#define DEMO_LOGO_STARTPOS ( YM_PAGES_NUMBERS - 23 )
+#define DEMO_LOGO_ENDPOS   ( YM_PAGES_NUMBERS )
+
+
+#define DEMO_SPLASH_SCREEN 0
+#define DEMO_3D_OBJECT_1   1
+#define DEMO_3D_OBJECT_2   2
+
+typedef struct _demo_triggers
+{
+	unsigned char  effect_code;
+	unsigned short music_block;
+}demo_triggers;
+
+const demo_triggers demo_program[]=
+{
+	{ DEMO_SPLASH_SCREEN, YM_PAGES_NUMBERS - 23 },
+	{ DEMO_3D_OBJECT_1, 0 },
+	{ DEMO_3D_OBJECT_2, 100 },
+	{ 0x00000000, 0xFFFF }
+};
+
+volatile unsigned char current_trigger;
+volatile unsigned char new_trigger;
+unsigned char old_trigger;
 
 void irq_handler()
 {
@@ -64,9 +91,19 @@ void irq_handler()
 		{
 			cur_blockmaps[i] = ym_reg_blocks[i] + ((((unsigned short)(ym_reg_blockmaps[i][blocknum])) * YM_PAGES_SIZE));
 		}
+
+		if( demo_program[current_trigger].music_block == blocknum )
+		{
+			new_trigger = current_trigger;
+			current_trigger++;
+			if( demo_program[current_trigger].music_block == 0xFFFF )
+			{
+				current_trigger = 0;
+			}
+		}
 	}
 
-	vbl_tick++;	
+	vbl_tick++;
 }
 
 void abort()
@@ -325,13 +362,6 @@ void printhex_int_fast(unsigned int value,unsigned char x,unsigned char y,unsign
 		cur_digits[3] = 'A'+(tmp_v-10);
 	}
 
-	i = 0;
-	while( ( cur_digits[digit_ptr&3] == old_digits[digit_ptr&3] ) )//&& ( i < 4 ) )
-	{
-		digit_ptr++;
-		i++;
-	}
-
 	if(i!=4)
 	{
 		waitvideochip();
@@ -346,7 +376,7 @@ void printhex_int_fast(unsigned int value,unsigned char x,unsigned char y,unsign
 		ptr[0x3] = csize;
 
 		if((erase_t&3) || ((digit_ptr&3)!=3))
-			vid_asm_func(old_digits[digit_ptr&3]);
+			vid_asm_func(cur_digits[digit_ptr&3]);
 
 		erase_t=erase_t+3;
 		waitvideochip();
@@ -358,10 +388,58 @@ void printhex_int_fast(unsigned int value,unsigned char x,unsigned char y,unsign
 
 		vid_asm_func(cur_digits[digit_ptr&3]);
 
-		old_digits[digit_ptr&3] = cur_digits[digit_ptr&3];
 	}
 
 	digit_ptr++;
+}
+
+
+void demo_logo_splash_part()
+{
+	vblank();
+
+	display_vectsprite((unsigned char *) &bmp_data_mo5_logo, 0, 0 );
+
+	while( new_trigger == old_trigger  );
+}
+
+void demo_squale_presentation_part()
+{
+	unsigned char i;
+
+	i = 0;
+	while ( strings[i] )
+	{
+		printstr(strings[i],0,255-((i+1)*8),0x11,0x04);
+		i++;
+	}
+}
+
+void demo_3D_oject_part(int object)
+{
+	int i;
+
+	waitvideochip();
+	WR_BYTE( HW_EF9365 + 0x0, 0x04 ); // Clear screen
+
+	waitvideochip();
+
+	i = 0;
+	do
+	{
+		// Erase the old object
+		WR_BYTE( HW_CTLHRD_REG, 7 | ledclavier);
+		drawobject(&double_lines_buffer[i&1]);
+
+		// Draw the new one
+		WR_BYTE( HW_CTLHRD_REG, 0 | ledclavier);
+		drawobject(&double_lines_buffer[(i&1)^1]);
+
+		// Prepare the next one...
+		calcobject(&double_lines_buffer[i&1],objectlist[object],i&0xFF,(0*3)&0xFF,(0*2)&0xFF);
+
+		i++;
+	}while( new_trigger == old_trigger );
 }
 
 int main()
@@ -374,13 +452,10 @@ int main()
 	double_lines_buffer[0].nblines = 0;
 	double_lines_buffer[1].nblines = 0;
 
-	waitvideochip();
-	vid_asm_func(0x04);// Clear screen
+	WR_BYTE( HW_CTLHRD_REG, 0 | ledclavier);
 
-	old_digits[0] = 'Z';
-	old_digits[1] = 'Z';
-	old_digits[2] = 'Z';
-	old_digits[3] = 'Z';
+	waitvideochip();
+	WR_BYTE( HW_EF9365 + 0x0, 0x0C ); // Clear screen
 
 	ptr = (volatile unsigned char *)HW_EF9365;
 
@@ -391,81 +466,37 @@ int main()
 
 	WR_WORD( IRQ_VECTOR, &irq_handler);
 
-	blocknum = 0;
+	blocknum = YM_PAGES_NUMBERS - 24;
 	blockpos = 0;
+
 	for(j=0;j<14;j++)
 	{
-		cur_blockmaps[j] = ym_reg_blocks[j] + (YM_PAGES_SIZE) * *(ym_reg_blockmaps[j]);
+		cur_blockmaps[j] = ym_reg_blocks[j] + ((((unsigned short)(ym_reg_blockmaps[j][blocknum])) * YM_PAGES_SIZE));
 	}
+
+	current_trigger = 0;
+	new_trigger = 0;
+	old_trigger = 0;
 
 	vbl_tick = 0;
 	WR_BYTE( HW_EF9365 + 0x1, 0x23 );
 
-	for(i=0;i<16;i++)
-	{
-		waitvideochip();
-
-		WR_BYTE( HW_CTLHRD_REG, i | ledclavier);
-		ptr[0x9] = 0 + (unsigned char)(i*16);
-
-		vid_asm_func(0x0B);
-	}
-
-	i = 0;
-	while ( strings[i] )
-	{
-		printstr(strings[i],0,256-((i+1)*8),0x11,0x04);
-		i++;
-	}
-
-	object = 0;
-	objimagecnt = 0;
-
-	col = 1;
 	for(;;)
 	{
-		for(i=0;i<1834;i++)
+		vblank();
+		switch(demo_program[new_trigger].effect_code)
 		{
-			vblank();
-
-			// Erase the old object
-			WR_BYTE( HW_CTLHRD_REG, 7 | ledclavier);
-			drawobject(&double_lines_buffer[i&1]);
-
-			// Draw the new one
-			WR_BYTE( HW_CTLHRD_REG, 0 | ledclavier);
-			drawobject(&double_lines_buffer[(i&1)^1]);
-
-			// Prepare the next one...
-			calcobject(&double_lines_buffer[i&1],objectlist[object],i&0xFF,(0*3)&0xFF,(0*2)&0xFF);
-
-			objimagecnt++;
-			if(objimagecnt > 90)
-			{
-				object++;
-				if(!objectlist[object])
-					object = 0;
-				objimagecnt = 0;
-			}
-
-			//printhex_int_fast(i,8,64,0xAF,col);
-
-			if(i&0x8)
-				ledclavier = 0x00;
-			else
-				ledclavier = 0x80;
-
+			case DEMO_SPLASH_SCREEN:
+				demo_logo_splash_part();
+			break;
+			case DEMO_3D_OBJECT_1:
+				demo_3D_oject_part( 0 );
+			break;
+			case DEMO_3D_OBJECT_2:
+				demo_3D_oject_part( 1 );
+			break;
 		}
-
-		col++;
-
-		if(col==0xF)
-			col = 0;
-
-		if(col==0x7)
-			col = 0x8;
-
-		old_digits[0] = 'Z';
+		old_trigger = new_trigger;
 	}
 
 	return 0;
