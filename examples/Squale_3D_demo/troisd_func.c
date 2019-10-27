@@ -264,8 +264,9 @@ void drawobject(lines_buffer * ln_buffer)
 		waitvideochip();
 
 		cmd = 0x11;
-
+		WR_BYTE(HW_EF9365 + 0x8,0);
 		WR_BYTE(HW_EF9365 + 0x9,lines_ptr[0]);
+		WR_BYTE(HW_EF9365 + 0xA,0);
 		WR_BYTE(HW_EF9365 + 0xB,lines_ptr[1]);
 
 		if( lines_ptr[0] > lines_ptr[2] )
