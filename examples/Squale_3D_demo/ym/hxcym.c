@@ -40,10 +40,9 @@
 
 #include "packer/lzh.h"
 
+#ifdef TEST
 
 #include "packed_ym.h"
-
-#ifdef TEST
 
 unsigned char ymptrbuf[14];
 unsigned char * cur_blockmaps[14];
