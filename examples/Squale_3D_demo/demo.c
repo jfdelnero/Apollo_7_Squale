@@ -44,10 +44,6 @@
 #include "demo_dotschaos_part.h"
 #include "demo_jump_part.h"
 
-unsigned char cur_digits[4];
-int digit_ptr;
-int erase_t;
-
 unsigned char ledclavier;
 
 unsigned char ymptrbuf[14];
