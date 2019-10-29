@@ -10,12 +10,16 @@
 //----------------------------------------------------- http://hxc2001.free.fr --//
 ///////////////////////////////////////////////////////////////////////////////////
 //
-// <<The Squale 3D Demo>> A demo for the French Apollo Squale computer.
+// Apollo Squale Technical demo
+// A demo for the French Apollo Squale computer.
+//
+// (c) 2019 HxC2001 / Jean-François DEL NERO
+// (c) 2019 MO5.COM / Association MO5.COM
 //
 // Written by: Jean François DEL NERO
 //
 // You are free to do what you want with this code.
-// A credit is always appreciated if you include it into your prod :)
+// But a credit is always appreciated :)
 //
 // Change History (most recent first):
 ///////////////////////////////////////////////////////////////////////////////////
@@ -81,53 +85,48 @@ void setpixelFast(uint8_t x,uint8_t y)
 
 }
 
-
-dot2d points2d[3];
-
-void Ligne(dot2d * pointA,dot2d * pointB,uint8_t state)
+void LigneFast(uint8_t x1, uint8_t y1, uint8_t x2, uint8_t y2)
 {
-	LigneFast(pointA,pointB);
-}
-
-void LigneFast(dot2d * pointA,dot2d * pointB)
-{
-	uint8_t x1,x2,y1,y2;
 	unsigned char cmd;
-	volatile unsigned char * ptr;
 
-	x1=  pointA->x;
-	x2=  pointB->x;
-	y1=  pointA->y;
-	y2=  pointB->y;
+	waitvideochip();
 
-	ptr = (volatile unsigned char *)0xF000;
+	WR_BYTE( HW_EF9365 + 0x8, 0 );
+	WR_BYTE( HW_EF9365 + 0x9, x1 );
+	WR_BYTE( HW_EF9365 + 0xA, 0 );
+	WR_BYTE( HW_EF9365 + 0xB, y1 );
 
-	ptr[0x9] = x1;
-	ptr[0xB] = y1;
 	cmd = 0x11;
 
 	if( x1 > x2 )
 	{
 		cmd = cmd | 0x02;
-		ptr[0x5] = x1 - x2;
+		WR_BYTE( HW_EF9365 + 0x5, x1 - x2 );
 	}
 	else
 	{
-		ptr[0x5] = x2 - x1;
+		WR_BYTE( HW_EF9365 + 0x5, x2 - x1 );
 	}
 
 	if( y1 > y2 )
 	{
 		cmd = cmd | 0x04;
-		ptr[0x7] = y1 - y2;
+		WR_BYTE( HW_EF9365 + 0x7, y1 - y2 );
 	}
 	else
 	{
-		ptr[0x7] = y2 - y1;
+		WR_BYTE( HW_EF9365 + 0x7, y2 - y1 );
 	}
 
-	*ptr = cmd;
+	WR_BYTE( HW_EF9365 + 0x0, cmd );
+}
 
+void Box(uint8_t x1, uint8_t y1, uint8_t x2, uint8_t y2)
+{
+	LigneFast(x1, y1, x2, y1);
+	LigneFast(x1, y1, x1, y2);
+	LigneFast(x2, y2, x1, y2);
+	LigneFast(x2, y2, x2, y1);
 }
 
 void cercle(int16_t rayon,int16_t x_centre,int16_t y_centre,uint8_t state)
@@ -216,5 +215,30 @@ void display_vectsprite(unsigned char * vectorized_sprite, unsigned char x, unsi
 
 			WR_BYTE(HW_EF9365 + 0x0, 0x11);
 		}
+	}
+}
+
+void printstr(char * str,unsigned char x,unsigned char y,unsigned char csize,unsigned char color)
+{
+	volatile unsigned char * ptr;
+
+	ptr = (volatile unsigned char *)HW_EF9365;
+
+	waitvideochip();
+
+	WR_BYTE( HW_CTLHRD_REG, color | ledclavier);
+
+	ptr[0x8] = 0;
+	ptr[0x9] = x;
+	ptr[0xA] = 0;
+	ptr[0xB] = y;
+
+	ptr[0x3] = csize;
+
+	while(*str)
+	{
+		waitvideochip();
+		vid_asm_func(*str);
+		str++;
 	}
 }

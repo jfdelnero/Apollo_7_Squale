@@ -15,7 +15,7 @@
 // Written by: Jean François DEL NERO
 //
 // You are free to do what you want with this code.
-// A credit is always appreciated if you include it into your prod :)
+// But a credit is always appreciated :)
 //
 // This file include some parts of the Noisetracker/Soundtracker/Protracker
 // Module Format documentation written by Andrew Scott (Adrenalin Software)

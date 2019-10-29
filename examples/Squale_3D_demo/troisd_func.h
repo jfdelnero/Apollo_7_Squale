@@ -10,12 +10,16 @@
 //----------------------------------------------------- http://hxc2001.free.fr --//
 ///////////////////////////////////////////////////////////////////////////////////
 //
-// <<The Squale 3D Demo>> A demo for the French Apollo Squale computer.
+// Apollo Squale Technical demo
+// A demo for the French Apollo Squale computer.
+//
+// (c) 2019 HxC2001 / Jean-François DEL NERO
+// (c) 2019 MO5.COM / Association MO5.COM
 //
 // Written by: Jean François DEL NERO
 //
 // You are free to do what you want with this code.
-// A credit is always appreciated if you include it into your prod :)
+// But a credit is always appreciated :)
 //
 // Change History (most recent first):
 ///////////////////////////////////////////////////////////////////////////////////

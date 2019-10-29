@@ -24,5 +24,4 @@
 // Change History (most recent first):
 ///////////////////////////////////////////////////////////////////////////////////
 
-void vid_asm_func(unsigned char value);
-void progymregs_asm_func(unsigned char *regs);
+void demo_squale_presentation_part();
