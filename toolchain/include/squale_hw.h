@@ -60,3 +60,5 @@
 
 #define WR_WORD(adr,data) *((volatile unsigned short *)adr) = ((unsigned short)data)
 #define RD_WORD(adr) *((volatile unsigned short *)adr)
+
+#define WAIT_EF9365_READY() while(!(RD_BYTE(HW_EF9365) & 0x04));

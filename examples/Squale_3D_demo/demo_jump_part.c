@@ -46,11 +46,11 @@ void demo_jump_part()
 	uint8_t *tmp_ptr;
 	uint8_t nbpoints;
 
-	waitvideochip();
+	WAIT_EF9365_READY();
 	WR_BYTE( HW_CTLHRD_REG, 7 | ledclavier);
 	WR_BYTE( HW_EF9365 + 0x0, 0x0C ); // Clear screen
 
-	waitvideochip();
+	WAIT_EF9365_READY();
 
 	display_vectsprite((unsigned char *) &bmp_data_footpage, 0, SCREEN_YSIZE-33 );
 
@@ -79,7 +79,7 @@ void demo_jump_part()
 
 		tmp_ptr = (uint8_t *)&points;
 
-		waitvideochip();
+		WAIT_EF9365_READY();
 		WR_BYTE( HW_CTLHRD_REG, (7) | ledclavier);
 
 		//WR_BYTE( HW_EF9365 + 0x1, RD_BYTE( HW_EF9365 + 0x1) | 0x04 );
@@ -130,7 +130,7 @@ void demo_jump_part()
 			tmp_ptr += 4;
 		}
 
-		waitvideochip();
+		WAIT_EF9365_READY();
 
 		//WR_BYTE( HW_EF9365 + 0x1, RD_BYTE( HW_EF9365 + 0x1) & ~0x04 );
 

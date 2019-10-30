@@ -89,7 +89,7 @@ void LigneFast(uint8_t x1, uint8_t y1, uint8_t x2, uint8_t y2)
 {
 	unsigned char cmd;
 
-	waitvideochip();
+	WAIT_EF9365_READY();
 
 	WR_BYTE( HW_EF9365 + 0x8, 0 );
 	WR_BYTE( HW_EF9365 + 0x9, x1 );
@@ -185,13 +185,13 @@ void display_vectsprite(unsigned char * vectorized_sprite, unsigned char x, unsi
 
 	nb_lines = *vectorized_sprite++;
 
-	waitvideochip();
+	WAIT_EF9365_READY();
 
 	WR_BYTE(HW_EF9365 + 0x7, 0x00);
 
 	for(i=0;i<nb_lines;i++)
 	{
-		waitvideochip();
+		WAIT_EF9365_READY();
 
 		WR_BYTE(HW_EF9365 + 0x8,0);
 		WR_BYTE(HW_EF9365 + 0x9,x);
@@ -202,7 +202,7 @@ void display_vectsprite(unsigned char * vectorized_sprite, unsigned char x, unsi
 		nb_vects = *vectorized_sprite++;
 		for(j=0;j<nb_vects;j++)
 		{
-			waitvideochip();
+			WAIT_EF9365_READY();
 
 			color = (*vectorized_sprite & 0xF);
 			cnt = (*vectorized_sprite++ >> 4);
@@ -224,7 +224,7 @@ void printstr(char * str,unsigned char x,unsigned char y,unsigned char csize,uns
 
 	ptr = (volatile unsigned char *)HW_EF9365;
 
-	waitvideochip();
+	WAIT_EF9365_READY();
 
 	WR_BYTE( HW_CTLHRD_REG, color | ledclavier);
 
@@ -237,7 +237,7 @@ void printstr(char * str,unsigned char x,unsigned char y,unsigned char csize,uns
 
 	while(*str)
 	{
-		waitvideochip();
+		WAIT_EF9365_READY();
 		vid_asm_func(*str);
 		str++;
 	}

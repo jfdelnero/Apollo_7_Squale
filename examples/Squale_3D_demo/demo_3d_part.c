@@ -67,10 +67,10 @@ void demo_3D_oject_part(int object)
 	double_lines_buffer[0].nblines = 0;
 	double_lines_buffer[1].nblines = 0;
 
-	waitvideochip();
+	WAIT_EF9365_READY();
 	WR_BYTE( HW_EF9365 + 0x0, 0x04 ); // Clear screen
 
-	waitvideochip();
+	WAIT_EF9365_READY();
 
 	display_vectsprite((unsigned char *) &bmp_data_footpage, 0, SCREEN_YSIZE-33 );
 

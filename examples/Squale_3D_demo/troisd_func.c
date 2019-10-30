@@ -265,7 +265,7 @@ void drawobject(lines_buffer * ln_buffer)
 
 	for(i=0; i<ln_buffer->nblines; i++)
 	{
-		waitvideochip();
+		WAIT_EF9365_READY();
 
 		cmd = 0x11;
 		WR_BYTE(HW_EF9365 + 0x8,0);
@@ -299,5 +299,5 @@ void drawobject(lines_buffer * ln_buffer)
 	}
 
 	// Wait to finish the last line...
-	waitvideochip();
+	WAIT_EF9365_READY();
 }

@@ -135,11 +135,6 @@ void abort()
 {
 }
 
-void waitvideochip()
-{
-	while(!(*((volatile unsigned char *)HW_EF9365) & 0x04));
-}
-
 void vblank()
 {
 	unsigned char old_vbl_tick;
@@ -158,12 +153,12 @@ int main()
 
 	WR_BYTE( HW_CTLHRD_REG, 0 | ledclavier);
 
-	waitvideochip();
+	WAIT_EF9365_READY();
 	WR_BYTE( HW_EF9365 + 0x0, 0x0C ); // Clear screen
 
 	ptr = (volatile unsigned char *)HW_EF9365;
 
-	waitvideochip();
+	WAIT_EF9365_READY();
 
 	ptr[0xB] = 4;
 	ptr[0x3] = 0x39;
