@@ -75,7 +75,6 @@ void demo_jump_part()
 	do
 	{
 		vblank();
-		vblank();
 
 		tmp_ptr = (uint8_t *)&points;
 
@@ -86,7 +85,7 @@ void demo_jump_part()
 
 		for(p=0;p<nbpoints;p++)
 		{
-			printstr("Squale",tmp_ptr[0],tmp_ptr[1],0x44,7);
+			printstr("MO5",tmp_ptr[0],tmp_ptr[1],0x44,7);
 
 			tmp_ptr += 4;
 		}
@@ -97,9 +96,9 @@ void demo_jump_part()
 			tmp_ptr[0] += tmp_ptr[2];
 			tmp_ptr[1] += ((int8_t)tmp_ptr[3])/1;
 
-			if( (tmp_ptr[0] >=  (BOX_CORNER_POINT3_X - 1)) && ((int8_t)tmp_ptr[2]) >= 0 )
+			if( (tmp_ptr[0] >=  (BOX_CORNER_POINT3_X - 1)  - 67) && ((int8_t)tmp_ptr[2]) >= 0 )
 			{
-				tmp_ptr[0] -= (tmp_ptr[0] - (BOX_CORNER_POINT3_X - 1));
+				tmp_ptr[0] -= (tmp_ptr[0] - ((BOX_CORNER_POINT3_X - 1) - 67));
 				tmp_ptr[2] = -((int8_t)tmp_ptr[2]);
 			}
 
@@ -139,7 +138,7 @@ void demo_jump_part()
 
 		for(p=0;p<nbpoints;p++)
 		{
-			printstr("Squale",tmp_ptr[0],tmp_ptr[1],0x44,0);
+			printstr("MO5",tmp_ptr[0],tmp_ptr[1],0x44,0);
 
 			tmp_ptr += 4;
 		}
