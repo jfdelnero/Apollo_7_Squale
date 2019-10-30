@@ -180,7 +180,7 @@ void display_vectsprite(unsigned char * vectorized_sprite, unsigned char x, unsi
 	unsigned char nb_lines;
 	unsigned char nb_vects;
 	unsigned char cnt,color;
-
+	uint8_t  regsbuf[2];
 	// [NUMBER_OF_LINES] [NUMBER_OF_VECTORS] [ _CNT|_COL] [ _CNT|_COL] [ _CNT|_COL] [ COUNT__ (if CNT==0)] ... [NUMBER_OF_VECTORS]....
 
 	nb_lines = *vectorized_sprite++;
@@ -191,30 +191,37 @@ void display_vectsprite(unsigned char * vectorized_sprite, unsigned char x, unsi
 
 	for(i=0;i<nb_lines;i++)
 	{
+		regsbuf[0] = x;
+		regsbuf[1] = (255 - (y + i));
+
 		WAIT_EF9365_READY();
 
 		WR_BYTE(HW_EF9365 + 0x8,0);
-		WR_BYTE(HW_EF9365 + 0x9,x);
-
+		WR_BYTE(HW_EF9365 + 0x9,regsbuf[0]);
 		WR_BYTE(HW_EF9365 + 0xA,0);
-		WR_BYTE(HW_EF9365 + 0xB,(255 - (y + i)));
+		WR_BYTE(HW_EF9365 + 0xB,regsbuf[1]);
 
 		nb_vects = *vectorized_sprite++;
-		for(j=0;j<nb_vects;j++)
+		j = nb_vects;
+		do
 		{
+			color = *vectorized_sprite++;
+			cnt = (color >> 4);
+
+			if(!cnt)
+				regsbuf[0] = *vectorized_sprite++;
+			else
+				regsbuf[0] = cnt;
+			regsbuf[1] = (color&0xF) | ledclavier;
+
 			WAIT_EF9365_READY();
 
-			color = (*vectorized_sprite & 0xF);
-			cnt = (*vectorized_sprite++ >> 4);
-			if(!cnt)
-				cnt = (*vectorized_sprite++);
-
-			WR_BYTE(HW_EF9365 + 0x5, cnt);
-
-			WR_BYTE( HW_CTLHRD_REG, color | ledclavier);
-
+			WR_BYTE(HW_EF9365 + 0x5, regsbuf[0]);
+			WR_BYTE(HW_CTLHRD_REG,   regsbuf[1]);
 			WR_BYTE(HW_EF9365 + 0x0, 0x11);
-		}
+
+			j--;
+		}while(j);
 	}
 }
 
