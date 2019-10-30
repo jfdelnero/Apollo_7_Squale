@@ -34,16 +34,24 @@
 #include "deuxd_func.h"
 
 #include "images/footpage.h"
+#include "images/squale_logo.h"
+
+#undef BOX_CORNER_POINT3_Y
+#define BOX_CORNER_POINT3_Y SCREEN_YSIZE - 60
 
 void demo_segments_part()
 {
-	#define NB_MAX_POINTS 16
+	#define NB_MAX_POINTS 10
 	int i;
 	uint8_t p,t;
 	uint8_t points[3 * NB_MAX_POINTS];
+
+	uint8_t lines_buffer[(8 * 4) * 4];
+
 	uint8_t *tmp_ptr;
+	uint8_t *tmp_ptr2;
 	uint8_t nbpoints;
-	uint8_t x1,y1,x2,y2;
+	uint8_t xlen,ylen,cmd;
 
 	WAIT_EF9365_READY();
 	WR_BYTE( HW_CTLHRD_REG, 7 | ledclavier);
@@ -57,9 +65,14 @@ void demo_segments_part()
 
 	Box(BOX_CORNER_POINT1_X, BOX_CORNER_POINT1_Y, BOX_CORNER_POINT3_X, BOX_CORNER_POINT3_Y);
 
+	display_vectsprite((unsigned char *) &bmp_data_squale_logo, 50, 0 );
+
 	nbpoints = 1;
 
 	tmp_ptr = (uint8_t *)&points;
+
+	for(p=0;p<(sizeof(lines_buffer));p++)
+		lines_buffer[p] = 0;
 
 	for(p=0;p<(sizeof(points)/3);p++)
 	{
@@ -69,42 +82,102 @@ void demo_segments_part()
 		tmp_ptr += 3;
 	}
 
+	WR_BYTE( HW_EF9365 + 0x8, 0 );
+	WR_BYTE( HW_EF9365 + 0xA, 0 );
+
 	i = 0;
 	do
 	{
 		vblank();
-	//	vblank();
+
+		//WR_BYTE( HW_EF9365 + 0x1, RD_BYTE( HW_EF9365 + 0x1) | 0x04 );
+
+		if(i&1)
+			tmp_ptr2 = (uint8_t *)&lines_buffer[sizeof(lines_buffer)/2];
+		else
+			tmp_ptr2 = (uint8_t *)&lines_buffer;
 
 		WAIT_EF9365_READY();
 
 		WR_BYTE( HW_CTLHRD_REG, (7) | ledclavier);
-
-		//WR_BYTE( HW_EF9365 + 0x1, RD_BYTE( HW_EF9365 + 0x1) | 0x04 );
-
+		
+		// Erase
 		for(p=0;p<nbpoints;p++)
 		{
-			if(nbpoints>1)
+			if( tmp_ptr2[0] > tmp_ptr2[2] )
 			{
-				x1 = tmp_ptr[0];
-				y1 = tmp_ptr[1];
-				tmp_ptr += 3;
-				if( p == nbpoints - 1 )
-					tmp_ptr = (uint8_t *)&points;
-
-				x2 = tmp_ptr[0];
-				y2 = tmp_ptr[1];
+				cmd = 0x11 | 0x02;
+				xlen = tmp_ptr2[0] - tmp_ptr2[2];
 			}
 			else
 			{
-				x1 = tmp_ptr[0];
-				y1 = tmp_ptr[1];
-				x2 = tmp_ptr[0];
-				y2 = tmp_ptr[1];
-				tmp_ptr += 3;
-
+				cmd = 0x11;
+				xlen = tmp_ptr2[2] - tmp_ptr2[0];
 			}
 
-			LigneFast( x1 , y1, x2 , y2);
+			if( tmp_ptr2[1] > tmp_ptr2[3] )
+			{
+				cmd |= 0x04;
+				ylen = tmp_ptr2[1] - tmp_ptr2[3];
+			}
+			else
+			{
+				ylen = tmp_ptr2[3] - tmp_ptr2[1];
+			}
+
+			WAIT_EF9365_READY();
+
+			WR_BYTE( HW_EF9365 + 0x9, tmp_ptr2[0] ); // start x
+			WR_BYTE( HW_EF9365 + 0xB, tmp_ptr2[1] ); // start y
+			WR_BYTE( HW_EF9365 + 0x5, xlen ); // x lenght
+			WR_BYTE( HW_EF9365 + 0x7, ylen ); // y lenght
+			WR_BYTE( HW_EF9365 + 0x0, cmd );
+
+			tmp_ptr2 += 4;
+		}
+
+		if(i&1)
+			tmp_ptr2 = (uint8_t *)&lines_buffer;
+		else
+			tmp_ptr2 = (uint8_t *)&lines_buffer[sizeof(lines_buffer)/2];
+
+		WAIT_EF9365_READY();
+
+		WR_BYTE( HW_CTLHRD_REG, (0) | ledclavier);
+		
+		// Draw
+		for(p=0;p<nbpoints;p++)
+		{
+			if( tmp_ptr2[0] > tmp_ptr2[2] )
+			{
+				cmd = 0x11 | 0x02;
+				xlen = tmp_ptr2[0] - tmp_ptr2[2];
+			}
+			else
+			{
+				cmd = 0x11;
+				xlen = tmp_ptr2[2] - tmp_ptr2[0];
+			}
+
+			if( tmp_ptr2[1] > tmp_ptr2[3] )
+			{
+				cmd |= 0x04;
+				ylen = tmp_ptr2[1] - tmp_ptr2[3];
+			}
+			else
+			{
+				ylen = tmp_ptr2[3] - tmp_ptr2[1];
+			}
+
+			WAIT_EF9365_READY();
+
+			WR_BYTE( HW_EF9365 + 0x9, tmp_ptr2[0] ); // start x
+			WR_BYTE( HW_EF9365 + 0xB, tmp_ptr2[1] ); // start y
+			WR_BYTE( HW_EF9365 + 0x5, xlen ); // x lenght
+			WR_BYTE( HW_EF9365 + 0x7, ylen ); // y lenght
+			WR_BYTE( HW_EF9365 + 0x0, cmd );
+
+			tmp_ptr2 += 4;
 		}
 
 		if(nbpoints<NB_MAX_POINTS)
@@ -143,34 +216,32 @@ void demo_segments_part()
 
 		tmp_ptr = (uint8_t *)&points;
 
-		WAIT_EF9365_READY();
-		WR_BYTE( HW_CTLHRD_REG, (0) | ledclavier);
-
-		//WR_BYTE( HW_EF9365 + 0x1, RD_BYTE( HW_EF9365 + 0x1) & ~0x04 );
+		if(i&1)
+			tmp_ptr2 = (uint8_t *)&lines_buffer[sizeof(lines_buffer)/2];
+		else
+			tmp_ptr2 = (uint8_t *)&lines_buffer;
 
 		for(p=0;p<nbpoints;p++)
 		{
 			if(nbpoints>1)
 			{
-				x1 = tmp_ptr[0];
-				y1 = tmp_ptr[1];
+				*tmp_ptr2++ = tmp_ptr[0];
+				*tmp_ptr2++ = tmp_ptr[1];
 				tmp_ptr += 3;
 				if( p == nbpoints - 1 )
 					tmp_ptr = (uint8_t *)&points;
 
-				x2 = tmp_ptr[0];
-				y2 = tmp_ptr[1];
+				*tmp_ptr2++ = tmp_ptr[0];
+				*tmp_ptr2++ = tmp_ptr[1];
 			}
 			else
 			{
-				x1 = tmp_ptr[0];
-				y1 = tmp_ptr[1];
-				x2 = tmp_ptr[0];
-				y2 = tmp_ptr[1];
+				*tmp_ptr2++ = tmp_ptr[0];
+				*tmp_ptr2++ = tmp_ptr[1];
+				*tmp_ptr2++ = tmp_ptr[0];
+				*tmp_ptr2++ = tmp_ptr[1];
 				tmp_ptr += 3;
 			}
-
-			LigneFast( x1 , y1, x2 , y2);
 		}
 
 		i++;
