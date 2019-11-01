@@ -33,53 +33,9 @@
 
 lines_buffer double_lines_buffer[2];
 
-#define ZOFF 85
-
-void rotateXYZ(dot * point,uint8_t xang,uint8_t yang,uint8_t zang)
-{
-	int16_t xt;
-	int16_t yt;
-	int16_t zt;
-
-	int16_t x;
-	int16_t y;
-	int16_t z;
-
-	int8_t cosv;
-	int8_t sinv;
-
-	x = point->x;
-	y = point->y;
-	z = point->z;
-
-	cosv = SinCos[xang];
-	sinv = SinCos[xang + 64];
-
-	yt = ( ( y * cosv ) - ( z * sinv ) ) / 128 ;
-	zt = ( ( y * sinv ) + ( z * cosv ) ) / 128 ;
-
-	y = yt;
-	z = zt;
-
-	cosv = SinCos[yang];
-	sinv = SinCos[yang + 64];
-
-	xt = ( ( x * cosv ) - ( z * sinv ) ) / 128 ;
-	zt = ( ( x * sinv ) + ( z * cosv ) ) / 128 ;
-
-	x = xt;
-	z = zt;
-
-	cosv = SinCos[zang];
-	sinv = SinCos[zang + 64];
-
-	xt = ( ( x * cosv ) - ( y * sinv ) ) / 128 ;
-	yt = ( ( x * sinv ) + ( y * cosv ) ) / 128 ;
-
-	point->x = xt;
-	point->y = yt;
-	point->z = z;
-}
+#define ZOFF 95
+#define XOFF 70
+#define YOFF 70
 
 void rotateX(dot * point,uint8_t xang)
 {
@@ -155,7 +111,7 @@ void calcpolygone(lines_buffer * ln_buffer, const int8_t * polygone,uint8_t xrot
 	uint8_t i,c;
 	uint8_t * lines_ptr;
 	int8_t * polygone_ptr;
-	
+
 	dot temppoint[3];
 	dot2d points2d[3];
 
@@ -202,10 +158,10 @@ void calcpolygone(lines_buffer * ln_buffer, const int8_t * polygone,uint8_t xrot
 				rotateY(&temppoint[i],yrotate + 64);
 			if(zrotate)
 				rotateZ(&temppoint[i],zrotate + 64);
-			
-			points2d[i].x= ((((temppoint[i].x<<6) / (temppoint[i].z+ZOFF)))) + (256/2);
-			points2d[i].y= ((((temppoint[i].y<<6) / (temppoint[i].z+ZOFF)))) + (256/2);
-			
+
+			points2d[i].x= ((((temppoint[i].x<<6) / (temppoint[i].z+ZOFF)))) + ((256/2) + XOFF) ;
+			points2d[i].y= ((((temppoint[i].y<<6) / (temppoint[i].z+ZOFF)))) + ((256/2) + YOFF);
+
 			polygone_ptr++;
 		}
 		else
@@ -252,7 +208,7 @@ void calcobject(lines_buffer * ln_buffer, const d3dtype * obj,uint8_t xrotate,ui
 	for(i=0;i<obj->nbfaces;i++)
 	{
 		calcpolygone(ln_buffer,&obj->vertex[i<<4],xrotate,yrotate,zrotate);
-	}	
+	}
 }
 
 void drawobject(lines_buffer * ln_buffer)
@@ -260,42 +216,45 @@ void drawobject(lines_buffer * ln_buffer)
 	uint8_t i;
 	unsigned char cmd;
 	uint8_t * lines_ptr;
-
+	uint8_t xlen,ylen;
 	lines_ptr = &ln_buffer->lines[0];
+
+	WR_BYTE(HW_EF9365 + 0x8,0);
+	WR_BYTE(HW_EF9365 + 0xA,0);
 
 	for(i=0; i<ln_buffer->nblines; i++)
 	{
-		WAIT_EF9365_READY();
-
-		cmd = 0x11;
-		WR_BYTE(HW_EF9365 + 0x8,0);
-		WR_BYTE(HW_EF9365 + 0x9,lines_ptr[0]);
-		WR_BYTE(HW_EF9365 + 0xA,0);
-		WR_BYTE(HW_EF9365 + 0xB,lines_ptr[1]);
-
 		if( lines_ptr[0] > lines_ptr[2] )
 		{
 			cmd = 0x13;
-			WR_BYTE(HW_EF9365 + 0x5,lines_ptr[0] - lines_ptr[2]);
+			xlen = lines_ptr[0] - lines_ptr[2];
 		}
 		else
 		{
-			WR_BYTE(HW_EF9365 + 0x5,lines_ptr[2] - lines_ptr[0]);
+			cmd = 0x11;
+			xlen = lines_ptr[2] - lines_ptr[0];
 		}
 
 		if( lines_ptr[1] > lines_ptr[3] ) // y1 > y2 ?
 		{
 			cmd = cmd | 0x04;
-			WR_BYTE(HW_EF9365 + 0x7,lines_ptr[1] - lines_ptr[3]);
+			ylen = lines_ptr[1] - lines_ptr[3];
 		}
 		else
 		{
-			WR_BYTE(HW_EF9365 + 0x7,lines_ptr[3] - lines_ptr[1]);
+			ylen = lines_ptr[3] - lines_ptr[1];
 		}
+
+		WAIT_EF9365_READY();
+
+		WR_BYTE(HW_EF9365 + 0x9,lines_ptr[0]); // x start
+		WR_BYTE(HW_EF9365 + 0xB,lines_ptr[1]); // y start
+		WR_BYTE(HW_EF9365 + 0x5,xlen);
+		WR_BYTE(HW_EF9365 + 0x7,ylen);
+		WR_BYTE(HW_EF9365 + 0x0,cmd);
 
 		lines_ptr+=4;
 
-		WR_BYTE(HW_EF9365 + 0x0,cmd);
 	}
 
 	// Wait to finish the last line...
