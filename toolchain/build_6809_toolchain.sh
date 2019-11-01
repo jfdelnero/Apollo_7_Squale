@@ -70,7 +70,7 @@ export PATH="$CUR_FOLDER/bin:$PATH"
 mkdir -p ${CUR_FOLDER}/build   || exit 1
 cd ${CUR_FOLDER}/build         || exit 1
 
-${CUR_FOLDER}/src/gcc-4.6.4/configure --enable-languages=c --target=m6809-unknown --program-prefix=m6809-unknown- --enable-obsolete --srcdir=${CUR_FOLDER}/src/gcc-4.6.4 --disable-threads --disable-nls --disable-libssp --prefix=${CUR_FOLDER} --with-as=${CUR_FOLDER}/bin/m6809-unknown-as --with-ld=${CUR_FOLDER}/bin/m6809-unknown-ld --with-ar=${CUR_FOLDER}/bin/m6809-unknown-ar || exit 1
+${CUR_FOLDER}/src/gcc-4.6.4/configure --enable-languages=c --target=m6809-unknown --program-prefix=m6809-unknown- --enable-obsolete --srcdir=${CUR_FOLDER}/src/gcc-4.6.4 --disable-threads --disable-nls --disable-libssp --disable-doc --without-htmldir --without-pdfdir --without-docdir --prefix=${CUR_FOLDER} --with-as=${CUR_FOLDER}/bin/m6809-unknown-as --with-ld=${CUR_FOLDER}/bin/m6809-unknown-ld --with-ar=${CUR_FOLDER}/bin/m6809-unknown-ar || exit 1
 
 make           || exit 1
 make install   || exit 1
