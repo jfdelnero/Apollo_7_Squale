@@ -35,10 +35,8 @@
 #include "troisd_func.h"
 
 #include "obj3D_Box01.h"
-#include "obj3D_Piramid01.h"
+#include "obj3D_Pyramid01.h"
 #include "obj3D_Hedra01.h"
-
-#include "music/warp_5.h"
 
 #include "images/bart_footpage.h"
 
