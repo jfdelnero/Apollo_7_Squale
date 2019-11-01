@@ -35,34 +35,27 @@
 #include "troisd_func.h"
 
 #include "obj3D_Box01.h"
-#include "obj3D_Sphere01.h"
-#include "obj3D_Cylinder01.h"
-#include "obj3D_Prism01.h"
 #include "obj3D_Piramid01.h"
 #include "obj3D_Hedra01.h"
 
 #include "music/warp_5.h"
 
-#include "images/mo5_logo.h"
-#include "images/squale_logo.h"
-#include "images/apollo_7_logo.h"
-#include "images/footpage.h"
+#include "images/bart_footpage.h"
 
 const d3dtype * objectlist[]=
 {
 	&data3d_Hedra01,
 	&data3d_Box01,
 	&data3d_Piramid01,
-	&data3d_Prism01,
-	&data3d_Cylinder01,
 	0x00000000
 };
 
 extern lines_buffer double_lines_buffer[2];
 
-void demo_3D_oject_part(int object)
+void demo_3D_oject_part()
 {
 	int i;
+	int object;
 
 	double_lines_buffer[0].nblines = 0;
 	double_lines_buffer[1].nblines = 0;
@@ -72,8 +65,9 @@ void demo_3D_oject_part(int object)
 
 	WAIT_EF9365_READY();
 
-	display_vectsprite((unsigned char *) &bmp_data_footpage, 0, SCREEN_YSIZE-33 );
+	display_vectsprite((unsigned char *) &bmp_data_bart_footpage, 0, 0 );
 
+	object = 0;
 	i = 0;
 	do
 	{
@@ -83,14 +77,23 @@ void demo_3D_oject_part(int object)
 		WR_BYTE( HW_CTLHRD_REG, 7 | ledclavier);
 		drawobject(&double_lines_buffer[i&1]);
 
+		if( i > 164)
+		{
+			object++;
+			if(object > 2)
+				object = 0;
+			i=1;
+		}
+
 		// Draw the new one
 		WR_BYTE( HW_CTLHRD_REG, 0 | ledclavier);
 		drawobject(&double_lines_buffer[(i&1)^1]);
 
 		// Prepare the next one...
-		calcobject(&double_lines_buffer[i&1],objectlist[object],i&0xFF,(0*3)&0xFF,(0*2)&0xFF);
+		calcobject(&double_lines_buffer[i&1],objectlist[object],i&0xFF,(0*2)&0xFF,(i*2)&0xFF);
 
 		i++;
+
 	}while( new_trigger == old_trigger );
 }
 

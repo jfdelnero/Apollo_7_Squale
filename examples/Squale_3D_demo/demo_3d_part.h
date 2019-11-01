@@ -24,4 +24,4 @@
 // Change History (most recent first):
 ///////////////////////////////////////////////////////////////////////////////////
 
-void demo_3D_oject_part(int object);
+void demo_3D_oject_part();
