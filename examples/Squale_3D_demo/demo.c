@@ -57,8 +57,7 @@ void irq_handler (void) __attribute__ ((interrupt));
 
 #define DEMO_MO5LOGO_SCREEN 0
 #define DEMO_SQUALELOGO_SCREEN 1
-#define DEMO_3D_OBJECT_1   2
-#define DEMO_3D_OBJECT_2   3
+#define DEMO_3D_OBJECT   2
 #define DEMO_DOTSRACING_EFFECT 4
 #define DEMO_SEGMENTS_EFFECT 5
 #define DEMO_ZOOMBOX_EFFECT 6
@@ -81,8 +80,7 @@ const demo_triggers demo_program[]=
 	{ DEMO_SEGMENTS_EFFECT, 26  },
 	{ DEMO_ZOOMBOX_EFFECT, 80  },
 	{ DEMO_JUMP_EFFECT, 155  },
-	{ DEMO_3D_OBJECT_1, 220 },
-	{ DEMO_3D_OBJECT_2, 280 },
+	{ DEMO_3D_OBJECT, 220 },
 	{ DEMO_DOTSRACING_EFFECT, 340  },
 	{ 0x00000000, 0xFFFF }
 };
@@ -203,11 +201,8 @@ int main()
 			case DEMO_JUMP_EFFECT:
 				demo_jump_part();
 			break;
-			case DEMO_3D_OBJECT_1:
-				demo_3D_oject_part( 0 );
-			break;
-			case DEMO_3D_OBJECT_2:
-				demo_3D_oject_part( 1 );
+			case DEMO_3D_OBJECT:
+				demo_3D_oject_part();
 			break;
 		}
 		old_trigger = new_trigger;
