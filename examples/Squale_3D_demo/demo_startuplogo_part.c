@@ -37,6 +37,11 @@
 
 void demo_logo_splash_part()
 {
+	WAIT_EF9365_READY();
+
+	WR_BYTE( HW_CTLHRD_REG, 0 | ledclavier);
+	WR_BYTE( HW_EF9365 + 0x0, 0x0C ); // Clear screen
+
 	vblank();
 
 	display_vectsprite((unsigned char *) &bmp_data_mo5_logo, 0, 0 );
