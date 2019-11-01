@@ -25,5 +25,5 @@ make mrproper
 
 cd ${CUR_FOLDER}
 
-rm -Rf bin build include lib libexec share src m6809-unknown
+rm -Rf bin build lib libexec share src m6809-unknown
 
