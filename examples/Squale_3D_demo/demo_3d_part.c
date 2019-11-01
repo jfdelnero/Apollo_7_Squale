@@ -71,7 +71,13 @@ void demo_3D_oject_part()
 	i = 0;
 	do
 	{
-		vblank();
+		//vblank();
+		// TODO :
+		// Trick to attempt to suppress the flickering:
+		// Use the 6850 as a delay timer 
+		// The vblank IRQ start a serial transmission.
+		// The main loop wait for the transmitter shifter empty state
+		// Then we can modify the video memory.
 
 		// Erase the old object
 		WR_BYTE( HW_CTLHRD_REG, 7 | ledclavier);
