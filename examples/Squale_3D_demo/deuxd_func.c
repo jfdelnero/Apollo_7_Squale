@@ -29,95 +29,41 @@
 
 #include "deuxd_func.h"
 
-extern volatile uint8_t buffernb;
-
-
-const uint8_t div10tab[]=
-{
-	0,0,0,0,0,0,0,0,0,0,
-	1,1,1,1,1,1,1,1,1,1,
-	2,2,2,2,2,2,2,2,2,2,
-	3,3,3,3,3,3,3,3,3,3,
-	4,4,4,4,4,4,4,4,4,4,
-	5,5,5,5,5,5,5,5,5,5,
-	6,6,6,6,6,6,6,6,6,6,
-	7,7,7,7,7,7,7,7,7,7,
-	8,8,8,8,8,8,8,8,8,8,
-	9,9,9,9,9,9,9,9,9,9,
-	10,10,10,10,10,10,10,10,10,10,
-	11,11,11,11,11,11,11,11,11,11,
-	12,12,12,12,12,12,12,12,12,12,
-	13,13,13,13,13,13,13,13,13,13,
-	14,14,14,14,14,14,14,14,14,14,
-	15,15,15,15,15,15,15,15,15,15,
-	16,16,16,16,16,16,16,16,16,16,
-	17,17,17,17,17,17,17,17,17,17,
-	18,18,18,18,18,18,18,18,18,18,
-	19,19,19,19,19,19,19,19,19,19,
-	20,20,20,20,20,20,20,20,20,20,
-	21,21,21,21,21,21,21,21,21,21,
-	22,22,22,22,22,22,22,22,22,22,
-	23,23,23,23,23,23,23,23,23,23,
-	24,24,24,24,24,24,24,24,24,24,
-	25,25,25,25,25,25,25,25,25,25
-};
-
-const uint8_t multentab[]=
-{
-	0,10,20,30,40,50,60,70,80,90,100,110,120
-};
-
-
-void setpixel(uint8_t x,uint8_t y, uint8_t state)
-{
-	uint8_t i,j,c,k,d;
-
-	if(x<80 && y<100)
-	{
-		i=div10tab[y];//y/10;
-		k=y-multentab[i];
-	}
-}
-
-
-void setpixelFast(uint8_t x,uint8_t y)
-{
-
-}
-
 void LigneFast(uint8_t x1, uint8_t y1, uint8_t x2, uint8_t y2)
 {
 	unsigned char cmd;
+	uint8_t xlen,ylen;
 
-	WAIT_EF9365_READY();
-
-	WR_BYTE( HW_EF9365 + 0x8, 0 );
-	WR_BYTE( HW_EF9365 + 0x9, x1 );
-	WR_BYTE( HW_EF9365 + 0xA, 0 );
-	WR_BYTE( HW_EF9365 + 0xB, y1 );
-
-	cmd = 0x11;
-
+	
 	if( x1 > x2 )
 	{
-		cmd = cmd | 0x02;
-		WR_BYTE( HW_EF9365 + 0x5, x1 - x2 );
+		cmd = 0x11 | 0x2; 
+		xlen = x1 - x2;
 	}
 	else
 	{
-		WR_BYTE( HW_EF9365 + 0x5, x2 - x1 );
+		cmd = 0x11;
+		xlen = x2 - x1;
 	}
 
 	if( y1 > y2 )
 	{
 		cmd = cmd | 0x04;
-		WR_BYTE( HW_EF9365 + 0x7, y1 - y2 );
+		ylen = y1 - y2;
 	}
 	else
 	{
-		WR_BYTE( HW_EF9365 + 0x7, y2 - y1 );
+		ylen = y2 - y1;
 	}
-
+	
+	WAIT_EF9365_READY();
+	
+	WR_BYTE( HW_EF9365 + 0x8, 0 );
+	WR_BYTE( HW_EF9365 + 0x9, x1 );
+	WR_BYTE( HW_EF9365 + 0xA, 0 );
+	WR_BYTE( HW_EF9365 + 0xB, y1 );
+	WR_BYTE( HW_EF9365 + 0x5, xlen );
+	WR_BYTE( HW_EF9365 + 0x7, ylen );
 	WR_BYTE( HW_EF9365 + 0x0, cmd );
 }
 
@@ -129,6 +75,7 @@ void Box(uint8_t x1, uint8_t y1, uint8_t x2, uint8_t y2)
 	LigneFast(x2, y2, x2, y1);
 }
 
+/*
 void cercle(int16_t rayon,int16_t x_centre,int16_t y_centre,uint8_t state)
 {
 	int16_t x,y,d;
@@ -170,6 +117,7 @@ void cercle(int16_t rayon,int16_t x_centre,int16_t y_centre,uint8_t state)
 	}
 	return;
 }
+*/
 
 extern unsigned char ledclavier;
 
