@@ -34,10 +34,10 @@ void LigneFast(uint8_t x1, uint8_t y1, uint8_t x2, uint8_t y2)
 	unsigned char cmd;
 	uint8_t xlen,ylen;
 
-	
+
 	if( x1 > x2 )
 	{
-		cmd = 0x11 | 0x2; 
+		cmd = 0x11 | 0x2;
 		xlen = x1 - x2;
 	}
 	else
@@ -55,9 +55,9 @@ void LigneFast(uint8_t x1, uint8_t y1, uint8_t x2, uint8_t y2)
 	{
 		ylen = y2 - y1;
 	}
-	
+
 	WAIT_EF9365_READY();
-	
+
 	WR_BYTE( HW_EF9365 + 0x8, 0 );
 	WR_BYTE( HW_EF9365 + 0x9, x1 );
 	WR_BYTE( HW_EF9365 + 0xA, 0 );
@@ -193,7 +193,6 @@ void printstr(char * str,unsigned char x,unsigned char y,unsigned char csize,uns
 	while(*str)
 	{
 		WAIT_EF9365_READY();
-		vid_asm_func(*str);
-		str++;
+		WR_BYTE( HW_EF9365 + 0x0, *str++ );
 	}
 }
