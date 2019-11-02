@@ -38,19 +38,58 @@
 extern volatile unsigned char blockpos;
 extern volatile unsigned char ymptrbuf[14];
 
-char jump_strings[]="MO5";
-uint8_t jump_color[]={4,5,1};
+uint8_t jump_color[]={4,5,1,0,2,3,5,6,8,9,10,11,12,13,14,15};
 
-void demo_jump_part()
+void demo_jump_part(char * string)
 {
-	#define NB_MAX_POINTS 3
-	int i;
-	uint8_t p,t;
-
+	#define NB_MAX_POINTS 16
 	uint8_t points[4 * NB_MAX_POINTS]; // x pos, y pos, x speed/way, y speed/way
 	uint8_t *tmp_ptr;
-	uint8_t nbpoints,stringsize;
+	uint8_t nbpoints,size_code,stringlen;
 
+	int16_t i;
+	uint8_t p;
+
+	uint8_t charsizexpix,charsizeypix;
+
+	stringlen = 0;
+	while(string[stringlen])
+		stringlen++;
+
+	switch(stringlen)
+	{
+		case 1:
+			size_code = 0x77;
+			charsizexpix = 5*7;
+			charsizeypix = 8*7;
+		break;
+		case 2:
+			size_code = 0x44;
+			charsizexpix = 5*4;
+			charsizeypix = 8*4;
+		break;
+		case 3:
+			size_code = 0x44;
+			charsizexpix = 5*4;
+			charsizeypix = 8*4;
+		break;
+		case 4:
+			size_code = 0x33;
+			charsizexpix = 5*3;
+			charsizeypix = 8*3;
+		break;
+		case 5:
+		case 6:
+			size_code = 0x22;
+			charsizexpix = 5*2;
+			charsizeypix = 8*2;
+		break;
+		default:
+			size_code = 0x11;
+			charsizexpix = 5;
+			charsizeypix = 8;
+		break;
+	}
 
 	WAIT_EF9365_READY();
 
@@ -81,8 +120,6 @@ void demo_jump_part()
 		tmp_ptr += 4;
 	}
 
-	stringsize = 23;
-
 	i = 0;
 	do
 	{
@@ -93,15 +130,17 @@ void demo_jump_part()
 		WAIT_EF9365_READY();
 
 		WR_BYTE( HW_CTLHRD_REG, (7) | ledclavier);
-		WR_BYTE( HW_EF9365 + 0x3, 0x44 );
+		WR_BYTE( HW_EF9365 + 0x3, size_code );
 
 		for(p=0;p<nbpoints;p++)
 		{
 			WAIT_EF9365_READY();
 
+			WR_BYTE( HW_EF9365 + 0x8, 0 );
 			WR_BYTE( HW_EF9365 + 0x9, tmp_ptr[0] );
+			WR_BYTE( HW_EF9365 + 0xA, 0 );
 			WR_BYTE( HW_EF9365 + 0xB, tmp_ptr[1] );
-			WR_BYTE( HW_EF9365 + 0x0, jump_strings[p] );
+			WR_BYTE( HW_EF9365 + 0x0, string[p] );
 
 			tmp_ptr += 4;
 		}
@@ -109,13 +148,16 @@ void demo_jump_part()
 		tmp_ptr = (uint8_t *)&points;
 		for(p=0;p<nbpoints;p++)
 		{
+			if( ((int8_t)tmp_ptr[2]) < 0 && tmp_ptr[0] < -((int8_t)tmp_ptr[2]))
+				*((int8_t*)&tmp_ptr[2]) = -((int8_t)tmp_ptr[2]);
+
 			tmp_ptr[0] += tmp_ptr[2];
 			tmp_ptr[1] += ((int8_t)tmp_ptr[3]);
 
 			// X right border
-			if( (tmp_ptr[0] >=  ((BOX_CORNER_POINT3_X - 1)  - (stringsize))) && (((int8_t)tmp_ptr[2]) >= 0 ) )
+			if( (tmp_ptr[0] >=  (BOX_CORNER_POINT3_X - (charsizexpix))) && (((int8_t)tmp_ptr[2]) >= 0 ) )
 			{
-				tmp_ptr[0] -= (tmp_ptr[0] - ((BOX_CORNER_POINT3_X - 1) - (stringsize+1)));
+				tmp_ptr[0] -= (tmp_ptr[0] - ( BOX_CORNER_POINT3_X- (charsizexpix+1)));
 				tmp_ptr[2] = -((int8_t)tmp_ptr[2]);
 				if(tmp_ptr[2])
 				{
@@ -169,7 +211,7 @@ void demo_jump_part()
 
 		WAIT_EF9365_READY();
 
-		WR_BYTE( HW_EF9365 + 0x3, 0x44 );
+		WR_BYTE( HW_EF9365 + 0x3, size_code );
 
 		for(p=0;p<nbpoints;p++)
 		{
@@ -177,9 +219,11 @@ void demo_jump_part()
 
 			WR_BYTE( HW_CTLHRD_REG, jump_color[p] | ledclavier);
 
+			WR_BYTE( HW_EF9365 + 0x8, 0 );
 			WR_BYTE( HW_EF9365 + 0x9, tmp_ptr[0] );
+			WR_BYTE( HW_EF9365 + 0xA, 0 );
 			WR_BYTE( HW_EF9365 + 0xB, tmp_ptr[1] );
-			WR_BYTE( HW_EF9365 + 0x0, jump_strings[p] );
+			WR_BYTE( HW_EF9365 + 0x0, string[p] );
 
 			tmp_ptr += 4;
 		}
@@ -189,8 +233,9 @@ void demo_jump_part()
 		if(nbpoints<NB_MAX_POINTS)
 			nbpoints = 1 + (i / 16);
 
-		if(nbpoints > NB_MAX_POINTS)
-			nbpoints = NB_MAX_POINTS;
+		if(nbpoints > NB_MAX_POINTS || nbpoints > stringlen)
+			nbpoints = stringlen;
+
 	}while( new_trigger == old_trigger );
 
 }
