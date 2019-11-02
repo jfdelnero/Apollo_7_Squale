@@ -30,6 +30,8 @@
 
 //#define TEST 1
 
+#define YM_PAGE_SIZE 32
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -345,7 +347,7 @@ int hxcym_load( ymcontext * ymctx, void * ym_data, int ym_data_size )
 				{
 					memset(regs_dump,0,ymctx->nb_of_frames);
 
-					blocksize = 16;
+					blocksize = YM_PAGE_SIZE;
 					//for(blocksize = 8;blocksize < 256; blocksize += 8)
 					{
 						total_count = 0;

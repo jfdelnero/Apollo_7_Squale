@@ -75,13 +75,13 @@ typedef struct _demo_triggers
 
 const demo_triggers demo_program[]=
 {
-	{ DEMO_MO5LOGO_SCREEN, YM_PAGES_NUMBERS - 23 },
+	{ DEMO_MO5LOGO_SCREEN, YM_PAGES_NUMBERS - 11 },
 	{ DEMO_SQUALELOGO_SCREEN, 0 },
-	{ DEMO_SEGMENTS_EFFECT, 26  },
-	//{ DEMO_ZOOMBOX_EFFECT, 80  },
-	{ DEMO_JUMP_EFFECT, 80 },
-	{ DEMO_3D_OBJECT, 220 },
-	{ DEMO_DOTSRACING_EFFECT, 340  },
+	{ DEMO_SEGMENTS_EFFECT, 12  },
+	//{ DEMO_ZOOMBOX_EFFECT, 40  },
+	{ DEMO_JUMP_EFFECT, 44 },
+	{ DEMO_3D_OBJECT, 110 },
+	{ DEMO_DOTSRACING_EFFECT, 170  },
 	{ 0x00000000, 0xFFFF }
 };
 
@@ -163,7 +163,7 @@ int main()
 
 	WR_WORD( IRQ_VECTOR, &irq_handler);
 
-	blocknum = YM_PAGES_NUMBERS - 24;
+	blocknum = YM_PAGES_NUMBERS - 12;
 	blockpos = 0;
 
 	for(j=0;j<14;j++)
