@@ -1,4 +1,4 @@
-OUTPUT=Squale_3D_demo
+OUTPUT=Squale_Technical_Demo
 OBJECTS=images/mo5_logo.o images/apollo_7_logo.o images/squale_logo.o images/bart_footpage.o images/footpage.o music/warp_5.o demo.o \
         demo_segments_part.o demo_3d_part.o demo_startuplogo_part.o demo_presentation_part.o \
         demo_dotschaos_part.o demo_jump_part.o progymregs_asm_func.o deuxd_func.o troisd_func.o
