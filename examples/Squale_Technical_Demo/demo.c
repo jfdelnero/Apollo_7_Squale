@@ -78,8 +78,8 @@ const demo_triggers demo_program[]=
 	{ DEMO_MO5LOGO_SCREEN, YM_PAGES_NUMBERS - 23 },
 	{ DEMO_SQUALELOGO_SCREEN, 0 },
 	{ DEMO_SEGMENTS_EFFECT, 26  },
-	{ DEMO_ZOOMBOX_EFFECT, 80  },
-	{ DEMO_JUMP_EFFECT, 155  },
+	//{ DEMO_ZOOMBOX_EFFECT, 80  },
+	{ DEMO_JUMP_EFFECT, 80 },
 	{ DEMO_3D_OBJECT, 220 },
 	{ DEMO_DOTSRACING_EFFECT, 340  },
 	{ 0x00000000, 0xFFFF }
@@ -195,9 +195,9 @@ int main()
 			case DEMO_SEGMENTS_EFFECT:
 				demo_segments_part();
 			break;
-			case DEMO_ZOOMBOX_EFFECT:
+/*			case DEMO_ZOOMBOX_EFFECT:
 				demo_zoombox_part();
-			break;
+			break;*/
 			case DEMO_JUMP_EFFECT:
 				demo_jump_part();
 			break;
