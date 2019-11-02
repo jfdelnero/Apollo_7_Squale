@@ -61,7 +61,10 @@ void irq_handler (void) __attribute__ ((interrupt));
 #define DEMO_DOTSRACING_EFFECT 4
 #define DEMO_SEGMENTS_EFFECT 5
 #define DEMO_ZOOMBOX_EFFECT 6
-#define DEMO_JUMP_EFFECT 7
+#define DEMO_JUMP_EFFECT_1 7
+#define DEMO_JUMP_EFFECT_2 8
+#define DEMO_JUMP_EFFECT_3 9
+#define DEMO_JUMP_EFFECT_4 10
 
 volatile unsigned char current_trigger;
 volatile unsigned char new_trigger;
@@ -79,7 +82,10 @@ const demo_triggers demo_program[]=
 	{ DEMO_SQUALELOGO_SCREEN, 0 },
 	{ DEMO_SEGMENTS_EFFECT, 12  },
 	//{ DEMO_ZOOMBOX_EFFECT, 40  },
-	{ DEMO_JUMP_EFFECT, 44 },
+	{ DEMO_JUMP_EFFECT_1, 44 },
+	{ DEMO_JUMP_EFFECT_2, 69 },
+	//{ DEMO_JUMP_EFFECT_3, 64 },
+	//{ DEMO_JUMP_EFFECT_4, 74 },
 	{ DEMO_3D_OBJECT, 110 },
 	{ DEMO_DOTSRACING_EFFECT, 170  },
 	{ 0x00000000, 0xFFFF }
@@ -198,8 +204,17 @@ int main()
 /*			case DEMO_ZOOMBOX_EFFECT:
 				demo_zoombox_part();
 			break;*/
-			case DEMO_JUMP_EFFECT:
-				demo_jump_part();
+			case DEMO_JUMP_EFFECT_1:
+				demo_jump_part("MO5");
+			break;
+			case DEMO_JUMP_EFFECT_2:
+				demo_jump_part("6809");
+			break;
+			case DEMO_JUMP_EFFECT_3:
+				demo_jump_part("Squale");
+			break;
+			case DEMO_JUMP_EFFECT_4:
+				demo_jump_part("AssociationMO5");
 			break;
 			case DEMO_3D_OBJECT:
 				demo_3D_oject_part();
