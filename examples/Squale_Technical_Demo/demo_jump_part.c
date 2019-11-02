@@ -155,9 +155,9 @@ void demo_jump_part(char * string)
 			tmp_ptr[1] += ((int8_t)tmp_ptr[3]);
 
 			// X right border
-			if( (tmp_ptr[0] >=  (BOX_CORNER_POINT3_X - (charsizexpix))) && (((int8_t)tmp_ptr[2]) >= 0 ) )
+			if( (tmp_ptr[0] >=  (BOX_CORNER_POINT3_X - charsizexpix)) && (((int8_t)tmp_ptr[2]) >= 0 ) )
 			{
-				tmp_ptr[0] -= (tmp_ptr[0] - ( BOX_CORNER_POINT3_X- (charsizexpix+1)));
+				tmp_ptr[0] -= (tmp_ptr[0] - ( BOX_CORNER_POINT3_X - charsizexpix));
 				tmp_ptr[2] = -((int8_t)tmp_ptr[2]);
 				if(tmp_ptr[2])
 				{
@@ -185,11 +185,11 @@ void demo_jump_part(char * string)
 			}
 
 			// Y floor
-			if( (tmp_ptr[1] <=  (BOX_CORNER_POINT1_Y + 1)) )
+			if( (tmp_ptr[1] <=  (BOX_CORNER_POINT1_Y - 2)) )
 			{
 				if(((int8_t)tmp_ptr[3]) < 0)
 				{
-					tmp_ptr[1] += ((BOX_CORNER_POINT1_Y + 1) - tmp_ptr[1]);
+					tmp_ptr[1] += ((BOX_CORNER_POINT1_Y - 2) - tmp_ptr[1]);
 
 					// Invert
 					tmp_ptr[3] = -((int8_t)tmp_ptr[3]);
