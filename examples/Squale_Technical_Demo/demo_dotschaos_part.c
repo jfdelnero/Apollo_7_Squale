@@ -62,7 +62,7 @@ void demo_dotschaos_part()
 
 	Box(BOX_CORNER_POINT1_X, BOX_CORNER_POINT1_Y, BOX_CORNER_POINT3_X, BOX_CORNER_POINT3_Y);
 
-	printstr("Squale technical demo v1.1 (02/11/2019)",BOX_CORNER_POINT1_X,BOX_CORNER_POINT1_Y - 9 ,0x11,0x04);
+	printstr("Squale technical demo v1.1 (02 Nov 2019)",BOX_CORNER_POINT1_X,BOX_CORNER_POINT1_Y - 9 ,0x11,0x04);
 	printstr("Code: Jean-Francois DEL NERO",BOX_CORNER_POINT1_X,BOX_CORNER_POINT1_Y - 18 ,0x11,0x04);
 	printstr("Music: Jochen Hippel",BOX_CORNER_POINT1_X,BOX_CORNER_POINT1_Y - 27 ,0x11,0x04);
 
