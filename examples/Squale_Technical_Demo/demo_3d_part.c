@@ -54,6 +54,7 @@ void demo_3D_oject_part()
 {
 	int i;
 	int object;
+	uint8_t j;
 
 	double_lines_buffer[0].nblines = 0;
 	double_lines_buffer[1].nblines = 0;
@@ -67,6 +68,7 @@ void demo_3D_oject_part()
 
 	object = 0;
 	i = 0;
+	j = 0;
 	do
 	{
 		//vblank();
@@ -94,9 +96,12 @@ void demo_3D_oject_part()
 		drawobject(&double_lines_buffer[(i&1)^1]);
 
 		// Prepare the next one...
-		calcobject(&double_lines_buffer[i&1],objectlist[object],(i*3)&0xFF,0,(i*4)&0xFF);
+		calcobject(&double_lines_buffer[i&1],objectlist[object],((i+j)*3)&0xFF,0,(i*4)&0xFF);
 
 		i++;
+
+		if(!(i&1))
+			j++;
 
 	}while( new_trigger == old_trigger );
 }
