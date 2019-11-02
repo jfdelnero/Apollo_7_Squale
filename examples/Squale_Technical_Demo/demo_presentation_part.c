@@ -48,8 +48,8 @@ char * strings[]=
 	"       16 colors",
 	"Video RAM: 32KB",
 	"Sound: AY-3-8910A",
-	"V24/V25/V54 modem",
-	"Tape / Cartridge support",
+	"Embedded modem",
+	"Tape and Cartridge support",
 	0
 };
 
