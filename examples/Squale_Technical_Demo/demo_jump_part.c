@@ -35,18 +35,28 @@
 
 #include "images/footpage.h"
 
+extern volatile unsigned char blockpos;
+extern volatile unsigned char ymptrbuf[14];
+
+char jump_strings[]="MO5";
+uint8_t jump_color[]={4,5,1};
+
 void demo_jump_part()
 {
-	#define NB_MAX_POINTS 1
+	#define NB_MAX_POINTS 3
 	int i;
 	uint8_t p,t;
-	// x pos, y pos, x speed/way, y speed/way
 
-	uint8_t points[4 * NB_MAX_POINTS];
+	uint8_t points[4 * NB_MAX_POINTS]; // x pos, y pos, x speed/way, y speed/way
 	uint8_t *tmp_ptr;
-	uint8_t nbpoints;
+	uint8_t nbpoints,stringsize;
+
 
 	WAIT_EF9365_READY();
+
+	WR_BYTE( HW_EF9365 + 0x8, 0 );
+	WR_BYTE( HW_EF9365 + 0xA, 0 );
+
 	WR_BYTE( HW_CTLHRD_REG, 7 | ledclavier);
 	WR_BYTE( HW_EF9365 + 0x0, 0x0C ); // Clear screen
 
@@ -62,7 +72,7 @@ void demo_jump_part()
 
 	tmp_ptr = (uint8_t *)&points;
 
-	for(p=0;p<(sizeof(points)/3);p++)
+	for(p=0;p<(sizeof(points)/4);p++)
 	{
 		tmp_ptr[0] = (SCREEN_XSIZE/2);
 		tmp_ptr[1] = BOX_CORNER_POINT1_Y + ((BOX_CORNER_POINT3_Y - BOX_CORNER_POINT1_Y)/2) +40;
@@ -70,6 +80,8 @@ void demo_jump_part()
 		tmp_ptr[3] = 1;
 		tmp_ptr += 4;
 	}
+
+	stringsize = 23;
 
 	i = 0;
 	do
@@ -79,13 +91,17 @@ void demo_jump_part()
 		tmp_ptr = (uint8_t *)&points;
 
 		WAIT_EF9365_READY();
-		WR_BYTE( HW_CTLHRD_REG, (7) | ledclavier);
 
-		//WR_BYTE( HW_EF9365 + 0x1, RD_BYTE( HW_EF9365 + 0x1) | 0x04 );
+		WR_BYTE( HW_CTLHRD_REG, (7) | ledclavier);
+		WR_BYTE( HW_EF9365 + 0x3, 0x44 );
 
 		for(p=0;p<nbpoints;p++)
 		{
-			printstr("MO5",tmp_ptr[0],tmp_ptr[1],0x44,7);
+			WAIT_EF9365_READY();
+
+			WR_BYTE( HW_EF9365 + 0x9, tmp_ptr[0] );
+			WR_BYTE( HW_EF9365 + 0xB, tmp_ptr[1] );
+			WR_BYTE( HW_EF9365 + 0x0, jump_strings[p] );
 
 			tmp_ptr += 4;
 		}
@@ -94,51 +110,76 @@ void demo_jump_part()
 		for(p=0;p<nbpoints;p++)
 		{
 			tmp_ptr[0] += tmp_ptr[2];
-			tmp_ptr[1] += ((int8_t)tmp_ptr[3])/1;
+			tmp_ptr[1] += ((int8_t)tmp_ptr[3]);
 
-			if( (tmp_ptr[0] >=  (BOX_CORNER_POINT3_X - 1)  - 67) && ((int8_t)tmp_ptr[2]) >= 0 )
+			// X right border
+			if( (tmp_ptr[0] >=  ((BOX_CORNER_POINT3_X - 1)  - (stringsize))) && (((int8_t)tmp_ptr[2]) >= 0 ) )
 			{
-				tmp_ptr[0] -= (tmp_ptr[0] - ((BOX_CORNER_POINT3_X - 1) - 67));
+				tmp_ptr[0] -= (tmp_ptr[0] - ((BOX_CORNER_POINT3_X - 1) - (stringsize+1)));
 				tmp_ptr[2] = -((int8_t)tmp_ptr[2]);
+				if(tmp_ptr[2])
+				{
+					tmp_ptr[2]++;
+					if(!tmp_ptr[2])
+						tmp_ptr[2] = -(((blockpos&0x3) + ymptrbuf[1]&0x7) + 4); // relaunch (random)
+				}
+				else
+					tmp_ptr[2] = -(((blockpos&0x3) + ymptrbuf[1]&0x7) + 4); // relaunch (random)
 			}
 
+			// X left border
 			if( (tmp_ptr[0] <=  (BOX_CORNER_POINT1_X + 1)) && ((int8_t)tmp_ptr[2]) < 0  )
 			{
 				tmp_ptr[0] += ((BOX_CORNER_POINT1_X + 1) - tmp_ptr[0] );
 				tmp_ptr[2] = -((int8_t)tmp_ptr[2]);
+				if(tmp_ptr[2])
+				{
+					tmp_ptr[2]--;
+					if(!tmp_ptr[2])
+						tmp_ptr[2] = (((blockpos&0x3) + ymptrbuf[1]&0x7) + 4); // relaunch (random)
+				}
+				else
+					tmp_ptr[2] =  (((blockpos&0x3) + ymptrbuf[1]&0x7) + 4); // relaunch (random)
 			}
 
-			if( (tmp_ptr[1] >=  (BOX_CORNER_POINT3_Y - 1)) && ((int8_t)tmp_ptr[3]) >= 0 )
+			// Y floor
+			if( (tmp_ptr[1] <=  (BOX_CORNER_POINT1_Y + 1)) )
 			{
-				tmp_ptr[1] -= (tmp_ptr[1] - (BOX_CORNER_POINT3_Y - 1));
-				tmp_ptr[3] = -((int8_t)tmp_ptr[3]);
+				if(((int8_t)tmp_ptr[3]) < 0)
+				{
+					tmp_ptr[1] += ((BOX_CORNER_POINT1_Y + 1) - tmp_ptr[1]);
+
+					// Invert
+					tmp_ptr[3] = -((int8_t)tmp_ptr[3]);
+				}
+				else
+				{
+					tmp_ptr[3] = +((blockpos&0x7) + ymptrbuf[0]&0xF + 4);
+				}
 			}
 
-			if( (tmp_ptr[1] <=  (BOX_CORNER_POINT1_Y + 1)) && ((int8_t)tmp_ptr[3]) < 0  )
-			{
-				tmp_ptr[1] += ((BOX_CORNER_POINT1_Y + 1) - tmp_ptr[1]);
-				tmp_ptr[3] = -((int8_t)tmp_ptr[3]);
-			}
-
-			if( ((int8_t)tmp_ptr[3]) >= 0 )
-				tmp_ptr[3]--;
-
-			if( ((int8_t)tmp_ptr[3]) < 0 )
-				tmp_ptr[3]--;
+			tmp_ptr[3]--;
 
 			tmp_ptr += 4;
 		}
 
 		WAIT_EF9365_READY();
 
-		//WR_BYTE( HW_EF9365 + 0x1, RD_BYTE( HW_EF9365 + 0x1) & ~0x04 );
-
 		tmp_ptr = (uint8_t *)&points;
-		WR_BYTE( HW_CTLHRD_REG, (0) | ledclavier);
+
+		WAIT_EF9365_READY();
+
+		WR_BYTE( HW_EF9365 + 0x3, 0x44 );
 
 		for(p=0;p<nbpoints;p++)
 		{
-			printstr("MO5",tmp_ptr[0],tmp_ptr[1],0x44,0);
+			WAIT_EF9365_READY();
+
+			WR_BYTE( HW_CTLHRD_REG, jump_color[p] | ledclavier);
+
+			WR_BYTE( HW_EF9365 + 0x9, tmp_ptr[0] );
+			WR_BYTE( HW_EF9365 + 0xB, tmp_ptr[1] );
+			WR_BYTE( HW_EF9365 + 0x0, jump_strings[p] );
 
 			tmp_ptr += 4;
 		}
