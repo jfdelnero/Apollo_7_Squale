@@ -94,7 +94,7 @@ void demo_3D_oject_part()
 		drawobject(&double_lines_buffer[(i&1)^1]);
 
 		// Prepare the next one...
-		calcobject(&double_lines_buffer[i&1],objectlist[object],i&0xFF,(0*2)&0xFF,(i*2)&0xFF);
+		calcobject(&double_lines_buffer[i&1],objectlist[object],(i*3)&0xFF,0,(i*4)&0xFF);
 
 		i++;
 
