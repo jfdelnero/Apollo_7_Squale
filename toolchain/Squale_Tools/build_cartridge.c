@@ -73,7 +73,11 @@ int main(int argc, char* argv[])
 			f = fopen(argv[3],"w+b"); // Output rom
 			if(f)
 			{
-				fwrite(memory,64*1024,1,f);
+				if( (size + 0x100) <= 32*1024 )
+					fwrite(memory,32*1024,1,f);
+				else
+					fwrite(memory,64*1024,1,f);
+
 				fclose(f);
 				f = NULL;
 				printf("%s created\n",argv[3]);
