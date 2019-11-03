@@ -52,3 +52,5 @@ clean:
 
 mrproper: clean
 	rm -f images/*.c images/*.h music/*.c music/*.h  music/*.o music/*.o.S *.o.S *.o *.wav *.map
+	cd bmp2vect && $(MAKE) mrproper
+	cd ym && $(MAKE) mrproper

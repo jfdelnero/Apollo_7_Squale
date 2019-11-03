@@ -1,18 +1,19 @@
-OUTPUT=rawym_to_rleym 
+CFLAGS=-O3
+
 OBJECTS=packer/lzh.o rawym_to_rleym.o hxcym.o #packed_ym.o
-CFLAGS=-O2 -g
 
-PREFIX=
-
-CC=gcc
-LD=ld
+EXEC=rawym_to_rleym
 
 all: $(OBJECTS)
-	$(CC) -o $(OUTPUT)  $(OBJECTS) $(LIBOBJ) -lc
+	$(CC) -o $(EXEC)  $(OBJECTS) $(LIBOBJ) -lc
 
 clean:
-	rm -f $(OUTPUT) $(OUTPUT).map $(OBJECTS)
+	rm -f $(EXEC) $(EXEC).map $(OBJECTS)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
+mrproper: clean
+	rm -rf $(EXEC)
+
+.PHONY: clean mrproper
