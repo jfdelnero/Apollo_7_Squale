@@ -25,3 +25,6 @@ clean:
 
 %.o: %.s
 	$(AS) $< -o $@
+
+mrproper: clean
+	rm -f *.o.S *.o *.wav *.map
