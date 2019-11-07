@@ -1,10 +1,12 @@
 	-------------------------------------------------------------------------------
-	Apollo 7 Squale toolchain and demos - http://hxc2001.free.fr/Squale/index.html
+	Apollo 7 Squale toolchain and demos
 	(c) 2015-2019 Jean-François DEL NERO
-	(c) 2015-2019 Association MO5.COM ( https://mo5.com )
+	(c) 2015-2019 Association MO5.COM ( [https://mo5.com](https://mo5.com) )
 	-------------------------------------------------------------------------------
 
 	gcc6809 based Apollo 7 Squale C toolchain and demos examples
+
+	[Squale computer technical page](http://hxc2001.free.fr/Squale/index.html)
 
 ![Squale_mo5](https://raw.githubusercontent.com/jfdelnero/Apollo_7_Squale/master/doc/imgs/Squales_MO5.jpg)
 
