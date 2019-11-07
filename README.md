@@ -1,5 +1,5 @@
-Apollo 7 Squale toolchain and demos
-(c) 2015-2019 Jean-François DEL NERO
+Apollo 7 Squale toolchain and demos  
+(c) 2015-2019 Jean-François DEL NERO  
 (c) 2015-2019 Association MO5.COM ( [https://mo5.com](https://mo5.com) )
 ---
 
