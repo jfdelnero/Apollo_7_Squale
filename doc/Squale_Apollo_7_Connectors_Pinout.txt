@@ -1,0 +1,207 @@
+----------------------------------------------------------------
+
+PERITELEVISION (Scart)
+
+- Sortie "SQUALE" Cannon DB15 Femelle
+
+- 1 BTV		 Bleu péritel
+- 2 VTV		 Vert péritel
+- 3 SY+TTL	 Synchro négative TTL
+- 4 VTTL	 Vert TTL
+- 5 ITTL	 Intensité TTL
+- 6 +12V	 12V 100mA
+- 7 COMMUT	 Commutation péritel
+- 8 SON		 Son Péritel
+- 9 SYTV	 Synchro péritel
+-10 RTV		 Rouge péritel
+-11 BTTL	 Bleu TTL
+-12 RTTL	 Rouge TTL
+-13 +5V		 +5V 100 mA
+-14 MASSE	 MASSE
+-15 MASSE	 MASSE
+
+----------------------------------------------------------------
+
+CRAYON LUMINEUX
+
+- Sortie "SQUALE" DIN 5 broches femelle
+
+- 1 +5V		+5V 50mA
+- 2 MASSE	MASSE
+- 3 INTLP	INTERRUPTEUR CRAYON
+- 4
+- 5 LP		CRAYON LUMINEUX
+
+----------------------------------------------------------------
+
+MANETTES DE JEUX TYPE "ATARI"
+
+- Sortie "SQUALE" 2 CANNON DB9 MALE
+
+- 1 AV		AVANT
+- 2 AR		ARRIERE
+- 3 GA		GAUCHE
+- 4 DR		DROITE
+- 5
+- 6 P		POUSSOIR
+- 7 +5V		+5V 50mA
+- 8 MASSE	MASSE
+- 9
+
+----------------------------------------------------------------
+
+MODEM
+
+- Sortie "SQUALE" CANNON DB9 femelle
+
+- 1 CONMODEM 	Connection ligne téléphonique
+- 2 RING+		Indicateur de sonnerie
+- 3 +5V			+5V 100mA
+- 4 DT			Signal MODEM
+- 5 Masse SIG	Masse signal
+- 6
+- 7
+- 8	Masse alim 	Masse alim 5V
+- 9
+
+----------------------------------------------------------------
+
+MAGNETOPHONE A CASSETTE
+
+- Sortie "SQUALE" DIN 5 broches femelle
+
+- 1 SI			Sortie micro 50mV
+- 2 MASSE		Masse
+- 3 E1			Entrée
+- 4 S2			Sortie aux 1V
+- 5 E2			Entrée 2
+
+----------------------------------------------------------------
+
+IMPRIMANTE
+
+- Sortie "SQUALE" Cannon DB15 Male
+
+- 1
+- 2 MASSE		MASSE
+- 3 MASSE		MASSE
+- 4 D8			Donnée 8
+- 5 ACK*		Acknowledge
+- 6 DSTROBE+	Strobe+
+- 7
+- 8
+- 9 D7			Donnée 7
+-10 D6			Donnée 6
+-11 D5			Donnée 5
+-12 D4			Donnée 4
+-13 D3			Donnée 3
+-14 D2			Donnée 2
+-15 D1			Donnée 1
+
+----------------------------------------------------------------
+
+ROMPACK
+
+- Sortie "SQUALE" 2x20 2,54mm
+
+- 1,2,3,4		MASSE
+- 5				D0
+- 6				A0
+- 7				D1
+- 8				A1
+- 9				D2
+-10				A2
+-11				D3
+-12				A3
+-13				D4
+-14				A4
+-15				D5
+-16				A5
+-17				D6
+-18				A6
+-19				D7
+-20				A7
+-21
+-22				A8
+-23
+-24				A9
+-25
+-26				A10
+-27
+-28				A11
+-29
+-30				A12
+-31
+-32				A13
+-33
+-34				A14
+-35
+-36				A15
+-37,38,39,40	+5V
+
+----------------------------------------------------------------
+
+BUS EXTENSION SS-30
+
+- Sortie "SQUALE" Cannon DB25 Male
+
+- 1				+5V
+- 2				NMI*
+- 3				A6
+- 4				A4
+- 5				A2
+- 6				A0
+- 7				R/W*
+- 8				CSS30*
+- 9				D1
+-10				D3
+-11				D5
+-12				D7
+-13				MASSE
+-14				+5V
+-15				IRQ*
+-16				A5
+-17				A3
+-18				A1
+-19				E
+-20				RST*
+-21				D0
+-22				D2
+-23				D4
+-24				D6
+-25				MASSE
+
+----------------------------------------------------------------
+
+CHASSIS EXTENSION SS-30 Bus
+
+- 1				Board Select
+- 2				RST*
+- 3
+- 4
+- 5
+- 6
+- 7
+- 8				+12V ?
+- 9				+12V ?
+-10				R/W*
+-11				E
+-12				D7
+-13				D6
+-14				D5
+-15				D4
+-16				D3
+-17				D2
+-18				D1
+-19				D0
+-20				A1
+-21				A0
+-22				IRQ* ?
+-23				FIRQ* ?
+-24
+-25				MASSE
+-26				MASSE
+-27
+-28
+-29				A3
+-30				A2
