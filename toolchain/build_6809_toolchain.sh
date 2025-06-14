@@ -33,6 +33,10 @@ cd ${CUR_FOLDER}/src || exit 1
 tar zxvf ${CUR_FOLDER}/download/lwtools-4.17.tar.gz || exit 1
 
 cd ${CUR_FOLDER}/src/lwtools-4.17   || exit 1
+
+# Fix ifl_head multiple definitions build error
+sed 's/struct\ ifl\ \*ifl_head\;/extern\ struct\ ifl\ \*ifl_head\;/' -i lwasm/input.h || exit 1
+
 make  || exit 1
 make INSTALLDIR="${CUR_FOLDER}/bin" install  || exit 1
 cp ${CUR_FOLDER}/src/lwtools-4.17/extra/ar ${CUR_FOLDER}/bin/m6809-unknown-ar || exit 1
