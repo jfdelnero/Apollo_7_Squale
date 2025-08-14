@@ -1,0 +1,266 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "9e981419-a202-4dd8-b7ec-e1bde8e7b185")
+	(paper "A3")
+	(lib_symbols)
+	(sheet
+		(at 146.05 143.51)
+		(size 49.53 36.83)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "1cd12e08-069e-458a-88f5-35d26a6c31b9")
+		(property "Sheetname" "CPU"
+			(at 146.05 142.7984 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "CPU.kicad_sch"
+			(at 146.05 180.9246 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Squale"
+				(path "/9e981419-a202-4dd8-b7ec-e1bde8e7b185"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 71.12 157.48)
+		(size 43.18 38.1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "28814265-8855-4aa8-bc56-9a1926cdf9bc")
+		(property "Sheetname" "Keyboard"
+			(at 71.12 156.7684 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Keyboard.kicad_sch"
+			(at 71.12 196.1646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Squale"
+				(path "/9e981419-a202-4dd8-b7ec-e1bde8e7b185"
+					(page "7")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 86.36 59.69)
+		(size 27.94 21.59)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "28a3049f-16e0-43e3-83ab-12f0505b9de0")
+		(property "Sheetname" "Video RAM"
+			(at 86.36 58.9784 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Video_RAM.kicad_sch"
+			(at 86.36 81.8646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Squale"
+				(path "/9e981419-a202-4dd8-b7ec-e1bde8e7b185"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 138.43 59.69)
+		(size 35.56 21.59)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "3580bea9-78bf-49f3-bb84-a5aabdd120cf")
+		(property "Sheetname" "Video Controller"
+			(at 138.43 58.9784 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Video_CTRL.kicad_sch"
+			(at 138.43 81.8646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Squale"
+				(path "/9e981419-a202-4dd8-b7ec-e1bde8e7b185"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 298.45 133.35)
+		(size 29.21 36.83)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "7d7f151b-a16e-4418-bf6d-71f4cdd2beb8")
+		(property "Sheetname" "DRAM"
+			(at 298.45 132.6384 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "DRAM.kicad_sch"
+			(at 298.45 170.7646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Squale"
+				(path "/9e981419-a202-4dd8-b7ec-e1bde8e7b185"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 254 80.01)
+		(size 48.26 36.83)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "c2df820c-e26d-4ff7-a305-ab38d39363a5")
+		(property "Sheetname" "ROM_pack"
+			(at 254 79.2984 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "ROM_pack.kicad_sch"
+			(at 254 117.4246 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Squale"
+				(path "/9e981419-a202-4dd8-b7ec-e1bde8e7b185"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)
