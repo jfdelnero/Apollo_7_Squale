@@ -5898,6 +5898,47 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "0xF000\n0xF010\n0xF020\n0xF030\n0xF040\n0xF050\n0xF060\n0xF070"
+		(exclude_from_sim no)
+		(at 185.928 228.092 0)
+		(effects
+			(font
+				(size 1.651 1.651)
+			)
+		)
+		(uuid "0d044a85-131d-4970-9e18-b0cfb8735020")
+	)
+	(text "0xFxxx"
+		(exclude_from_sim no)
+		(at 206.248 107.95 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "0df49e36-8c9b-4b61-8c2d-b1bdb207227a")
+	)
+	(text "16 Bytes window per device.\n~{CSES} Base : 0xF000"
+		(exclude_from_sim no)
+		(at 198.374 213.36 0)
+		(effects
+			(font
+				(size 1.651 1.651)
+			)
+		)
+		(uuid "2382c927-7e11-4db8-94f1-44b89f19e705")
+	)
+	(text "~{CSES}  : 0xF000 - 0xF07F\n~{CSS30} : 0xF080 - 0xF0FF\n~{CSROM} : 0xF100 - 0xFFFF (Read only)"
+		(exclude_from_sim no)
+		(at 194.31 191.77 0)
+		(effects
+			(font
+				(size 1.651 1.651)
+			)
+			(justify left)
+		)
+		(uuid "239c16bb-e8dd-4e97-b2fb-0a5ea432944d")
+	)
 	(junction
 		(at 166.37 101.6)
 		(diameter 0)
