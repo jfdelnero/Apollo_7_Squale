@@ -3549,7 +3549,7 @@ add_node 2177 2165
 add_node 2201 2110
 add_net
 # net 30
-set_netname "PRW"
+set_netname "R/WB"
 add_node 349 1625
 add_node 349 1833
 add_node 350 1931
@@ -3577,7 +3577,7 @@ add_node 606 2287
 add_node 609 2347
 add_net
 # net 33
-set_netname "PRW"
+set_netname "R/WB"
 add_node 1905 1370
 add_node 1901 1465
 add_node 1886 1485
@@ -3601,7 +3601,7 @@ add_node 2256 2424
 add_node 2276 2384
 add_net
 # net 34
-set_netname "PRW"
+set_netname "R/WB"
 add_node 2123 2386
 add_node 2118 2419
 add_node 1670 2418
@@ -4206,7 +4206,7 @@ add_node 1685 1519
 add_node 1688 1606
 add_net
 # net 62
-set_netname "RW"
+set_netname "R/W"
 add_node 1297 889
 add_node 1290 931
 add_node 1312 946
@@ -4648,7 +4648,7 @@ add_node 680 751
 add_node 685 693
 add_net
 # net 91
-set_netname ""
+set_netname "QB"
 add_node 1510 2068
 add_node 1531 2107
 add_node 1970 2106
@@ -13216,7 +13216,7 @@ add_node 344 1217
 add_node 355 1236
 add_net
 # net 597
-set_netname "PRW"
+set_netname "R/WB"
 add_node 335 2013
 add_node 332 1960
 add_node 349 1933
@@ -13225,7 +13225,7 @@ add_node 350 1622
 add_node 902 1624
 add_net
 # net 598
-set_netname "PRW"
+set_netname "R/WB"
 add_node 2121 2389
 add_node 2121 2389
 add_node 2118 2419
@@ -13244,4 +13244,9 @@ add_net
 set_netname ""
 add_node 607 3763
 add_node 570 3765
+add_net
+# net 600
+set_netname "VCC5V"
+add_node 982 888
+add_node 984 845
 add_net
