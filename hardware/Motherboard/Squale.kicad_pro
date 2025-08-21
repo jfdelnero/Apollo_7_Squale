@@ -636,6 +636,10 @@
     [
       "28814265-8855-4aa8-bc56-9a1926cdf9bc",
       "Keyboard"
+    ],
+    [
+      "dd00bbd5-115b-4aa6-bb2f-6fd8b481a113",
+      "Sound"
     ]
   ],
   "text_variables": {}
