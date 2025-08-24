@@ -5,7 +5,7 @@
 	(uuid "b2fef3da-290c-4189-8337-5585f4c9ff85")
 	(paper "A3")
 	(title_block
-		(title "Apollo 7 Squale - DRAM controller")
+		(title "Apollo 7 Squale - DRAM controller and 64KB of DRAM ")
 		(date "2025-08-24")
 		(rev "0.1")
 		(comment 1 "http://hxc2001.free.fr/Squale/")
@@ -5462,7 +5462,7 @@
 		)
 		(uuid "37b7fc5f-f9be-4591-935a-11b87c15fceb")
 	)
-	(text "Colon\nAddress\n(A15-A8)"
+	(text "Column\nAddress\n(A15-A8)"
 		(exclude_from_sim no)
 		(at 231.394 122.682 0)
 		(effects
@@ -5564,7 +5564,7 @@
 		)
 		(uuid "77b82953-90e0-47e5-9394-630f85d4fcbd")
 	)
-	(text "Valid Adresses,\nR~{W}, BS, BA"
+	(text "Valid Address,\nR~{W}, BS, BA"
 		(exclude_from_sim no)
 		(at 228.6 62.992 0)
 		(effects
@@ -5604,7 +5604,7 @@
 		)
 		(uuid "892efdba-7153-46c1-968a-b10131990da7")
 	)
-	(text "D\n(In/read)"
+	(text "D\n(Read/In)"
 		(exclude_from_sim no)
 		(at 188.976 78.486 0)
 		(effects
@@ -5710,7 +5710,7 @@
 		)
 		(uuid "a9862643-07dc-40a8-a451-106826ec692f")
 	)
-	(text "Colon\nAddress\n(A15-A8)"
+	(text "Column\nAddress\n(A15-A8)"
 		(exclude_from_sim no)
 		(at 202.184 122.682 0)
 		(effects
