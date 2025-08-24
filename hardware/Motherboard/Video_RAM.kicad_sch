@@ -4,6 +4,13 @@
 	(generator_version "9.0")
 	(uuid "4e3f09fe-0a92-4acb-9470-aebcbfbbd7a4")
 	(paper "A3")
+	(title_block
+		(title "Apollo 7 Squale - Video DRAM")
+		(rev "0.1")
+		(comment 1 "http://hxc2001.free.fr/Squale/")
+		(comment 2 "CC-BY Licence (Creative Commons Attribution)")
+		(comment 3 "Drawn by Jean-François DEL NERO")
+	)
 	(lib_symbols
 		(symbol "Memory_RAM:MK4116N"
 			(exclude_from_sim no)

@@ -4,6 +4,13 @@
 	(generator_version "9.0")
 	(uuid "cd995f7d-9988-47db-8c94-dc8e3a6ce70b")
 	(paper "A4")
+	(title_block
+		(title "Apollo 7 Squale - Video controller")
+		(rev "0.1")
+		(comment 1 "http://hxc2001.free.fr/Squale/")
+		(comment 2 "CC-BY Licence (Creative Commons Attribution)")
+		(comment 3 "Drawn by Jean-François DEL NERO")
+	)
 	(lib_symbols
 		(symbol "74xx:74LS374"
 			(exclude_from_sim no)

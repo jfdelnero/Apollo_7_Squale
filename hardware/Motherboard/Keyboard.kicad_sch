@@ -4,5 +4,12 @@
 	(generator_version "9.0")
 	(uuid "c8614e36-6815-4f9f-909c-a4c0b24b3662")
 	(paper "A3")
+	(title_block
+		(title "Apollo 7 Squale ")
+		(rev "0.1")
+		(comment 1 "http://hxc2001.free.fr/Squale/")
+		(comment 2 "CC-BY Licence (Creative Commons Attribution)")
+		(comment 3 "Drawn by Jean-François DEL NERO")
+	)
 	(lib_symbols)
 )

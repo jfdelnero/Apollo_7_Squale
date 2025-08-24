@@ -4,6 +4,13 @@
 	(generator_version "9.0")
 	(uuid "444709c2-0d37-4c45-94a3-279909740e9b")
 	(paper "A4")
+	(title_block
+		(title "Apollo 7 Squale - Sound and joysticks")
+		(rev "0.1")
+		(comment 1 "http://hxc2001.free.fr/Squale/")
+		(comment 2 "CC-BY Licence (Creative Commons Attribution)")
+		(comment 3 "Drawn by Jean-François DEL NERO")
+	)
 	(lib_symbols
 		(symbol "74xx:74LS02"
 			(pin_names
