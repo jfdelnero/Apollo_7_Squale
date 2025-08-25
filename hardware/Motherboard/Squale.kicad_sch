@@ -1321,6 +1321,48 @@
 		)
 	)
 	(sheet
+		(at 269.24 50.8)
+		(size 12.7 3.81)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "7c4c7ab9-cc93-441e-893a-6812d858b558")
+		(property "Sheetname" "Clocks"
+			(at 269.24 50.0884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Clocks.kicad_sch"
+			(at 269.24 55.1946 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Squale"
+				(path "/9e981419-a202-4dd8-b7ec-e1bde8e7b185"
+					(page "9")
+				)
+			)
+		)
+	)
+	(sheet
 		(at 298.45 133.35)
 		(size 29.21 36.83)
 		(exclude_from_sim no)
