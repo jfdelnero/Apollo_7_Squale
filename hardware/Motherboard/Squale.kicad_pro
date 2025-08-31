@@ -645,6 +645,10 @@
     [
       "c35c9546-3211-430f-a3fd-765c00b70ef8",
       "System Register"
+    ],
+    [
+      "daa78879-fc65-4b56-a4f6-5864d93113b1",
+      "Tape-Modem"
     ]
   ],
   "text_variables": {}
