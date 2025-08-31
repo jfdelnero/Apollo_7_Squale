@@ -615,15 +615,15 @@
       "Root"
     ],
     [
-      "28a3049f-16e0-43e3-83ab-12f0505b9de0",
-      "Video RAM"
-    ],
-    [
-      "3580bea9-78bf-49f3-bb84-a5aabdd120cf",
+      "64986b08-7b2b-4504-b87f-fa7d0c749ced",
       "Video Controller"
     ],
     [
-      "1cd12e08-069e-458a-88f5-35d26a6c31b9",
+      "70613a33-7fd7-4f8d-95ce-cdec7974bf7d",
+      "Clocks"
+    ],
+    [
+      "4df00b19-92a0-4514-ae0b-8cd7ab14a127",
       "CPU"
     ],
     [
@@ -643,8 +643,8 @@
       "Sound"
     ],
     [
-      "7c4c7ab9-cc93-441e-893a-6812d858b558",
-      "Clocks"
+      "c35c9546-3211-430f-a3fd-765c00b70ef8",
+      "System Register"
     ]
   ],
   "text_variables": {}
