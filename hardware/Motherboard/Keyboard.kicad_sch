@@ -6215,7 +6215,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "37740e08-cc06-40c6-b74f-4d311123444e")
-		(property "Reference" "U30"
+		(property "Reference" "U33"
 			(at 213.36 87.63 0)
 			(effects
 				(font
@@ -6303,7 +6303,7 @@
 		(instances
 			(project "Squale"
 				(path "/9e981419-a202-4dd8-b7ec-e1bde8e7b185/28814265-8855-4aa8-bc56-9a1926cdf9bc"
-					(reference "U30")
+					(reference "U33")
 					(unit 4)
 				)
 			)

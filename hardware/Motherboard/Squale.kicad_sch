@@ -2897,6 +2897,128 @@
 		)
 	)
 	(sheet
+		(at 96.52 201.93)
+		(size 57.15 39.37)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "3e38565c-4c70-4768-ad15-c515693a732c")
+		(property "Sheetname" "External Bus"
+			(at 96.52 201.2184 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "external_bus.kicad_sch"
+			(at 96.52 241.8846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "~{NMI}" output
+			(at 125.73 241.3 270)
+			(uuid "ad94fd22-8780-4090-b5e5-08e8c2bb5588")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "PA[6..0]" input
+			(at 96.52 205.74 180)
+			(uuid "f33a9c88-e0ac-46fe-b2de-584dc6aaa38f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "R~{W}B" input
+			(at 96.52 208.28 180)
+			(uuid "d401acfa-8e21-4723-b94c-c88a78a817ab")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "~{RST}" input
+			(at 96.52 204.47 180)
+			(uuid "0dcb1900-ce62-4ca1-858e-cc534b0bc5f6")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "~{IRQ}" output
+			(at 96.52 212.09 180)
+			(uuid "09ccdfea-1584-4648-aba3-ec5965ffa808")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "EB" input
+			(at 96.52 218.44 180)
+			(uuid "c95021d2-fd26-446c-8b48-b26d69bcd9c4")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "~{CSS30}" input
+			(at 96.52 222.25 180)
+			(uuid "b60625f7-2bf1-4757-a831-68a5eb6288f5")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "~{RSTB}" output
+			(at 153.67 205.74 0)
+			(uuid "dbcae2e8-1f41-4365-bbc6-20e686b18b7c")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "Squale"
+				(path "/9e981419-a202-4dd8-b7ec-e1bde8e7b185"
+					(page "11")
+				)
+			)
+		)
+	)
+	(sheet
 		(at 46.99 95.25)
 		(size 34.29 66.04)
 		(exclude_from_sim no)

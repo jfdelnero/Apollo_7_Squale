@@ -1981,7 +1981,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "19914467-5137-4587-b5df-f770b0f85f19")
-		(property "Reference" "R6"
+		(property "Reference" "R21"
 			(at 104.14 104.14 90)
 			(effects
 				(font
@@ -2033,7 +2033,7 @@
 		(instances
 			(project "Squale"
 				(path "/9e981419-a202-4dd8-b7ec-e1bde8e7b185/70613a33-7fd7-4f8d-95ce-cdec7974bf7d"
-					(reference "R6")
+					(reference "R21")
 					(unit 1)
 				)
 			)
@@ -2049,7 +2049,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "27c5bad2-f17b-473f-954f-346d145998aa")
-		(property "Reference" "R5"
+		(property "Reference" "R20"
 			(at 77.47 104.14 90)
 			(effects
 				(font
@@ -2101,7 +2101,7 @@
 		(instances
 			(project "Squale"
 				(path "/9e981419-a202-4dd8-b7ec-e1bde8e7b185/70613a33-7fd7-4f8d-95ce-cdec7974bf7d"
-					(reference "R5")
+					(reference "R20")
 					(unit 1)
 				)
 			)
@@ -2117,7 +2117,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3f8b2ee5-aab3-4593-b9aa-b21f0b79bc45")
-		(property "Reference" "C1"
+		(property "Reference" "C2"
 			(at 91.44 88.9 90)
 			(effects
 				(font
@@ -2169,7 +2169,7 @@
 		(instances
 			(project "Squale"
 				(path "/9e981419-a202-4dd8-b7ec-e1bde8e7b185/70613a33-7fd7-4f8d-95ce-cdec7974bf7d"
-					(reference "C1")
+					(reference "C2")
 					(unit 1)
 				)
 			)
@@ -2185,7 +2185,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "455f8630-e180-4bf2-be6e-444574cdbd54")
-		(property "Reference" "U31"
+		(property "Reference" "U60"
 			(at 129.54 87.63 0)
 			(effects
 				(font
@@ -2273,7 +2273,7 @@
 		(instances
 			(project "Squale"
 				(path "/9e981419-a202-4dd8-b7ec-e1bde8e7b185/70613a33-7fd7-4f8d-95ce-cdec7974bf7d"
-					(reference "U31")
+					(reference "U60")
 					(unit 4)
 				)
 			)
@@ -2289,7 +2289,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5b6bb11c-1beb-4bb7-a082-5ce65c184860")
-		(property "Reference" "U60"
+		(property "Reference" "U61"
 			(at 183.7533 71.12 0)
 			(effects
 				(font
@@ -2385,7 +2385,7 @@
 		(instances
 			(project "Squale"
 				(path "/9e981419-a202-4dd8-b7ec-e1bde8e7b185/70613a33-7fd7-4f8d-95ce-cdec7974bf7d"
-					(reference "U60")
+					(reference "U61")
 					(unit 1)
 				)
 			)
@@ -2603,7 +2603,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "99657f72-d488-4ee8-9077-d9d8b5a4ec4e")
-		(property "Reference" "U31"
+		(property "Reference" "U60"
 			(at 105.41 87.63 0)
 			(effects
 				(font
@@ -2691,7 +2691,7 @@
 		(instances
 			(project "Squale"
 				(path "/9e981419-a202-4dd8-b7ec-e1bde8e7b185/70613a33-7fd7-4f8d-95ce-cdec7974bf7d"
-					(reference "U31")
+					(reference "U60")
 					(unit 5)
 				)
 			)
@@ -2773,7 +2773,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c3c9d117-dbc7-44bc-951e-2ff68828d35c")
-		(property "Reference" "U31"
+		(property "Reference" "U60"
 			(at 77.47 87.63 0)
 			(effects
 				(font
@@ -2861,7 +2861,7 @@
 		(instances
 			(project "Squale"
 				(path "/9e981419-a202-4dd8-b7ec-e1bde8e7b185/70613a33-7fd7-4f8d-95ce-cdec7974bf7d"
-					(reference "U31")
+					(reference "U60")
 					(unit 6)
 				)
 			)
@@ -2877,7 +2877,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e12ebe7e-e03a-4e19-b221-ca3730aa798d")
-		(property "Reference" "U31"
+		(property "Reference" "U60"
 			(at 161.29 148.59 0)
 			(effects
 				(font
@@ -2965,7 +2965,7 @@
 		(instances
 			(project "Squale"
 				(path "/9e981419-a202-4dd8-b7ec-e1bde8e7b185/70613a33-7fd7-4f8d-95ce-cdec7974bf7d"
-					(reference "U31")
+					(reference "U60")
 					(unit 1)
 				)
 			)
@@ -2981,7 +2981,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e7c750b0-1814-4eed-acca-855672b9aa03")
-		(property "Reference" "U31"
+		(property "Reference" "U60"
 			(at 161.29 163.83 0)
 			(effects
 				(font
@@ -3069,7 +3069,7 @@
 		(instances
 			(project "Squale"
 				(path "/9e981419-a202-4dd8-b7ec-e1bde8e7b185/70613a33-7fd7-4f8d-95ce-cdec7974bf7d"
-					(reference "U31")
+					(reference "U60")
 					(unit 2)
 				)
 			)
@@ -3085,7 +3085,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e8df1742-7dab-4242-b7f7-7801abdf8e01")
-		(property "Reference" "U31"
+		(property "Reference" "U60"
 			(at 161.29 180.34 0)
 			(effects
 				(font
@@ -3173,7 +3173,7 @@
 		(instances
 			(project "Squale"
 				(path "/9e981419-a202-4dd8-b7ec-e1bde8e7b185/70613a33-7fd7-4f8d-95ce-cdec7974bf7d"
-					(reference "U31")
+					(reference "U60")
 					(unit 3)
 				)
 			)
@@ -3189,7 +3189,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f3b199b9-06a6-472e-85c2-736f9b559404")
-		(property "Reference" "C2"
+		(property "Reference" "C1"
 			(at 119.38 87.6299 0)
 			(effects
 				(font
@@ -3243,7 +3243,7 @@
 		(instances
 			(project "Squale"
 				(path "/9e981419-a202-4dd8-b7ec-e1bde8e7b185/70613a33-7fd7-4f8d-95ce-cdec7974bf7d"
-					(reference "C2")
+					(reference "C1")
 					(unit 1)
 				)
 			)

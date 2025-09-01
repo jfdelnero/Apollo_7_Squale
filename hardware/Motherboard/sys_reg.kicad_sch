@@ -4,6 +4,12 @@
 	(generator_version "9.0")
 	(uuid "c7d39462-1dda-45a0-b9db-ce715a9b5d9a")
 	(paper "A4")
+	(title_block
+		(rev "0.1")
+		(comment 1 "http://hxc2001.free.fr/Squale/")
+		(comment 2 "CC-BY Licence (Creative Commons Attribution)")
+		(comment 3 "Drawn by Jean-François DEL NERO")
+	)
 	(lib_symbols
 		(symbol "74xx:74LS273"
 			(exclude_from_sim no)

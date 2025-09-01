@@ -649,6 +649,10 @@
     [
       "daa78879-fc65-4b56-a4f6-5864d93113b1",
       "Tape-Modem"
+    ],
+    [
+      "3e38565c-4c70-4768-ad15-c515693a732c",
+      "External Bus"
     ]
   ],
   "text_variables": {}
