@@ -6060,7 +6060,7 @@
 		)
 		(uuid "713ef31d-0577-4374-b5fc-5ab3fc73248c")
 	)
-	(hierarchical_label "SYSREG_KEYB_LED"
+	(hierarchical_label "SYS_KEYB_LED"
 		(shape input)
 		(at 63.5 96.52 180)
 		(effects
