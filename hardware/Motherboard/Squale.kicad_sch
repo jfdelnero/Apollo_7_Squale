@@ -3355,6 +3355,16 @@
 				(justify left)
 			)
 		)
+		(pin "MODEM_RING" output
+			(at 349.25 124.46 0)
+			(uuid "8a3cc20b-7b7a-4d4f-94df-43ee332bf390")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
 		(instances
 			(project "Squale"
 				(path "/9e981419-a202-4dd8-b7ec-e1bde8e7b185"
