@@ -4559,7 +4559,7 @@
 		)
 		(uuid "ae2028c2-49d4-4e91-94f0-b1bd314a16c8")
 	)
-	(text "G = 33K3/2K2 = * 15,14\n20 * log 15,14 = +23,6 dB"
+	(text "G = 33K3/22K = * 1.514\n20 * log 1.514 = +3,6 dB"
 		(exclude_from_sim no)
 		(at 301.752 22.606 0)
 		(effects
@@ -7675,7 +7675,7 @@
 				)
 			)
 		)
-		(property "Value" "4K7"
+		(property "Value" "47K"
 			(at 326.136 70.612 90)
 			(effects
 				(font
@@ -11618,7 +11618,7 @@
 				)
 			)
 		)
-		(property "Value" "2K2"
+		(property "Value" "22K"
 			(at 285.75 33.02 90)
 			(effects
 				(font
