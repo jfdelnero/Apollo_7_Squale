@@ -4440,6 +4440,26 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "+/- 1.20V"
+		(exclude_from_sim no)
+		(at 357.632 28.194 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "108762a7-f4fa-4e69-929d-721845c090ef")
+	)
+	(text "Typical output level : +/- 1.56V"
+		(exclude_from_sim no)
+		(at 264.922 65.024 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "11b1f933-992b-4d22-be01-4f3accf056ff")
+	)
 	(text "Peak limiter band pass filter"
 		(exclude_from_sim no)
 		(at 335.026 97.536 0)
@@ -4518,7 +4538,7 @@
 	)
 	(text "Duplexer"
 		(exclude_from_sim no)
-		(at 322.326 50.292 0)
+		(at 308.356 63.5 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4536,6 +4556,16 @@
 			(justify left)
 		)
 		(uuid "98b7a236-271b-452e-b7b1-2f2dde7c6848")
+	)
+	(text "+/- 54mV"
+		(exclude_from_sim no)
+		(at 357.632 37.338 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "aa89b1cb-2e51-4b7d-8dfd-62b18ac2875d")
 	)
 	(text "max level :\n+8 dBm (< 6 VPP)"
 		(exclude_from_sim no)
@@ -4579,6 +4609,16 @@
 			(justify left)
 		)
 		(uuid "c09eb381-bdb0-4fb2-85a6-e17c3b74728f")
+	)
+	(text "+/- 2.36V"
+		(exclude_from_sim no)
+		(at 314.96 51.816 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "cf5f02c9-5a12-4294-b40a-9bedb22d7365")
 	)
 	(text "TX baudrate selection\nLow = 75 baud\nHigh = 1200 baud."
 		(exclude_from_sim no)
