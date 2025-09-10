@@ -4548,7 +4548,7 @@
 	)
 	(text "Low pass filter\n\nG = 330K/10K = 33\n20 * log 33 = 30,37 dB\n\nCutoff frequency (-3 dB) :\nfc = 1 / ( 2 * PI * 330K * 68pF )\n   = 7092.47 Hz"
 		(exclude_from_sim no)
-		(at 338.328 118.872 0)
+		(at 338.074 119.888 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5316,7 +5316,7 @@
 	)
 	(polyline
 		(pts
-			(xy 271.78 95.25) (xy 361.95 95.25)
+			(xy 271.78 95.25) (xy 372.11 95.25)
 		)
 		(stroke
 			(width 0)
@@ -5666,7 +5666,7 @@
 	)
 	(polyline
 		(pts
-			(xy 361.95 95.25) (xy 361.95 185.42)
+			(xy 372.11 95.25) (xy 372.11 186.69)
 		)
 		(stroke
 			(width 0)
@@ -6576,7 +6576,7 @@
 	)
 	(polyline
 		(pts
-			(xy 361.95 185.42) (xy 279.4 185.42)
+			(xy 372.11 186.69) (xy 279.4 186.69)
 		)
 		(stroke
 			(width 0)
@@ -12022,7 +12022,7 @@
 		(dnp no)
 		(uuid "da37c4e6-2f8c-4db2-98b9-578c7e44a4be")
 		(property "Reference" "U67"
-			(at 317.5 82.55 0)
+			(at 317.754 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12030,7 +12030,7 @@
 			)
 		)
 		(property "Value" "TL084"
-			(at 317.5 104.14 0)
+			(at 317.5 106.172 0)
 			(effects
 				(font
 					(size 1.27 1.27)
