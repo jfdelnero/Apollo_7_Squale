@@ -4707,7 +4707,7 @@
 		)
 		(uuid "a6afe4f7-ca6b-4ebe-9410-7adfb6efbf70")
 	)
-	(label "LIGHTPEN_INT"
+	(label "LIGHTPEN_SWITCH"
 		(at 111.76 181.61 0)
 		(effects
 			(font
@@ -4837,7 +4837,7 @@
 		)
 		(uuid "e5dbebb3-e660-4b9e-a2aa-a1c38be84b21")
 	)
-	(label "LIGHTPEN_INT"
+	(label "LIGHTPEN_SWITCH"
 		(at 229.87 134.62 0)
 		(effects
 			(font
@@ -4909,7 +4909,7 @@
 		)
 		(uuid "502033ba-30c3-45f9-8402-9d87569ef656")
 	)
-	(hierarchical_label "LIGHTPEN_INT"
+	(hierarchical_label "LIGHTPEN_SWITCH"
 		(shape input)
 		(at 82.55 181.61 180)
 		(effects
