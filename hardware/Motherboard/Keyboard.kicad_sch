@@ -1446,6 +1446,145 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Device:C"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C"
+				(at 0.635 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0.9652 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Unpolarized capacitor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "cap capacitor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "C_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "C_0_1"
+				(polyline
+					(pts
+						(xy -2.032 0.762) (xy 2.032 0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Device:R"
 			(pin_numbers
 				(hide yes)
@@ -4231,8 +4370,9 @@
 				(effects
 					(font
 						(size 1.27 1.27)
+						(thickness 0.254)
+						(bold yes)
 					)
-					(justify left top)
 				)
 				(uuid "135dd4ef-8551-4b00-93af-c33bb238a7be")
 			)
@@ -4248,8 +4388,10 @@
 				(effects
 					(font
 						(size 1.27 1.27)
+						(thickness 0.254)
+						(bold yes)
+						(italic yes)
 					)
-					(justify left top)
 				)
 				(uuid "be107fe1-8670-49d0-99d8-121e0c13b8d4")
 			)
@@ -4265,8 +4407,10 @@
 				(effects
 					(font
 						(size 1.27 1.27)
+						(thickness 0.254)
+						(bold yes)
+						(italic yes)
 					)
-					(justify left top)
 				)
 				(uuid "0b4cc776-a9d9-4165-8196-b4c9103fe133")
 			)
@@ -4282,8 +4426,10 @@
 				(effects
 					(font
 						(size 1.27 1.27)
+						(thickness 0.254)
+						(bold yes)
+						(italic yes)
 					)
-					(justify left top)
 				)
 				(uuid "7a0c5a86-6ab3-4ddb-bb8d-d9712fbbf7af")
 			)
@@ -4299,8 +4445,10 @@
 				(effects
 					(font
 						(size 1.27 1.27)
+						(thickness 0.254)
+						(bold yes)
+						(italic yes)
 					)
-					(justify left top)
 				)
 				(uuid "7557156d-e21e-4041-954f-c97146313544")
 			)
@@ -4316,8 +4464,10 @@
 				(effects
 					(font
 						(size 1.27 1.27)
+						(thickness 0.254)
+						(bold yes)
+						(italic yes)
 					)
-					(justify left top)
 				)
 				(uuid "e712e067-4e0b-4e4e-9bcd-e1bbc77f6699")
 			)
@@ -4333,8 +4483,10 @@
 				(effects
 					(font
 						(size 1.27 1.27)
+						(thickness 0.254)
+						(bold yes)
+						(italic yes)
 					)
-					(justify left top)
 				)
 				(uuid "36f8d532-ec2f-495f-ac91-5d50a0379768")
 			)
@@ -4350,8 +4502,10 @@
 				(effects
 					(font
 						(size 1.27 1.27)
+						(thickness 0.254)
+						(bold yes)
+						(italic yes)
 					)
-					(justify left top)
 				)
 				(uuid "87cfbd71-4cfd-4d59-abb5-b21dfca4ce75")
 			)
@@ -4367,8 +4521,10 @@
 				(effects
 					(font
 						(size 1.27 1.27)
+						(thickness 0.254)
+						(bold yes)
+						(italic yes)
 					)
-					(justify left top)
 				)
 				(uuid "b409c677-35db-4372-a3bf-43908ce552d8")
 			)
@@ -4402,7 +4558,6 @@
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
 				)
 				(uuid "a4050f62-7d12-4b2b-b9ca-e93fee243a17")
 			)
@@ -4419,7 +4574,6 @@
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
 				)
 				(uuid "d9b16d13-7fe2-45ff-89b3-b29d864690f0")
 			)
@@ -4436,7 +4590,6 @@
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
 				)
 				(uuid "bf2dc0d7-95af-438c-aadf-2c02850aa1bc")
 			)
@@ -4453,7 +4606,6 @@
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
 				)
 				(uuid "3e56cf88-c309-4f0e-b1a4-83ef9f63447f")
 			)
@@ -4470,7 +4622,6 @@
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
 				)
 				(uuid "7f48aab6-04c3-41c6-8642-c5b1e9a97aea")
 			)
@@ -4487,7 +4638,6 @@
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
 				)
 				(uuid "16243ff2-4ae9-467a-a463-74ad5a906ce4")
 			)
@@ -4503,8 +4653,10 @@
 				(effects
 					(font
 						(size 1.27 1.27)
+						(thickness 0.254)
+						(bold yes)
+						(italic yes)
 					)
-					(justify left top)
 				)
 				(uuid "4aa83b40-9c56-4c74-afe4-6122d9b86994")
 			)
@@ -4521,7 +4673,6 @@
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
 				)
 				(uuid "1c144388-d3c7-4867-8bec-4d4b3c1fea85")
 			)
@@ -4538,7 +4689,6 @@
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
 				)
 				(uuid "36412c25-ec84-4365-8844-ff671032cd84")
 			)
@@ -4555,7 +4705,6 @@
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
 				)
 				(uuid "7b6e09f2-2a09-4c5a-840d-1ae9bd8c53a8")
 			)
@@ -4572,7 +4721,6 @@
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
 				)
 				(uuid "c377db93-15ef-4fd6-aa58-c88af2f0cddd")
 			)
@@ -4589,7 +4737,6 @@
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
 				)
 				(uuid "c47ae520-b760-4004-bd52-1da148bf0261")
 			)
@@ -4606,7 +4753,6 @@
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
 				)
 				(uuid "9b291b12-cfc4-4f8e-8954-0678b0f21655")
 			)
@@ -4623,7 +4769,6 @@
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
 				)
 				(uuid "ca0a51bd-8340-453d-ac0d-5380a90b219f")
 			)
@@ -4639,8 +4784,10 @@
 				(effects
 					(font
 						(size 1.27 1.27)
+						(thickness 0.254)
+						(bold yes)
+						(italic yes)
 					)
-					(justify left top)
 				)
 				(uuid "4c064025-e3be-4d34-8478-fbbffcd35e4e")
 			)
@@ -4657,7 +4804,6 @@
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
 				)
 				(uuid "f00a4b39-d793-472d-a71f-e9cef5dbb22f")
 			)
@@ -4674,7 +4820,6 @@
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
 				)
 				(uuid "0b681a66-c99f-4074-9cb6-365ca1ea0394")
 			)
@@ -4691,7 +4836,6 @@
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
 				)
 				(uuid "3aa4c2ed-6608-4274-bb46-9176cb17f27e")
 			)
@@ -4708,7 +4852,6 @@
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
 				)
 				(uuid "b4879585-c76d-444f-a3a6-0004ff2437f3")
 			)
@@ -4725,7 +4868,6 @@
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
 				)
 				(uuid "5facb217-69f9-46a0-8131-60f0d6abfce7")
 			)
@@ -4742,7 +4884,6 @@
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
 				)
 				(uuid "87d21926-4dfc-4fac-9391-e40cba3d50a6")
 			)
@@ -4759,7 +4900,6 @@
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
 				)
 				(uuid "38e13d4d-a9da-4fce-af59-9dfac257cea8")
 			)
@@ -4775,8 +4915,10 @@
 				(effects
 					(font
 						(size 1.27 1.27)
+						(thickness 0.254)
+						(bold yes)
+						(italic yes)
 					)
-					(justify left top)
 				)
 				(uuid "f1a60ad6-3f0e-47e4-839f-e87f204e09ba")
 			)
@@ -4793,7 +4935,6 @@
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
 				)
 				(uuid "381335ce-c4e0-4af5-8a2e-86b98a4d9cec")
 			)
@@ -4810,7 +4951,6 @@
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
 				)
 				(uuid "1f543be9-7341-446c-97c5-66f5307a2359")
 			)
@@ -4827,7 +4967,6 @@
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
 				)
 				(uuid "653b715a-c6e9-42b4-8aff-d41b1007c3be")
 			)
@@ -4844,7 +4983,6 @@
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
 				)
 				(uuid "1c8d8661-f127-4c83-abe9-20fce330e051")
 			)
@@ -4861,7 +4999,6 @@
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
 				)
 				(uuid "0b307ebc-63a2-44b6-a59a-d8eeacec6d32")
 			)
@@ -4878,7 +5015,6 @@
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
 				)
 				(uuid "8e04b51a-827a-4695-a107-259b4d94b07f")
 			)
@@ -4895,7 +5031,6 @@
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
 				)
 				(uuid "8afb74b9-50d1-4159-8f9d-af5ada2ab8be")
 			)
@@ -4911,8 +5046,10 @@
 				(effects
 					(font
 						(size 1.27 1.27)
+						(thickness 0.254)
+						(bold yes)
+						(italic yes)
 					)
-					(justify left top)
 				)
 				(uuid "44e20e2b-61f6-479f-9e3f-b62bb9948d84")
 			)
@@ -4946,7 +5083,6 @@
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
 				)
 				(uuid "ab3e27c2-8b29-4a7c-ab58-b09c07523ab2")
 			)
@@ -4963,7 +5099,6 @@
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
 				)
 				(uuid "dec805a1-8b80-4947-bf11-24c9546caba7")
 			)
@@ -4980,7 +5115,6 @@
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
 				)
 				(uuid "a8fbcad0-6e9f-4cda-9337-8a99393b8b7e")
 			)
@@ -4997,7 +5131,6 @@
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
 				)
 				(uuid "95b720ab-1112-436c-bfbf-2dbaef4a6088")
 			)
@@ -5014,7 +5147,6 @@
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
 				)
 				(uuid "10c56297-319e-48c9-9951-1b4aa8b519eb")
 			)
@@ -5047,8 +5179,10 @@
 				(effects
 					(font
 						(size 1.27 1.27)
+						(thickness 0.254)
+						(bold yes)
+						(italic yes)
 					)
-					(justify left top)
 				)
 				(uuid "52ed31df-773a-4a07-a380-247d41fd326e")
 			)
@@ -5082,7 +5216,6 @@
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
 				)
 				(uuid "ea7c9115-eaf0-4df0-830b-53ad42093760")
 			)
@@ -5099,7 +5232,6 @@
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
 				)
 				(uuid "28da56f8-fc64-4ed0-8591-d38fadc10f06")
 			)
@@ -5116,7 +5248,6 @@
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
 				)
 				(uuid "94cb5686-bfbf-4bb1-b5b6-2c3e71274fe9")
 			)
@@ -5133,7 +5264,6 @@
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
 				)
 				(uuid "116652da-1d5f-4929-961e-562542e26fc1")
 			)
@@ -5150,7 +5280,6 @@
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
 				)
 				(uuid "973eda8e-3ce5-43bf-80b4-b1757738b5e4")
 			)
@@ -5167,7 +5296,6 @@
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
 				)
 				(uuid "6802a6c0-2c79-445c-a9ae-38bc67f4d30e")
 			)
@@ -5183,8 +5311,10 @@
 				(effects
 					(font
 						(size 1.27 1.27)
+						(thickness 0.254)
+						(bold yes)
+						(italic yes)
 					)
-					(justify left top)
 				)
 				(uuid "e2ff15e0-1710-4395-afb0-8e2c98bb38b9")
 			)
@@ -5218,7 +5348,6 @@
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
 				)
 				(uuid "b0614369-7407-45de-9e98-723d3a9a932e")
 			)
@@ -5235,7 +5364,6 @@
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
 				)
 				(uuid "8c3a7309-abca-4173-88b2-696bee30cf51")
 			)
@@ -5252,7 +5380,6 @@
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
 				)
 				(uuid "f2572037-4bae-4c26-b0e6-431c9912b3f8")
 			)
@@ -5269,7 +5396,6 @@
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
 				)
 				(uuid "a0b30934-9254-488e-8118-7382d5f91bb9")
 			)
@@ -5286,7 +5412,6 @@
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
 				)
 				(uuid "3f8fe044-dbb6-4464-be7a-f384e4692122")
 			)
@@ -5303,7 +5428,6 @@
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
 				)
 				(uuid "4fced3ee-b25c-452d-a8a6-a9f97e760537")
 			)
@@ -5319,8 +5443,10 @@
 				(effects
 					(font
 						(size 1.27 1.27)
+						(thickness 0.254)
+						(bold yes)
+						(italic yes)
 					)
-					(justify left top)
 				)
 				(uuid "cf6c7278-0967-4822-b032-4c41b820618e")
 			)
@@ -5354,7 +5480,6 @@
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
 				)
 				(uuid "49cab114-ba33-4f8f-98b1-5d3f7fc932a6")
 			)
@@ -5371,7 +5496,6 @@
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
 				)
 				(uuid "28574172-1430-4705-8645-bba6c6e8708c")
 			)
@@ -5388,7 +5512,6 @@
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
 				)
 				(uuid "7d11ef18-b4b9-4421-ae6a-cb69dc338016")
 			)
@@ -5405,7 +5528,6 @@
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
 				)
 				(uuid "b1ba5f34-00be-41c4-a0cc-36477f4606e3")
 			)
@@ -5422,7 +5544,6 @@
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
 				)
 				(uuid "d6d46889-cbf3-4a0e-98dc-aff489a90f29")
 			)
@@ -5439,7 +5560,6 @@
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
 				)
 				(uuid "5f2a7576-1cad-4006-98ff-ba85b7e0ebd8")
 			)
@@ -6892,6 +7012,142 @@
 		)
 	)
 	(symbol
+		(lib_id "power:VSS")
+		(at 171.45 182.88 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b4be86bd-7936-4dba-9a53-72639590970d")
+		(property "Reference" "#PWR0302"
+			(at 171.45 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VCC5V"
+			(at 171.45 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 171.45 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 171.45 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VSS\""
+			(at 171.45 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2b892910-17b4-4018-8272-38a0175b7bbc")
+		)
+		(instances
+			(project "Squale"
+				(path "/9e981419-a202-4dd8-b7ec-e1bde8e7b185/28814265-8855-4aa8-bc56-9a1926cdf9bc"
+					(reference "#PWR0302")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 171.45 186.69 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b6640fb5-88d0-4b2d-b380-08d25d1e59bf")
+		(property "Reference" "C69"
+			(at 175.26 185.4199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100nF"
+			(at 175.26 187.9599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 172.4152 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 171.45 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 171.45 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "b9caa7dc-0ccf-4693-96f1-08a00b5f5289")
+		)
+		(pin "1"
+			(uuid "ddac9495-63de-4e97-9e56-054cd31915d9")
+		)
+		(instances
+			(project "Squale"
+				(path "/9e981419-a202-4dd8-b7ec-e1bde8e7b185/28814265-8855-4aa8-bc56-9a1926cdf9bc"
+					(reference "C69")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 260.35 113.03 270)
 		(unit 1)
@@ -6953,6 +7209,72 @@
 			(project "Squale"
 				(path "/9e981419-a202-4dd8-b7ec-e1bde8e7b185/28814265-8855-4aa8-bc56-9a1926cdf9bc"
 					(reference "#PWR0180")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 171.45 190.5 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c624e0c9-3847-4e31-a977-679a4d410d5c")
+		(property "Reference" "#PWR0303"
+			(at 171.45 196.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VSS"
+			(at 171.45 195.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 171.45 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 171.45 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 171.45 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b572b050-5cb0-4a50-88ed-8b32c546abbf")
+		)
+		(instances
+			(project "Squale"
+				(path "/9e981419-a202-4dd8-b7ec-e1bde8e7b185/28814265-8855-4aa8-bc56-9a1926cdf9bc"
+					(reference "#PWR0303")
 					(unit 1)
 				)
 			)

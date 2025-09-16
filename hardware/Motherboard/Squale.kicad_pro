@@ -587,7 +587,7 @@
         }
       ],
       "filter_string": "",
-      "group_symbols": true,
+      "group_symbols": false,
       "include_excluded_from_bom": true,
       "name": "",
       "sort_asc": true,
@@ -620,7 +620,7 @@
     "meta": {
       "version": 1
     },
-    "net_format_name": "",
+    "net_format_name": "KiCad",
     "page_layout_descr_file": "Squale - CPU",
     "plot_directory": "",
     "space_save_all_events": true,
@@ -639,10 +639,6 @@
       "Root"
     ],
     [
-      "64986b08-7b2b-4504-b87f-fa7d0c749ced",
-      "Video Controller"
-    ],
-    [
       "70613a33-7fd7-4f8d-95ce-cdec7974bf7d",
       "Clocks"
     ],
@@ -655,8 +651,8 @@
       "DRAM"
     ],
     [
-      "c2df820c-e26d-4ff7-a305-ab38d39363a5",
-      "ROM_pack"
+      "64986b08-7b2b-4504-b87f-fa7d0c749ced",
+      "Video Controller"
     ],
     [
       "28814265-8855-4aa8-bc56-9a1926cdf9bc",
@@ -667,8 +663,8 @@
       "Sound"
     ],
     [
-      "c35c9546-3211-430f-a3fd-765c00b70ef8",
-      "System Register"
+      "c2df820c-e26d-4ff7-a305-ab38d39363a5",
+      "ROM_pack"
     ],
     [
       "daa78879-fc65-4b56-a4f6-5864d93113b1",

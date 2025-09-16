@@ -1879,7 +1879,7 @@
 	)
 	(wire
 		(pts
-			(xy 238.76 137.16) (xy 238.76 142.24)
+			(xy 238.76 137.16) (xy 238.76 138.43)
 		)
 		(stroke
 			(width 0)
@@ -2280,6 +2280,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:VSS")
+		(at 250.19 185.42 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "55b841c4-1433-4d46-a462-7eeffb100b0b")
+		(property "Reference" "#PWR0376"
+			(at 250.19 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VCC5V"
+			(at 250.19 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 250.19 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 250.19 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VSS\""
+			(at 250.19 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "20fe21c0-9cab-45a5-a780-0c43b80eaf57")
+		)
+		(instances
+			(project "Squale"
+				(path "/9e981419-a202-4dd8-b7ec-e1bde8e7b185/70613a33-7fd7-4f8d-95ce-cdec7974bf7d"
+					(reference "#PWR0376")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "74xx:74LS193")
 		(at 238.76 115.57 0)
 		(unit 1)
@@ -2386,6 +2452,72 @@
 			(project "Squale"
 				(path "/9e981419-a202-4dd8-b7ec-e1bde8e7b185/70613a33-7fd7-4f8d-95ce-cdec7974bf7d"
 					(reference "U61")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VSS")
+		(at 252.73 85.09 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6fa98a03-0ff9-44dd-b199-9ba2a627d5c5")
+		(property "Reference" "#PWR0370"
+			(at 252.73 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VCC5V"
+			(at 252.73 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 252.73 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 252.73 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VSS\""
+			(at 252.73 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "86650537-2809-4e02-b13b-348bf9c7a6d9")
+		)
+		(instances
+			(project "Squale"
+				(path "/9e981419-a202-4dd8-b7ec-e1bde8e7b185/70613a33-7fd7-4f8d-95ce-cdec7974bf7d"
+					(reference "#PWR0370")
 					(unit 1)
 				)
 			)
@@ -2522,6 +2654,109 @@
 				(path "/9e981419-a202-4dd8-b7ec-e1bde8e7b185/70613a33-7fd7-4f8d-95ce-cdec7974bf7d"
 					(reference "#PWR0168")
 					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "74xx:74LS04")
+		(at 250.19 198.12 0)
+		(unit 7)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "81ec375e-9767-4b4d-a992-d4611482e48f")
+		(property "Reference" "U60"
+			(at 253.238 186.182 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "74LS04"
+			(at 254.508 188.214 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 250.19 198.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.ti.com/lit/gpn/sn74LS04"
+			(at 250.19 198.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Hex Inverter"
+			(at 250.19 198.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "14"
+			(uuid "25882462-1c98-47fa-9f98-ada37e8cc8f8")
+		)
+		(pin "10"
+			(uuid "ec4ce232-e4e4-4403-917b-782ba6541e2e")
+		)
+		(pin "8"
+			(uuid "24c9d95a-b4f5-440e-a311-b729874f4721")
+		)
+		(pin "11"
+			(uuid "4c5db34e-bf8a-4646-9b87-5e6ad9ccadf3")
+		)
+		(pin "4"
+			(uuid "fbe6cd0c-b946-4dec-b286-f7504c420341")
+		)
+		(pin "5"
+			(uuid "5dee5030-6f1f-4ad3-814a-e7c8251c055f")
+		)
+		(pin "12"
+			(uuid "07e86075-eb11-4c26-924a-df25039b1c67")
+		)
+		(pin "13"
+			(uuid "21fef634-1ae2-4a1f-9b44-4583cbea20f4")
+		)
+		(pin "9"
+			(uuid "cf9c66c4-6eea-4fc2-87cd-dc42daadeea0")
+		)
+		(pin "3"
+			(uuid "b7e0487d-2364-45d9-abf6-e7a4a72196e6")
+		)
+		(pin "2"
+			(uuid "1136652b-36df-4804-a912-8190e29008b4")
+		)
+		(pin "1"
+			(uuid "f4341535-930e-4123-b414-b47eed60a434")
+		)
+		(pin "7"
+			(uuid "3c04ed60-15fb-41a1-8117-3a115c63635b")
+		)
+		(pin "6"
+			(uuid "18efa989-a74c-40f8-80f2-309297384ee8")
+		)
+		(instances
+			(project "Squale"
+				(path "/9e981419-a202-4dd8-b7ec-e1bde8e7b185/70613a33-7fd7-4f8d-95ce-cdec7974bf7d"
+					(reference "U60")
+					(unit 7)
 				)
 			)
 		)
@@ -2868,6 +3103,76 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C")
+		(at 252.73 88.9 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ca3074d9-8cf4-4c20-8f7e-d491ff6719a2")
+		(property "Reference" "C50"
+			(at 256.54 87.6299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100nF"
+			(at 256.54 90.1699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 253.6952 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 252.73 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 252.73 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "d5a317b3-6ee1-4678-a84b-8e7af9820858")
+		)
+		(pin "1"
+			(uuid "e5633d7f-8100-4171-b76d-f9240cb560fb")
+		)
+		(instances
+			(project "Squale"
+				(path "/9e981419-a202-4dd8-b7ec-e1bde8e7b185/70613a33-7fd7-4f8d-95ce-cdec7974bf7d"
+					(reference "C50")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "74xx:74LS04")
 		(at 218.44 184.15 0)
 		(unit 1)
@@ -3180,6 +3485,138 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 252.73 92.71 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e9221d40-9db6-47db-9498-7739b2ec02ff")
+		(property "Reference" "#PWR0371"
+			(at 252.73 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VSS"
+			(at 252.73 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 252.73 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 252.73 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 252.73 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6cd44ed4-6dc5-4166-ac7b-af24f4a95b90")
+		)
+		(instances
+			(project "Squale"
+				(path "/9e981419-a202-4dd8-b7ec-e1bde8e7b185/70613a33-7fd7-4f8d-95ce-cdec7974bf7d"
+					(reference "#PWR0371")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 250.19 210.82 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f2895fbf-5227-4b69-8cd8-788c97345ccd")
+		(property "Reference" "#PWR0375"
+			(at 250.19 217.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VSS"
+			(at 250.19 215.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 250.19 210.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 250.19 210.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 250.19 210.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "50a6d865-8656-4fa8-863e-d0b4a95a020d")
+		)
+		(instances
+			(project "Squale"
+				(path "/9e981419-a202-4dd8-b7ec-e1bde8e7b185/70613a33-7fd7-4f8d-95ce-cdec7974bf7d"
+					(reference "#PWR0375")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 172.72 115.57 0)
 		(unit 1)
@@ -3251,7 +3688,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 238.76 142.24 0)
+		(at 238.76 138.43 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3260,7 +3697,7 @@
 		(fields_autoplaced yes)
 		(uuid "ffd810fd-ffa4-4e16-98be-2bfee63cc52d")
 		(property "Reference" "#PWR0171"
-			(at 238.76 148.59 0)
+			(at 238.76 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3269,7 +3706,7 @@
 			)
 		)
 		(property "Value" "VSS"
-			(at 238.76 147.32 0)
+			(at 238.76 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3277,7 +3714,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 238.76 142.24 0)
+			(at 238.76 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3286,7 +3723,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 238.76 142.24 0)
+			(at 238.76 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3295,7 +3732,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 238.76 142.24 0)
+			(at 238.76 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
