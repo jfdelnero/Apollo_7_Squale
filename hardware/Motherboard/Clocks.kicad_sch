@@ -1997,7 +1997,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal"
 			(at 161.29 138.938 90)
 			(effects
 				(font
@@ -2065,7 +2065,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal"
 			(at 134.62 138.938 90)
 			(effects
 				(font
@@ -2133,7 +2133,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_THT:C_Disc_D9.0mm_W2.5mm_P5.00mm"
 			(at 152.4 122.2248 0)
 			(effects
 				(font
@@ -2201,7 +2201,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_DIP:DIP-14_W7.62mm_Socket"
 			(at 186.69 123.19 0)
 			(effects
 				(font
@@ -2373,7 +2373,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_DIP:DIP-16_W7.62mm_Socket"
 			(at 238.76 115.57 0)
 			(effects
 				(font
@@ -2549,7 +2549,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Crystal:Crystal_HC18-U_Vertical"
 			(at 149.86 107.95 0)
 			(effects
 				(font
@@ -2683,7 +2683,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_DIP:DIP-14_W7.62mm_Socket"
 			(at 250.19 198.12 0)
 			(effects
 				(font
@@ -2854,7 +2854,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_DIP:DIP-14_W7.62mm_Socket"
 			(at 162.56 123.19 0)
 			(effects
 				(font
@@ -3024,7 +3024,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_DIP:DIP-14_W7.62mm_Socket"
 			(at 134.62 123.19 0)
 			(effects
 				(font
@@ -3130,7 +3130,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_THT:C_Disc_D9.0mm_W2.5mm_P5.00mm"
 			(at 253.6952 92.71 0)
 			(effects
 				(font
@@ -3198,7 +3198,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_DIP:DIP-14_W7.62mm_Socket"
 			(at 218.44 184.15 0)
 			(effects
 				(font
@@ -3226,34 +3226,34 @@
 			)
 		)
 		(pin "14"
-			(uuid "25882462-1c98-47fa-9f98-ada37e8cc8f8")
+			(uuid "25882462-1c98-47fa-9f98-ada37e8cc8f9")
 		)
 		(pin "10"
-			(uuid "ec4ce232-e4e4-4403-917b-782ba6541e2e")
+			(uuid "ec4ce232-e4e4-4403-917b-782ba6541e2f")
 		)
 		(pin "8"
-			(uuid "24c9d95a-b4f5-440e-a311-b729874f4721")
+			(uuid "24c9d95a-b4f5-440e-a311-b729874f4722")
 		)
 		(pin "11"
-			(uuid "4c5db34e-bf8a-4646-9b87-5e6ad9ccadf3")
+			(uuid "4c5db34e-bf8a-4646-9b87-5e6ad9ccadf4")
 		)
 		(pin "4"
-			(uuid "fbe6cd0c-b946-4dec-b286-f7504c420341")
+			(uuid "fbe6cd0c-b946-4dec-b286-f7504c420342")
 		)
 		(pin "5"
-			(uuid "5dee5030-6f1f-4ad3-814a-e7c8251c055f")
+			(uuid "5dee5030-6f1f-4ad3-814a-e7c8251c0560")
 		)
 		(pin "12"
-			(uuid "07e86075-eb11-4c26-924a-df25039b1c67")
+			(uuid "07e86075-eb11-4c26-924a-df25039b1c68")
 		)
 		(pin "13"
-			(uuid "21fef634-1ae2-4a1f-9b44-4583cbea20f4")
+			(uuid "21fef634-1ae2-4a1f-9b44-4583cbea20f5")
 		)
 		(pin "9"
-			(uuid "cf9c66c4-6eea-4fc2-87cd-dc42daadeea0")
+			(uuid "cf9c66c4-6eea-4fc2-87cd-dc42daadeea1")
 		)
 		(pin "3"
-			(uuid "b7e0487d-2364-45d9-abf6-e7a4a72196e6")
+			(uuid "b7e0487d-2364-45d9-abf6-e7a4a72196e7")
 		)
 		(pin "2"
 			(uuid "8b0978bb-8dec-432a-a265-659d995750e1")
@@ -3262,10 +3262,10 @@
 			(uuid "a26db1c5-a2d9-46f0-ab0f-3d7695846390")
 		)
 		(pin "7"
-			(uuid "3c04ed60-15fb-41a1-8117-3a115c63635b")
+			(uuid "3c04ed60-15fb-41a1-8117-3a115c63635c")
 		)
 		(pin "6"
-			(uuid "18efa989-a74c-40f8-80f2-309297384ee8")
+			(uuid "18efa989-a74c-40f8-80f2-309297384ee9")
 		)
 		(instances
 			(project "Squale"
@@ -3302,7 +3302,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_DIP:DIP-14_W7.62mm_Socket"
 			(at 218.44 199.39 0)
 			(effects
 				(font
@@ -3330,31 +3330,31 @@
 			)
 		)
 		(pin "14"
-			(uuid "25882462-1c98-47fa-9f98-ada37e8cc8f9")
+			(uuid "25882462-1c98-47fa-9f98-ada37e8cc8fa")
 		)
 		(pin "10"
-			(uuid "ec4ce232-e4e4-4403-917b-782ba6541e2f")
+			(uuid "ec4ce232-e4e4-4403-917b-782ba6541e30")
 		)
 		(pin "8"
-			(uuid "24c9d95a-b4f5-440e-a311-b729874f4722")
+			(uuid "24c9d95a-b4f5-440e-a311-b729874f4723")
 		)
 		(pin "11"
-			(uuid "4c5db34e-bf8a-4646-9b87-5e6ad9ccadf4")
+			(uuid "4c5db34e-bf8a-4646-9b87-5e6ad9ccadf5")
 		)
 		(pin "4"
 			(uuid "384fb11a-09f3-416d-85c3-1142a7134efa")
 		)
 		(pin "5"
-			(uuid "5dee5030-6f1f-4ad3-814a-e7c8251c0560")
+			(uuid "5dee5030-6f1f-4ad3-814a-e7c8251c0561")
 		)
 		(pin "12"
-			(uuid "07e86075-eb11-4c26-924a-df25039b1c68")
+			(uuid "07e86075-eb11-4c26-924a-df25039b1c69")
 		)
 		(pin "13"
-			(uuid "21fef634-1ae2-4a1f-9b44-4583cbea20f5")
+			(uuid "21fef634-1ae2-4a1f-9b44-4583cbea20f6")
 		)
 		(pin "9"
-			(uuid "cf9c66c4-6eea-4fc2-87cd-dc42daadeea1")
+			(uuid "cf9c66c4-6eea-4fc2-87cd-dc42daadeea2")
 		)
 		(pin "3"
 			(uuid "25881d21-8573-46f4-a9b4-dd5f5a0b4683")
@@ -3366,10 +3366,10 @@
 			(uuid "efcc6f68-a46f-4745-bcab-b949d3354128")
 		)
 		(pin "7"
-			(uuid "3c04ed60-15fb-41a1-8117-3a115c63635c")
+			(uuid "3c04ed60-15fb-41a1-8117-3a115c63635d")
 		)
 		(pin "6"
-			(uuid "18efa989-a74c-40f8-80f2-309297384ee9")
+			(uuid "18efa989-a74c-40f8-80f2-309297384eea")
 		)
 		(instances
 			(project "Squale"
@@ -3406,7 +3406,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_DIP:DIP-14_W7.62mm_Socket"
 			(at 218.44 215.9 0)
 			(effects
 				(font
@@ -3434,16 +3434,16 @@
 			)
 		)
 		(pin "14"
-			(uuid "25882462-1c98-47fa-9f98-ada37e8cc8fa")
+			(uuid "25882462-1c98-47fa-9f98-ada37e8cc8fb")
 		)
 		(pin "10"
-			(uuid "ec4ce232-e4e4-4403-917b-782ba6541e30")
+			(uuid "ec4ce232-e4e4-4403-917b-782ba6541e31")
 		)
 		(pin "8"
-			(uuid "24c9d95a-b4f5-440e-a311-b729874f4723")
+			(uuid "24c9d95a-b4f5-440e-a311-b729874f4724")
 		)
 		(pin "11"
-			(uuid "4c5db34e-bf8a-4646-9b87-5e6ad9ccadf5")
+			(uuid "4c5db34e-bf8a-4646-9b87-5e6ad9ccadf6")
 		)
 		(pin "4"
 			(uuid "fbe6cd0c-b946-4dec-b286-f7504c420343")
@@ -3452,13 +3452,13 @@
 			(uuid "52a7ee49-ab9b-4b38-a8ad-ffab4b1414f7")
 		)
 		(pin "12"
-			(uuid "07e86075-eb11-4c26-924a-df25039b1c69")
+			(uuid "07e86075-eb11-4c26-924a-df25039b1c6a")
 		)
 		(pin "13"
-			(uuid "21fef634-1ae2-4a1f-9b44-4583cbea20f6")
+			(uuid "21fef634-1ae2-4a1f-9b44-4583cbea20f7")
 		)
 		(pin "9"
-			(uuid "cf9c66c4-6eea-4fc2-87cd-dc42daadeea2")
+			(uuid "cf9c66c4-6eea-4fc2-87cd-dc42daadeea3")
 		)
 		(pin "3"
 			(uuid "b7e0487d-2364-45d9-abf6-e7a4a72196e8")
@@ -3470,7 +3470,7 @@
 			(uuid "efcc6f68-a46f-4745-bcab-b949d3354129")
 		)
 		(pin "7"
-			(uuid "3c04ed60-15fb-41a1-8117-3a115c63635d")
+			(uuid "3c04ed60-15fb-41a1-8117-3a115c63635e")
 		)
 		(pin "6"
 			(uuid "edfd0bde-fe7d-4b31-9ec7-07b73452d203")
@@ -3644,7 +3644,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm"
 			(at 173.6852 119.38 0)
 			(effects
 				(font

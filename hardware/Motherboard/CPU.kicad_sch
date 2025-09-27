@@ -15418,7 +15418,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_DIP:DIP-20_W7.62mm_Socket"
 			(at 350.52 176.53 0)
 			(effects
 				(font
@@ -15606,7 +15606,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_DIP:DIP-14_W7.62mm_Socket"
 			(at 204.47 148.59 0)
 			(effects
 				(font
@@ -16042,7 +16042,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_DIP:DIP-16_W7.62mm_Socket"
 			(at 167.64 175.26 0)
 			(effects
 				(font
@@ -16435,7 +16435,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_DIP:DIP-14_W7.62mm_Socket"
 			(at 256.54 146.05 0)
 			(effects
 				(font
@@ -16541,7 +16541,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_THT:C_Disc_D9.0mm_W2.5mm_P5.00mm"
 			(at 224.4852 58.42 0)
 			(effects
 				(font
@@ -16674,7 +16674,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_DIP:DIP-14_W7.62mm_Socket"
 			(at 186.69 205.74 0)
 			(effects
 				(font
@@ -16777,7 +16777,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_DIP:DIP-14_W7.62mm_Socket"
 			(at 320.04 227.33 0)
 			(effects
 				(font
@@ -16874,7 +16874,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_DIP:DIP-14_W7.62mm_Socket"
 			(at 344.17 227.33 0)
 			(effects
 				(font
@@ -17176,7 +17176,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_DIP:DIP-20_W7.62mm_Socket"
 			(at 350.52 50.8 0)
 			(effects
 				(font
@@ -17562,7 +17562,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_DIP:DIP-14_W7.62mm_Socket"
 			(at 238.76 146.05 0)
 			(effects
 				(font
@@ -17731,7 +17731,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_DIP:DIP-16_W7.62mm_Socket"
 			(at 295.91 227.33 0)
 			(effects
 				(font
@@ -17759,28 +17759,28 @@
 			)
 		)
 		(pin "2"
-			(uuid "cdb1dee7-df25-44bc-a93f-492d9c0f2bac")
+			(uuid "cdb1dee7-df25-44bc-a93f-492d9c0f2bad")
 		)
 		(pin "3"
-			(uuid "6584a64b-be81-48d2-975e-f99409f1b553")
+			(uuid "6584a64b-be81-48d2-975e-f99409f1b554")
 		)
 		(pin "16"
-			(uuid "98daed14-9720-4234-ac89-407eb44ef81e")
+			(uuid "98daed14-9720-4234-ac89-407eb44ef81f")
 		)
 		(pin "12"
 			(uuid "4fe60c0a-ddeb-4ee2-9423-9574f414e1f6")
 		)
 		(pin "4"
-			(uuid "32dc6af0-687a-47be-adfb-71605f681dee")
+			(uuid "32dc6af0-687a-47be-adfb-71605f681def")
 		)
 		(pin "5"
-			(uuid "728589b1-285d-457f-89bf-eb0232e0e031")
+			(uuid "728589b1-285d-457f-89bf-eb0232e0e032")
 		)
 		(pin "6"
-			(uuid "223d8346-1457-4ccb-b874-281f70eab0bb")
+			(uuid "223d8346-1457-4ccb-b874-281f70eab0bc")
 		)
 		(pin "7"
-			(uuid "0608d682-de18-4d75-b4f1-298545c1a257")
+			(uuid "0608d682-de18-4d75-b4f1-298545c1a258")
 		)
 		(pin "15"
 			(uuid "e1410989-5819-4133-a21b-95a43dadc6d2")
@@ -17789,10 +17789,10 @@
 			(uuid "71b701f8-a0b2-4b2d-a2ad-1fe3f737a716")
 		)
 		(pin "1"
-			(uuid "93ffbc00-a531-4467-9e9f-4ad159af6204")
+			(uuid "93ffbc00-a531-4467-9e9f-4ad159af6205")
 		)
 		(pin "8"
-			(uuid "90d59fb9-9e65-41cd-b9fe-b753fa006d4c")
+			(uuid "90d59fb9-9e65-41cd-b9fe-b753fa006d4d")
 		)
 		(pin "14"
 			(uuid "f0ad30ad-8445-4465-bbf6-abebc1e2eb6a")
@@ -17841,7 +17841,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_DIP:DIP-14_W7.62mm_Socket"
 			(at 162.56 129.54 0)
 			(effects
 				(font
@@ -17939,7 +17939,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_DIP:DIP-14_W7.62mm_Socket"
 			(at 256.54 115.57 0)
 			(effects
 				(font
@@ -18111,7 +18111,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_DIP:DIP-28_W15.24mm"
+		(property "Footprint" "Package_DIP:DIP-28_W15.24mm_Socket"
 			(at 199.39 78.74 0)
 			(effects
 				(font
@@ -18257,7 +18257,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_DIP:DIP-16_W7.62mm_Socket"
 			(at 167.64 153.67 0)
 			(effects
 				(font
@@ -18291,7 +18291,7 @@
 			(uuid "8b37d9b1-1b7e-4fcd-b9bd-fa31382414fc")
 		)
 		(pin "16"
-			(uuid "98daed14-9720-4234-ac89-407eb44ef81f")
+			(uuid "98daed14-9720-4234-ac89-407eb44ef820")
 		)
 		(pin "12"
 			(uuid "235621b0-fd5c-4ad5-96e4-18580c930081")
@@ -18318,7 +18318,7 @@
 			(uuid "84aca1cd-98a3-496b-b01c-4262aef99d45")
 		)
 		(pin "8"
-			(uuid "90d59fb9-9e65-41cd-b9fe-b753fa006d4d")
+			(uuid "90d59fb9-9e65-41cd-b9fe-b753fa006d4e")
 		)
 		(pin "14"
 			(uuid "1d6b0a68-1308-427e-a091-e3448e9f3dc1")
@@ -18369,7 +18369,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal"
 			(at 94.488 72.39 90)
 			(effects
 				(font
@@ -18439,7 +18439,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal"
 			(at 74.168 72.39 90)
 			(effects
 				(font
@@ -18574,7 +18574,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal"
 			(at 55.372 60.96 90)
 			(effects
 				(font
@@ -18643,7 +18643,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_DIP:DIP-14_W7.62mm_Socket"
 			(at 368.3 227.33 0)
 			(effects
 				(font
@@ -18946,7 +18946,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_DIP:DIP-14_W7.62mm_Socket"
 			(at 285.75 173.99 0)
 			(effects
 				(font
@@ -19050,7 +19050,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_DIP:DIP-14_W7.62mm_Socket"
 			(at 220.98 173.99 0)
 			(effects
 				(font
@@ -19214,7 +19214,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_DIP:DIP-14_W7.62mm_Socket"
 			(at 284.48 260.35 0)
 			(effects
 				(font
@@ -19517,7 +19517,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_DIP:DIP-16_W7.62mm_Socket"
 			(at 167.64 234.95 0)
 			(effects
 				(font
@@ -19629,7 +19629,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_THT:C_Disc_D9.0mm_W2.5mm_P5.00mm"
 			(at 378.1552 232.41 0)
 			(effects
 				(font
@@ -19697,7 +19697,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_DIP:DIP-14_W7.62mm_Socket"
 			(at 256.54 130.81 0)
 			(effects
 				(font
@@ -19801,7 +19801,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_DIP:DIP-14_W7.62mm_Socket"
 			(at 165.1 208.28 0)
 			(effects
 				(font
@@ -20038,7 +20038,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_THT:C_Disc_D9.0mm_W2.5mm_P5.00mm"
 			(at 91.1352 48.26 0)
 			(effects
 				(font
@@ -20108,7 +20108,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal"
 			(at 84.328 72.39 90)
 			(effects
 				(font
@@ -20178,7 +20178,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_DIP:DIP-40_W15.24mm"
+		(property "Footprint" "Package_DIP:DIP-40_W15.24mm_Socket"
 			(at 121.92 125.73 0)
 			(effects
 				(font
@@ -20362,7 +20362,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_DIP:DIP-20_W7.62mm_Socket"
 			(at 350.52 114.3 0)
 			(effects
 				(font
@@ -20619,7 +20619,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_THT:C_Radial_D6.3mm_H5.0mm_P2.50mm"
 			(at 46.6852 76.2 0)
 			(effects
 				(font

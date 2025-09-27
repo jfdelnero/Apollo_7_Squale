@@ -7573,7 +7573,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_DIP:DIP-40_W15.24mm"
+		(property "Footprint" "Package_DIP:DIP-40_W15.24mm_Socket"
 			(at 209.55 123.19 0)
 			(effects
 				(font
@@ -8089,7 +8089,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_Dsub:DSUB-15_Socket_Horizontal_P2.77x2.84mm_EdgePinOffset9.40mm"
 			(at 331.47 191.77 0)
 			(effects
 				(font
@@ -8261,7 +8261,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_DIP:DIP-14_W7.62mm_Socket"
 			(at 269.24 96.52 0)
 			(effects
 				(font
@@ -8365,7 +8365,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_2x20_P2.54mm_Vertical"
 			(at 327.66 76.2 0)
 			(effects
 				(font
@@ -8611,7 +8611,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_DIP:DIP-14_W7.62mm_Socket"
 			(at 269.24 143.51 0)
 			(effects
 				(font
@@ -8784,7 +8784,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_DIP:DIP-14_W7.62mm_Socket"
 			(at 378.46 233.68 0)
 			(effects
 				(font
@@ -8953,7 +8953,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_DIP:DIP-14_W7.62mm_Socket"
 			(at 269.24 120.65 0)
 			(effects
 				(font
@@ -9124,7 +9124,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_THT:C_Disc_D9.0mm_W2.5mm_P5.00mm"
 			(at 301.9552 143.51 0)
 			(effects
 				(font
@@ -9194,7 +9194,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_THT:C_Disc_D9.0mm_W2.5mm_P5.00mm"
 			(at 192.7352 44.45 0)
 			(effects
 				(font
@@ -9326,7 +9326,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_DIP:DIP-14_W7.62mm_Socket"
 			(at 269.24 71.12 0)
 			(effects
 				(font
@@ -9630,7 +9630,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_DIP:DIP-14_W7.62mm_Socket"
 			(at 353.06 233.68 0)
 			(effects
 				(font

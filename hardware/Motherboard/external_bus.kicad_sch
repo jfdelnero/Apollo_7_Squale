@@ -4908,7 +4908,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_DIP:DIP-20_W7.62mm_Socket"
 			(at 224.79 175.26 0)
 			(effects
 				(font
@@ -5098,7 +5098,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_THT:C_Disc_D9.0mm_W2.5mm_P5.00mm"
 			(at 240.9952 120.65 0)
 			(effects
 				(font
@@ -5299,7 +5299,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_DIP:DIP-20_W7.62mm_Socket"
 			(at 227.33 92.71 0)
 			(effects
 				(font
@@ -5423,7 +5423,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_Dsub:DSUB-25_Pins_Horizontal_P2.77x2.54mm_EdgePinOffset9.40mm"
 			(at 300.99 128.27 0)
 			(effects
 				(font
@@ -5694,7 +5694,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_THT:C_Disc_D9.0mm_W2.5mm_P5.00mm"
 			(at 206.7052 196.85 0)
 			(effects
 				(font
