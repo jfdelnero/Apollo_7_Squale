@@ -8267,8 +8267,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Potentiometer")
-		(at 270.51 135.89 0)
-		(mirror y)
+		(at 270.51 135.89 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8276,7 +8275,7 @@
 		(dnp no)
 		(uuid "113cb6d7-e9a3-403c-98ff-1dba74f69b9f")
 		(property "Reference" "P1"
-			(at 273.05 134.6199 0)
+			(at 273.05 137.1601 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8285,7 +8284,7 @@
 			)
 		)
 		(property "Value" "VR10K"
-			(at 273.05 137.1599 0)
+			(at 273.05 134.6201 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8330,7 +8329,7 @@
 			(uuid "b2addb01-07fa-4341-9ae6-2baa5531ecfb")
 		)
 		(instances
-			(project ""
+			(project "Squale"
 				(path "/9e981419-a202-4dd8-b7ec-e1bde8e7b185/daa78879-fc65-4b56-a4f6-5864d93113b1"
 					(reference "P1")
 					(unit 1)
