@@ -289,7 +289,7 @@
 		(uuid "feb79b39-ba2d-439b-8e0c-b5268e12489e")
 	)
 	(bus_entry
-		(at 241.3 137.16)
+		(at 241.3 134.62)
 		(size 2.54 2.54)
 		(stroke
 			(width 0)
@@ -1136,16 +1136,6 @@
 			(type default)
 		)
 		(uuid "5b596f02-65ce-447b-bf32-9aac76c933af")
-	)
-	(wire
-		(pts
-			(xy 243.84 139.7) (xy 243.84 142.24)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5f05d7f9-1550-428e-b86b-8fe86a427906")
 	)
 	(wire
 		(pts
@@ -2139,7 +2129,7 @@
 	)
 	(bus
 		(pts
-			(xy 241.3 87.63) (xy 241.3 137.16)
+			(xy 241.3 87.63) (xy 241.3 134.62)
 		)
 		(stroke
 			(width 0)
@@ -2206,6 +2196,16 @@
 			(type default)
 		)
 		(uuid "ea5197a1-7218-49ad-bd44-84f40056b5c0")
+	)
+	(wire
+		(pts
+			(xy 243.84 137.16) (xy 243.84 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f2464aff-6892-4219-b468-8da0d4608dd7")
 	)
 	(wire
 		(pts
@@ -2306,6 +2306,16 @@
 			(justify left bottom)
 		)
 		(uuid "353597d6-8c9d-4a04-8cf4-b78a94b9d437")
+	)
+	(label "A0"
+		(at 243.84 138.43 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "543f7b13-7025-4f2e-be85-5ad3c088879f")
 	)
 	(label "A[15..0]"
 		(at 62.23 87.63 0)
