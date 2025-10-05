@@ -7936,7 +7936,7 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "Note :\nThe V2.X Monitors need a 27C64.\nIn this case the extra EPROM A12 address line (pin 2) need to be connected \nwith a wire to the U66 pin 19 output register (SYS_ROM_BK).\nThe 27C64 pin 27,28 and 1 need to be connected to the pin 26 (VCC5V)"
+	(text "Note :\nThe V2.X Monitors need a 27C64.\nIn this case the extra EPROM A12 address line (pin 2) need to be connected \nwith a wire to the U66 pin 19 output register (SYS_ROM_BK).\nThe 27C64 pins 27, 28 and 1 need to be connected to the pin 26 (VCC5V)"
 		(exclude_from_sim no)
 		(at 220.472 91.44 0)
 		(effects
@@ -17201,7 +17201,7 @@
 	)
 	(symbol
 		(lib_id "power:VSS")
-		(at 199.39 53.34 0)
+		(at 201.93 53.34 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -17210,7 +17210,7 @@
 		(fields_autoplaced yes)
 		(uuid "5fdc6b01-654e-48d2-93f7-95d29125fb2c")
 		(property "Reference" "#PWR0129"
-			(at 199.39 57.15 0)
+			(at 201.93 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17219,7 +17219,7 @@
 			)
 		)
 		(property "Value" "VCC5V"
-			(at 199.39 48.26 0)
+			(at 201.93 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17227,7 +17227,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 199.39 53.34 0)
+			(at 201.93 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17236,7 +17236,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 199.39 53.34 0)
+			(at 201.93 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17245,7 +17245,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VSS\""
-			(at 199.39 53.34 0)
+			(at 201.93 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
