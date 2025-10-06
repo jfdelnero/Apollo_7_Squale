@@ -16401,7 +16401,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
+		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P12.70mm_Horizontal"
 			(at 45.72 60.96 0)
 			(effects
 				(font

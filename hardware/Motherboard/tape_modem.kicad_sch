@@ -8430,7 +8430,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
+		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P12.70mm_Horizontal"
 			(at 323.85 140.97 0)
 			(effects
 				(font
@@ -10135,7 +10135,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical"
+		(property "Footprint" "Library:DIN5-RA-PTH"
 			(at 397.51 69.85 0)
 			(effects
 				(font
@@ -10826,7 +10826,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
+		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P12.70mm_Horizontal"
 			(at 323.85 148.59 0)
 			(effects
 				(font
