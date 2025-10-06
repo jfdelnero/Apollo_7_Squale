@@ -8089,7 +8089,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_Dsub:DSUB-15_Socket_Horizontal_P2.77x2.84mm_EdgePinOffset9.40mm"
+		(property "Footprint" "Connector_Dsub:DSUB-15_Pins_Horizontal_P2.77x2.84mm_EdgePinOffset9.40mm"
 			(at 331.47 191.77 0)
 			(effects
 				(font
