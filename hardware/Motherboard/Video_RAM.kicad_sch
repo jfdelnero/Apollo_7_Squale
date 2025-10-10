@@ -6917,9 +6917,9 @@
 		)
 		(uuid "de691e6f-eb86-4f2c-b50a-73abaafc2eb4")
 	)
-	(text "Video DRAM Memory bank :\n4 * 4 * 16384 bits = 32768 bytes\n4 components (I,R,G,B).\n4 bits access per component \n16 bits access for the whole bank. "
+	(text "Video DRAM Memory bank :\n\n4 * 4 * 16384 bits = 32768 bytes\n4 planes/components (I,R,G,B).\n4 bits access per plane/component\n\nShifters read access : \nOne 4*4 bits (16 bits) access every 571ns (1.75MHz) to reload the 4 bits shitfers. \nAll DRAM IC are enabled during the shifters reload.\n\nGDP write access :\nOne 1*4 bits (4 bits - 1 bit per plane) access.\nOnly one \"bank\" at a time enabled by the MSL[3..0] outputs to write one pixel.\n\n"
 		(exclude_from_sim no)
-		(at 261.62 327.406 0)
+		(at 236.474 343.154 0)
 		(effects
 			(font
 				(size 2.54 2.54)
