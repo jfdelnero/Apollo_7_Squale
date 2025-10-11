@@ -6,10 +6,11 @@
 	(paper "A3")
 	(title_block
 		(title "Apollo 7 Squale - Clocks sources")
-		(rev "0.1")
-		(comment 1 "http://hxc2001.free.fr/Squale/")
-		(comment 2 "CC-BY Licence (Creative Commons Attribution)")
-		(comment 3 "Drawn by Jean-François DEL NERO")
+		(rev "0.9")
+		(comment 1 "https://github.com/jfdelnero/Apollo_7_Squale/tree/master/hardware/Motherboard")
+		(comment 2 "http://hxc2001.free.fr/Squale/")
+		(comment 3 "CC-BY Licence (Creative Commons Attribution)")
+		(comment 4 "Drawn by Jean-François DEL NERO")
 	)
 	(lib_symbols
 		(symbol "74xx:74LS04"
