@@ -212,91 +212,127 @@ print_end:
 	RTS
 
 ***************************************************************
+* sound event
 ay_snd_wr:
 	PSHS A
 
-* Tone Channel A
+	LDY #AY_BASE
 
-*   LDA #0
-*   STA AY_BASE
-*   LDA #$08
-*   STA AY_BASE+1
+*
+* Warning : AY-3-8910 Datasheet RX registers indexes are in octal !
+*
 
-*   LDA #1
-*   STA AY_BASE
-*   LDA #$01
-*   STA AY_BASE+1
+* Tone A Fine (R0)
+* B7-B0: TP7-TP0
+	LDA #0
+	LDB #$02
+	STD ,Y
 
-* Tone Channel B
+* Tone A Coarse (R1)
+* B3-B0: TP11-TP8
+    INCA
+**  LDA #1
+	LDB #$01
+	STD ,Y
 
-*   LDA #2
-*   STA AY_BASE
-*   LDA #$08
-*   STA AY_BASE+1
+* Tone B Fine (R2)
+* B7-B0: TP7-TP0
+*   INCA
+**  LDA #2
+*   LDB #$08
+*   STD ,Y
 
-*   LDA #3
-*   STA AY_BASE
-*   LDA #$01
-*   STA AY_BASE+1
+* Tone B Coarse (R3)
+* B3-B0: TP11-TP8
+*   INCA
+**  LDA #3
+*   LDB #$01
+*   STD ,Y
 
-* Tone Channel C
-	* Fine
-	LDA #4
-	STA AY_BASE
-	LDA #$02
-	STA AY_BASE+1
+* Tone C Fine (R4)
+* B7-B0: TP7-TP0
+*   INCA
+**  LDA #4
+*   LDB #$02
+*   STD ,Y
 
-	* Coarse
-	LDA #5
-	STA AY_BASE
-	LDA #$01
-	STA AY_BASE+1
+* Tone C Coarse (R5)
+* B3-B0: TP11-TP8
+*   INCA
+**  LDA #5
+*   LDB #$01
+*   STD ,Y
 
-	* Noise gen period
-	*LDA #6
-	*STA AY_BASE
-	*LDA #$5
-	*STA AY_BASE+1
+* Noise gen period (R6)
+* B4-B0: Noise period
+*   INCA
+**  LDA #6
+*   LDB #$05
+*   STD ,Y
 
-	* Mixer control
-	LDA #7
-	STA AY_BASE
-	* Enable C Channel
-	LDA #$3B
-	STA AY_BASE+1
+* Mixer control (R7)
+*B7: /Input B enable
+*B6: /Input A enable
+*B5: /Noise C enable
+*B4: /Noise B enable
+*B3: /Noise A enable
+*B2: /Tone C enable
+*B1: /Tone B enable
+*B0: /Tone A enable
+*   INCA
+    LDA #7
+	* Enable Tone Channel A
+	LDB #$3E
+	STD ,Y
 
-	* Ampl A
-	LDA #10
-	STA AY_BASE
-	LDA #$1F
-	STA AY_BASE+1
+* Ampl A (R10)
+* B3-B0: Fixed amplitude
+* B4: Envelope mode enable
+	INCA
+	*LDA #8
+	LDB #$1F
+	STD ,Y
 
-	* Ampl B
-	*LDA #11
-	*STA AY_BASE
-	*LDA #$1F
-	*STA AY_BASE+1
+* Ampl B (R11)
+* B3-B0: Fixed amplitude
+* B4: Envelope mode enable
+*   INCA
+**  LDA #9
+*   LDB #$1F
+*   STD ,Y
 
-	* Ampl C
-	LDA #12
-	STA AY_BASE
-	LDA #$1F
-	STA AY_BASE+1
+* Ampl C (R12)
+* B3-B0: Fixed amplitude
+* B4: Envelope mode enable
+*   INCA
+**  LDA #10
+*   LDB #$1F
+*   STD ,Y
 
+* Envelope Fine Tune (R13)
+	*INCA
+	LDA #11
+	LDB #$89
+	STD ,Y
+
+* Envelope Coarse Tune (R14)
+	INCA
+	*LDA #12
+	LDB #$30
+	STD ,Y
+
+* Envelope Shape/Cycle control (R15)
+* B3: Continue
+* B2: Attack
+* B1: Alternate
+* B0: Hold
+*
+* _____/|______
+*
+	INCA
 	LDA #13
-	STA AY_BASE
-	LDA #$89
-	STA AY_BASE+1
-
-	LDA #14
-	STA AY_BASE
-	LDA #$11
-	STA AY_BASE+1
-
-	LDA #15
-	STA AY_BASE
-	LDA #$09
-	STA AY_BASE+1
+	LDB #$00
+	STD ,Y
 
 	PULS A
 
