@@ -216,123 +216,20 @@ print_end:
 ay_snd_wr:
 	PSHS A
 
-	LDY #AY_BASE
-
 *
 * Warning : AY-3-8910 Datasheet RX registers indexes are in octal !
 *
 
-* Tone A Fine (R0)
-* B7-B0: TP7-TP0
+	LDY #AY_BASE
+	LDX #soundprg
+
 	LDA #0
-	LDB #$02
+loopprg:
+	LDB ,X+
 	STD ,Y
-
-* Tone A Coarse (R1)
-* B3-B0: TP11-TP8
-    INCA
-**  LDA #1
-	LDB #$01
-	STD ,Y
-
-* Tone B Fine (R2)
-* B7-B0: TP7-TP0
-*   INCA
-**  LDA #2
-*   LDB #$08
-*   STD ,Y
-
-* Tone B Coarse (R3)
-* B3-B0: TP11-TP8
-*   INCA
-**  LDA #3
-*   LDB #$01
-*   STD ,Y
-
-* Tone C Fine (R4)
-* B7-B0: TP7-TP0
-*   INCA
-**  LDA #4
-*   LDB #$02
-*   STD ,Y
-
-* Tone C Coarse (R5)
-* B3-B0: TP11-TP8
-*   INCA
-**  LDA #5
-*   LDB #$01
-*   STD ,Y
-
-* Noise gen period (R6)
-* B4-B0: Noise period
-*   INCA
-**  LDA #6
-*   LDB #$05
-*   STD ,Y
-
-* Mixer control (R7)
-*B7: /Input B enable
-*B6: /Input A enable
-*B5: /Noise C enable
-*B4: /Noise B enable
-*B3: /Noise A enable
-*B2: /Tone C enable
-*B1: /Tone B enable
-*B0: /Tone A enable
-*   INCA
-    LDA #7
-	* Enable Tone Channel A
-	LDB #$3E
-	STD ,Y
-
-* Ampl A (R10)
-* B3-B0: Fixed amplitude
-* B4: Envelope mode enable
 	INCA
-	*LDA #8
-	LDB #$1F
-	STD ,Y
-
-* Ampl B (R11)
-* B3-B0: Fixed amplitude
-* B4: Envelope mode enable
-*   INCA
-**  LDA #9
-*   LDB #$1F
-*   STD ,Y
-
-* Ampl C (R12)
-* B3-B0: Fixed amplitude
-* B4: Envelope mode enable
-*   INCA
-**  LDA #10
-*   LDB #$1F
-*   STD ,Y
-
-* Envelope Fine Tune (R13)
-	*INCA
-	LDA #11
-	LDB #$89
-	STD ,Y
-
-* Envelope Coarse Tune (R14)
-	INCA
-	*LDA #12
-	LDB #$30
-	STD ,Y
-
-* Envelope Shape/Cycle control (R15)
-* B3: Continue
-* B2: Attack
-* B1: Alternate
-* B0: Hold
-*
-* _____/|______
-*
-	INCA
-	LDA #13
-	LDB #$00
-	STD ,Y
+	CMPA #$14
+	BLO loopprg
 
 	PULS A
 
@@ -340,6 +237,57 @@ ay_snd_wr:
 
 ***************************************************************
 * Variables
+
+soundprg:
+	* Tone A Fine (R0) (TP7-TP0), Tone A Coarse (R1) (TP11-TP8)
+	.byte $2, $1
+	* Tone B Fine (R2) (TP7-TP0), Tone B Coarse (R3) (TP11-TP8)
+	.byte $4, $1
+	* Tone C Fine (R4) (TP7-TP0), Tone C Coarse (R5) (TP11-TP8)
+	.byte $8, $1
+
+	* Noise gen period (R6)
+	.byte $1F
+
+	* Mixer control (R7)
+	*B7: /Input B enable
+	*B6: /Input A enable
+	*B5: /Noise C enable
+	*B4: /Noise B enable
+	*B3: /Noise A enable
+	*B2: /Tone C enable
+	*B1: /Tone B enable
+	*B0: /Tone A enable
+	.byte $38
+
+	* Ampl A (R10)
+	* B3-B0: Fixed amplitude
+	* B4: Envelope mode enable
+	.byte $10
+
+	* Ampl B (R11)
+	* B3-B0: Fixed amplitude
+	* B4: Envelope mode enable
+	.byte $10
+
+	* Ampl C (R12)
+	* B3-B0: Fixed amplitude
+	* B4: Envelope mode enable
+	.byte $10
+
+	* Envelope Fine Tune (R13), Envelope Coarse Tune (R14)
+	.byte $89,$30
+
+	* Envelope Shape/Cycle control (R15)
+	* B3: Continue
+	* B2: Attack
+	* B1: Alternate
+	* B0: Hold
+	*
+	* _____/|______
+	*
+	.byte $00
+
 curcolor:
 	.byte $6
 
