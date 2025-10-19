@@ -200,7 +200,7 @@ DEL                   = effacement de ligne par la gauche
 6. Après 15 secondes le SQUALE affiche un message : la lecture de la cassette s'effectue.
 7. Après 5 minutes le programme SBASIC est chargé.
 8. Le SQUALE affiche PRET
-8. BIS. Utilisation du jeu POKER
+8 BIS. Utilisation du jeu POKER
 9. Retourner la cassette
 10. Amener la cassette en début de bande.
 11. Afficher à l'aide du clavier C LOAD.
