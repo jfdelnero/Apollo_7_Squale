@@ -6,10 +6,10 @@ Avant de le brancher, il est recommandé de lire cette notice. Les lignes qui vo
 
 Dans l'emballage vous devez trouver les éléments suivants :
 
-a/ votre "SQUALE".
-b/ un cordon "PERITEL".
-c/ une cassette SQ BASIC, SQ FLEX, Jeux
-d/ un manuel SBASIC.
+a. votre "SQUALE".
+b. un cordon "PERITEL".
+c. une cassette SQ BASIC, SQ FLEX, Jeux
+d. un manuel SBASIC.
 
 Après avoir soigneusement défait de l'emballage tous les éléments, vous installerez votre "SQUALE" sans le brancher pour l'instant.
 Cette notice vous aidera à le faire sans risques pour votre matériel.
