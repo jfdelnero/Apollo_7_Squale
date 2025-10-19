@@ -199,7 +199,7 @@ DEL                   = effacement de ligne par la gauche
 5. Démarrer le magnétophone.
 6. Après 15 secondes le SQUALE affiche un message : la lecture de la cassette s'effectue.
 7. Après 5 minutes le programme SBASIC est chargé.
-8. Le SQUALE affiche PRET
+8. Le SQUALE affiche PRET<br />
 8 BIS. Utilisation du jeu POKER
 9. Retourner la cassette
 10. Amener la cassette en début de bande.
