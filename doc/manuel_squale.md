@@ -1,22 +1,22 @@
 # MANUEL D'UTILISATION DE L'ORDINATEUR SQUALE
 
 
-	Vous venez de faire l'acquisition de votre nouvel ordinateur.
+Vous venez de faire l'acquisition de votre nouvel ordinateur.
 Avant de le brancher, il est recommandé de lire cette notice. Les lignes qui vont suivre vous permettront d'éviter un certain nombre d'erreurs et d'utiliser au mieux votre "SQUALE".
 
-	Dans l'emballage vous devez trouver les éléments suivants :
+Dans l'emballage vous devez trouver les éléments suivants :
 
 a/ votre "SQUALE".
 b/ un cordon "PERITEL".
 c/ une cassette SQ BASIC, SQ FLEX, Jeux
 d/ un manuel SBASIC.
 
-	Après avoir soigneusement défait de l'emballage tous les éléments, vous installerez votre "SQUALE" sans le brancher pour l'instant.
+Après avoir soigneusement défait de l'emballage tous les éléments, vous installerez votre "SQUALE" sans le brancher pour l'instant.
 Cette notice vous aidera à le faire sans risques pour votre matériel.
 
-	Il est préférable d'installer le "SQUALE" sur une table dégagée proche de votre téléviseur si vous n'avez pas de moniteur. Vous avez impérativement besoin d'un magnétophone à cassette. Pour vous aider à le choisir, reportez-vous au chapitre suivant.
+Il est préférable d'installer le "SQUALE" sur une table dégagée proche de votre téléviseur si vous n'avez pas de moniteur. Vous avez impérativement besoin d'un magnétophone à cassette. Pour vous aider à le choisir, reportez-vous au chapitre suivant.
 
-	Il serait également préférable d'avoir à portée de main de quoi prendre des notes.
+Il serait également préférable d'avoir à portée de main de quoi prendre des notes.
 
 
 
@@ -24,22 +24,22 @@ Cette notice vous aidera à le faire sans risques pour votre matériel.
 ## LES ÉLÉMENTS DU "SQUALE"
 
 
-	Avant de procéder aux branchements du "SQUALE", il est préférable d'avoir un aperçu des différents éléments qui le composent. Les personnes impatientes peuvent toujours sauter ce chapitre.
+Avant de procéder aux branchements du "SQUALE", il est préférable d'avoir un aperçu des différents éléments qui le composent. Les personnes impatientes peuvent toujours sauter ce chapitre.
 
 **LA PRISE PERITEL**
 
-	Cette prise se trouve à l’arrière de tout téléviseur récent. Elle permet de le transformer en terminal d’ordinateur. Cette prise est aussi indispensable au décodeur "CANAL+". Si vous possédez ce décodeur vous devez le débrancher afin de libérer la prise pour le "SQUALE".
-	Si votre téléviseur n’est pas équipé d’une entrée "PERITEL", vous devez vous procurer un adaptateur UHF. Cet élément a pour objet d’adapter votre "SQUALE" à n’importe quel téléviseur. Il est toutefois à noter que l’usage de l’adaptateur vous fera perdre un peu de définition sur les images graphiques, celles-ci seront légèrement floues. La formule idéale serait d’avoir un moniteur couleur.
+Cette prise se trouve à l’arrière de tout téléviseur récent. Elle permet de le transformer en terminal d’ordinateur. Cette prise est aussi indispensable au décodeur "CANAL+". Si vous possédez ce décodeur vous devez le débrancher afin de libérer la prise pour le "SQUALE".
+Si votre téléviseur n’est pas équipé d’une entrée "PERITEL", vous devez vous procurer un adaptateur UHF. Cet élément a pour objet d’adapter votre "SQUALE" à n’importe quel téléviseur. Il est toutefois à noter que l’usage de l’adaptateur vous fera perdre un peu de définition sur les images graphiques, celles-ci seront légèrement floues. La formule idéale serait d’avoir un moniteur couleur.
 
-	Il en existe un, spécialement adapté au "SQUALE". Le mieux serait de vous renseigner auprès de votre revendeur.
+Il en existe un, spécialement adapté au "SQUALE". Le mieux serait de vous renseigner auprès de votre revendeur.
 
 **LE MAGNETOPHONE**
 
-	Pour pouvoir utiliser les cassettes vous avez besoin d’un magnétophone. Cet appareil n’a pas besoin d’avoir une grande qualité. Il est donc inutile d’acheter une console HI-FI. Vous devez vous assurer que les prises correspondent à votre cordon de raccordement. Sinon, un spécialiste sera en mesure de vous aider. Les prises sont du type "JACK" et équipent la plupart des appareils bon marché.
+Pour pouvoir utiliser les cassettes vous avez besoin d’un magnétophone. Cet appareil n’a pas besoin d’avoir une grande qualité. Il est donc inutile d’acheter une console HI-FI. Vous devez vous assurer que les prises correspondent à votre cordon de raccordement. Sinon, un spécialiste sera en mesure de vous aider. Les prises sont du type "JACK" et équipent la plupart des appareils bon marché.
 
 **LA CASSETTE SBASIC**
 
-	La cassette que vous avez reçue avec votre "SQUALE" contient le programme SBASIC. Ce programme est enregistré sous forme codée. Contrairement à une cassette musicale, celle-ci est extrêmement fragile. Il est conseillé de manipuler cette cassette avec précautions.
+La cassette que vous avez reçue avec votre "SQUALE" contient le programme SBASIC. Ce programme est enregistré sous forme codée. Contrairement à une cassette musicale, celle-ci est extrêmement fragile. Il est conseillé de manipuler cette cassette avec précautions.
 
 **LE MANUEL SBASIC**
 
@@ -50,7 +50,7 @@ Le manuel SBASIC est indispensable à ceux qui veulent écrire des programmes. L
 ## BRANCHEMENTS DU "SQUALE"
 
 
-	Il y a au minimum deux branchements à faire sur votre "SQUALE",
+Il y a au minimum deux branchements à faire sur votre "SQUALE",
 le premier sera de connecter celui-ci sur votre téléviseur et le second sera de mettre le "SQUALE" sous tension.
 
 **IMPORTANT : AVANT DE COMMENCER ASSUREZ VOUS QUE VOTRE TÉLÉVISEUR EST ÉTEINT.**
