@@ -6183,6 +6183,16 @@
 		)
 		(uuid "263a1ea9-6ab4-43ff-a916-36f226ff806b")
 	)
+	(text "SS-30 Bus"
+		(exclude_from_sim no)
+		(at 54.102 53.848 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "55754469-78ec-492d-85ec-1f81a31a9ef4")
+	)
 	(text "Base : 0x0"
 		(exclude_from_sim no)
 		(at 164.846 193.548 0)
@@ -6296,7 +6306,7 @@
 		(uuid "72f683fd-7fb5-4431-81db-1fd6c499c7cd")
 	)
 	(junction
-		(at 139.7 132.08)
+		(at 143.51 132.08)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "76c72682-62d9-492c-b4ef-69deffa4b156")
@@ -7347,16 +7357,6 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 134.62) (xy 106.68 134.62)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "36a2b7eb-fda5-4369-8724-90c964eef487")
-	)
-	(wire
-		(pts
 			(xy 156.21 199.39) (xy 177.8 199.39)
 		)
 		(stroke
@@ -7597,7 +7597,7 @@
 	)
 	(wire
 		(pts
-			(xy 137.16 132.08) (xy 139.7 132.08)
+			(xy 140.97 132.08) (xy 143.51 132.08)
 		)
 		(stroke
 			(width 0)
@@ -7967,7 +7967,7 @@
 	)
 	(wire
 		(pts
-			(xy 109.22 129.54) (xy 121.92 129.54)
+			(xy 109.22 129.54) (xy 125.73 129.54)
 		)
 		(stroke
 			(width 0)
@@ -8757,7 +8757,7 @@
 	)
 	(wire
 		(pts
-			(xy 139.7 132.08) (xy 139.7 134.62)
+			(xy 143.51 132.08) (xy 143.51 134.62)
 		)
 		(stroke
 			(width 0)
@@ -9257,13 +9257,23 @@
 	)
 	(wire
 		(pts
-			(xy 139.7 129.54) (xy 139.7 132.08)
+			(xy 143.51 129.54) (xy 143.51 132.08)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "ea9cf04a-db80-4364-a8a6-05716eda4635")
+	)
+	(wire
+		(pts
+			(xy 106.68 134.62) (xy 125.73 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "edaee3ef-5f17-4b81-867b-663deeff6180")
 	)
 	(wire
 		(pts
@@ -9374,16 +9384,6 @@
 			(type default)
 		)
 		(uuid "f80042e6-a6b0-4b9c-a158-412d4e068343")
-	)
-	(wire
-		(pts
-			(xy 154.94 132.08) (xy 158.75 132.08)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f86aabf8-cbc5-4af9-ba75-b1841c091e31")
 	)
 	(wire
 		(pts
@@ -9955,6 +9955,16 @@
 		)
 		(uuid "abb0dde2-5a46-4238-973d-f20f35b50266")
 	)
+	(label "~{IO_SELECT}"
+		(at 116.84 134.62 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b14f90cd-0c7f-40a5-9a49-977b5fb2e1f5")
+	)
 	(label "~{DS1}"
 		(at 288.29 144.78 0)
 		(effects
@@ -10374,7 +10384,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0404e46d-68fe-4483-a514-41d8edf45b8d")
-		(property "Reference" "C?"
+		(property "Reference" "C5"
 			(at 118.11 29.2099 0)
 			(effects
 				(font
@@ -10428,7 +10438,7 @@
 		(instances
 			(project ""
 				(path "/84fa1d29-30c9-43d1-87fc-482896eea75d"
-					(reference "C?")
+					(reference "C5")
 					(unit 1)
 				)
 			)
@@ -10576,7 +10586,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0a4ca26b-5b82-407b-8752-cec724e7ea00")
-		(property "Reference" "R?"
+		(property "Reference" "R7"
 			(at 266.7 157.4799 0)
 			(effects
 				(font
@@ -10630,7 +10640,7 @@
 		(instances
 			(project ""
 				(path "/84fa1d29-30c9-43d1-87fc-482896eea75d"
-					(reference "R?")
+					(reference "R7")
 					(unit 1)
 				)
 			)
@@ -10974,7 +10984,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1ddc6c06-adb6-4b3d-bfc1-ba691aa765df")
-		(property "Reference" "Y?"
+		(property "Reference" "Y1"
 			(at 66.04 187.96 0)
 			(effects
 				(font
@@ -11026,7 +11036,7 @@
 		(instances
 			(project ""
 				(path "/84fa1d29-30c9-43d1-87fc-482896eea75d"
-					(reference "Y?")
+					(reference "Y1")
 					(unit 1)
 				)
 			)
@@ -11172,7 +11182,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "23c83a44-981f-4d10-bf49-7631fd288fed")
-		(property "Reference" "R?"
+		(property "Reference" "R4"
 			(at 232.41 219.7099 0)
 			(effects
 				(font
@@ -11226,7 +11236,7 @@
 		(instances
 			(project ""
 				(path "/84fa1d29-30c9-43d1-87fc-482896eea75d"
-					(reference "R?")
+					(reference "R4")
 					(unit 1)
 				)
 			)
@@ -11345,7 +11355,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "27cbb351-adbb-4251-b513-61534c02b236")
-		(property "Reference" "C?"
+		(property "Reference" "C2"
 			(at 40.894 200.66 90)
 			(effects
 				(font
@@ -11397,7 +11407,7 @@
 		(instances
 			(project "SS30_Floppy_Disk_Controller"
 				(path "/84fa1d29-30c9-43d1-87fc-482896eea75d"
-					(reference "C?")
+					(reference "C2")
 					(unit 1)
 				)
 			)
@@ -11413,7 +11423,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "30dfda1a-ecc4-4181-ada5-ca2d3f13d826")
-		(property "Reference" "C?"
+		(property "Reference" "C7"
 			(at 246.38 30.4799 0)
 			(effects
 				(font
@@ -11467,7 +11477,7 @@
 		(instances
 			(project "SS30_Floppy_Disk_Controller"
 				(path "/84fa1d29-30c9-43d1-87fc-482896eea75d"
-					(reference "C?")
+					(reference "C7")
 					(unit 1)
 				)
 			)
@@ -11718,7 +11728,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4a50dd55-dfd2-4134-ad41-6ce3dd370bad")
-		(property "Reference" "R?"
+		(property "Reference" "R2"
 			(at 53.34 200.66 90)
 			(effects
 				(font
@@ -11770,7 +11780,7 @@
 		(instances
 			(project "SS30_Floppy_Disk_Controller"
 				(path "/84fa1d29-30c9-43d1-87fc-482896eea75d"
-					(reference "R?")
+					(reference "R2")
 					(unit 1)
 				)
 			)
@@ -11924,7 +11934,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4c649cd0-25d0-4b8c-af1d-fceeb41432f5")
-		(property "Reference" "C?"
+		(property "Reference" "C6"
 			(at 210.82 30.4799 0)
 			(effects
 				(font
@@ -11978,7 +11988,7 @@
 		(instances
 			(project "SS30_Floppy_Disk_Controller"
 				(path "/84fa1d29-30c9-43d1-87fc-482896eea75d"
-					(reference "C?")
+					(reference "C6")
 					(unit 1)
 				)
 			)
@@ -12051,7 +12061,7 @@
 	)
 	(symbol
 		(lib_id "74xx:74LS02")
-		(at 129.54 132.08 0)
+		(at 133.35 132.08 0)
 		(unit 2)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -12060,7 +12070,7 @@
 		(fields_autoplaced yes)
 		(uuid "5ed55ef4-08c6-412d-abe0-41bda92c3044")
 		(property "Reference" "U3"
-			(at 129.54 123.19 0)
+			(at 133.35 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12068,7 +12078,7 @@
 			)
 		)
 		(property "Value" "74LS02"
-			(at 129.54 125.73 0)
+			(at 133.35 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12076,7 +12086,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 129.54 132.08 0)
+			(at 133.35 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12085,7 +12095,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/gpn/sn74ls02"
-			(at 129.54 132.08 0)
+			(at 133.35 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12094,7 +12104,7 @@
 			)
 		)
 		(property "Description" "quad 2-input NOR gate"
-			(at 129.54 132.08 0)
+			(at 133.35 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12163,7 +12173,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "64305e4e-9028-42c2-b2c9-0a7df412edaf")
-		(property "Reference" "R?"
+		(property "Reference" "R5"
 			(at 266.7 134.6199 0)
 			(effects
 				(font
@@ -12217,7 +12227,7 @@
 		(instances
 			(project "SS30_Floppy_Disk_Controller"
 				(path "/84fa1d29-30c9-43d1-87fc-482896eea75d"
-					(reference "R?")
+					(reference "R5")
 					(unit 1)
 				)
 			)
@@ -12225,7 +12235,7 @@
 	)
 	(symbol
 		(lib_id "74xx:74LS02")
-		(at 147.32 132.08 0)
+		(at 151.13 132.08 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -12234,7 +12244,7 @@
 		(fields_autoplaced yes)
 		(uuid "67730b5f-4d07-498b-a238-54269273a774")
 		(property "Reference" "U3"
-			(at 147.32 123.19 0)
+			(at 151.13 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12242,7 +12252,7 @@
 			)
 		)
 		(property "Value" "74LS02"
-			(at 147.32 125.73 0)
+			(at 151.13 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12250,7 +12260,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 147.32 132.08 0)
+			(at 151.13 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12259,7 +12269,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/gpn/sn74ls02"
-			(at 147.32 132.08 0)
+			(at 151.13 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12268,7 +12278,7 @@
 			)
 		)
 		(property "Description" "quad 2-input NOR gate"
-			(at 147.32 132.08 0)
+			(at 151.13 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13216,7 +13226,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "8748ac7f-6e8b-4192-a006-e0245fea3847")
-		(property "Reference" "C?"
+		(property "Reference" "C4"
 			(at 87.884 29.464 0)
 			(effects
 				(font
@@ -13270,7 +13280,7 @@
 		(instances
 			(project "SS30_Floppy_Disk_Controller"
 				(path "/84fa1d29-30c9-43d1-87fc-482896eea75d"
-					(reference "C?")
+					(reference "C4")
 					(unit 1)
 				)
 			)
@@ -13285,7 +13295,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "896d5c93-91a2-4439-9395-affb0e9b2f86")
-		(property "Reference" "R?"
+		(property "Reference" "R1"
 			(at 122.936 77.724 90)
 			(effects
 				(font
@@ -13337,7 +13347,7 @@
 		(instances
 			(project ""
 				(path "/84fa1d29-30c9-43d1-87fc-482896eea75d"
-					(reference "R?")
+					(reference "R1")
 					(unit 1)
 				)
 			)
@@ -13419,7 +13429,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8db2f4a6-e026-46ba-abae-ae95ae5a5732")
-		(property "Reference" "R?"
+		(property "Reference" "R6"
 			(at 259.08 157.4799 0)
 			(effects
 				(font
@@ -13473,7 +13483,7 @@
 		(instances
 			(project "SS30_Floppy_Disk_Controller"
 				(path "/84fa1d29-30c9-43d1-87fc-482896eea75d"
-					(reference "R?")
+					(reference "R6")
 					(unit 1)
 				)
 			)
@@ -14077,7 +14087,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9f5e7aea-a48d-4c58-8bd4-4e3040a15020")
-		(property "Reference" "C?"
+		(property "Reference" "C8"
 			(at 279.4 30.4799 0)
 			(effects
 				(font
@@ -14131,7 +14141,7 @@
 		(instances
 			(project "SS30_Floppy_Disk_Controller"
 				(path "/84fa1d29-30c9-43d1-87fc-482896eea75d"
-					(reference "C?")
+					(reference "C8")
 					(unit 1)
 				)
 			)
@@ -14253,7 +14263,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a2788101-58ad-49e3-9794-259acfb01af8")
-		(property "Reference" "R?"
+		(property "Reference" "R3"
 			(at 80.01 200.66 90)
 			(effects
 				(font
@@ -14305,7 +14315,7 @@
 		(instances
 			(project "SS30_Floppy_Disk_Controller"
 				(path "/84fa1d29-30c9-43d1-87fc-482896eea75d"
-					(reference "R?")
+					(reference "R3")
 					(unit 1)
 				)
 			)
@@ -14919,7 +14929,7 @@
 		(dnp no)
 		(uuid "c68e3457-0171-4204-b9ca-6d15f7fcd548")
 		(property "Reference" "J1"
-			(at 50.8 93.9799 0)
+			(at 54.61 51.054 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14928,7 +14938,7 @@
 			)
 		)
 		(property "Value" "Conn_01x30_Socket"
-			(at 50.8 96.5199 0)
+			(at 65.786 136.398 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15409,7 +15419,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "d7f2a5dc-38f0-4cc2-b829-a3898f75797d")
-		(property "Reference" "C?"
+		(property "Reference" "C3"
 			(at 66.294 214.376 90)
 			(effects
 				(font
@@ -15461,7 +15471,7 @@
 		(instances
 			(project ""
 				(path "/84fa1d29-30c9-43d1-87fc-482896eea75d"
-					(reference "C?")
+					(reference "C3")
 					(unit 1)
 				)
 			)
@@ -15750,7 +15760,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e13ba967-8e20-4df2-9d20-6794148c69ed")
-		(property "Reference" "R?"
+		(property "Reference" "R8"
 			(at 266.7 182.8799 0)
 			(effects
 				(font
@@ -15804,7 +15814,7 @@
 		(instances
 			(project "SS30_Floppy_Disk_Controller"
 				(path "/84fa1d29-30c9-43d1-87fc-482896eea75d"
-					(reference "R?")
+					(reference "R8")
 					(unit 1)
 				)
 			)
@@ -15952,7 +15962,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ecf7068d-1f6b-472a-933a-f1a6cb748b1d")
-		(property "Reference" "C?"
+		(property "Reference" "C1"
 			(at 233.68 231.1399 0)
 			(effects
 				(font
@@ -16006,7 +16016,7 @@
 		(instances
 			(project ""
 				(path "/84fa1d29-30c9-43d1-87fc-482896eea75d"
-					(reference "C?")
+					(reference "C1")
 					(unit 1)
 				)
 			)
