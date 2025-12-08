@@ -11786,7 +11786,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4bb85ebf-c5f5-438b-9830-c7d4f125a2b2")
-		(property "Reference" "U?"
+		(property "Reference" "U7"
 			(at 99.06 20.32 0)
 			(effects
 				(font
@@ -11842,7 +11842,7 @@
 		(instances
 			(project ""
 				(path "/84fa1d29-30c9-43d1-87fc-482896eea75d"
-					(reference "U?")
+					(reference "U7")
 					(unit 1)
 				)
 			)
@@ -14650,7 +14650,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "b37d42f1-5baf-42a3-b84f-106c81ed8e4d")
-		(property "Reference" "J?"
+		(property "Reference" "J2"
 			(at 300.99 125.73 0)
 			(effects
 				(font
@@ -14798,7 +14798,7 @@
 		(instances
 			(project ""
 				(path "/84fa1d29-30c9-43d1-87fc-482896eea75d"
-					(reference "J?")
+					(reference "J2")
 					(unit 1)
 				)
 			)
@@ -14858,46 +14858,46 @@
 			)
 		)
 		(pin "14"
-			(uuid "1020a695-8211-4ef6-bd25-41be5cff279b")
+			(uuid "1020a695-8211-4ef6-bd25-41be5cff279c")
 		)
 		(pin "7"
-			(uuid "ec93aa5f-e579-4469-b35f-4a61e61e087f")
+			(uuid "ec93aa5f-e579-4469-b35f-4a61e61e0880")
 		)
 		(pin "12"
 			(uuid "5df2f0dd-22b1-4ae2-8c8c-1893221bf3f5")
 		)
 		(pin "3"
-			(uuid "23d834e7-70b4-4566-8adb-184bfb846e4f")
+			(uuid "23d834e7-70b4-4566-8adb-184bfb846e50")
 		)
 		(pin "4"
-			(uuid "11fef28f-a175-4c34-95e8-dd3cacc9bb19")
+			(uuid "11fef28f-a175-4c34-95e8-dd3cacc9bb1a")
 		)
 		(pin "13"
 			(uuid "c57a3e12-6563-4ccb-8f66-2449b64a6aa0")
 		)
 		(pin "1"
-			(uuid "d9c438fe-2a2a-436c-b500-d34735a9867a")
+			(uuid "d9c438fe-2a2a-436c-b500-d34735a9867b")
 		)
 		(pin "2"
-			(uuid "26f23cc6-a686-4819-8b4b-14d424763db3")
+			(uuid "26f23cc6-a686-4819-8b4b-14d424763db4")
 		)
 		(pin "8"
-			(uuid "fbffe2d3-b4b9-4716-8570-2b3060338780")
+			(uuid "fbffe2d3-b4b9-4716-8570-2b3060338781")
 		)
 		(pin "5"
-			(uuid "2f60d3b4-7ab6-4693-abc9-fe0862f5978f")
+			(uuid "2f60d3b4-7ab6-4693-abc9-fe0862f59790")
 		)
 		(pin "6"
-			(uuid "20267194-4527-43b0-8d57-28ed278b678d")
+			(uuid "20267194-4527-43b0-8d57-28ed278b678e")
 		)
 		(pin "9"
-			(uuid "6ce4cf0b-ad46-41da-a1d4-a7aef8d79aed")
+			(uuid "6ce4cf0b-ad46-41da-a1d4-a7aef8d79aee")
 		)
 		(pin "10"
-			(uuid "7fcf88d9-33c1-4ac4-ba38-0327218db86f")
+			(uuid "7fcf88d9-33c1-4ac4-ba38-0327218db870")
 		)
 		(pin "11"
-			(uuid "d8d42228-7e30-40f6-9379-c6bc1b6a0329")
+			(uuid "d8d42228-7e30-40f6-9379-c6bc1b6a032a")
 		)
 		(instances
 			(project "SS30_Floppy_Disk_Controller"
@@ -14918,7 +14918,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c68e3457-0171-4204-b9ca-6d15f7fcd548")
-		(property "Reference" "J?"
+		(property "Reference" "J1"
 			(at 50.8 93.9799 0)
 			(effects
 				(font
@@ -15056,7 +15056,7 @@
 		(instances
 			(project ""
 				(path "/84fa1d29-30c9-43d1-87fc-482896eea75d"
-					(reference "J?")
+					(reference "J1")
 					(unit 1)
 				)
 			)
