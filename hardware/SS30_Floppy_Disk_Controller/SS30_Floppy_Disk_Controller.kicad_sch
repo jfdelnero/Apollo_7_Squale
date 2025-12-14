@@ -6334,6 +6334,16 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "Floppy controller"
+		(exclude_from_sim no)
+		(at 189.484 226.06 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+			)
+		)
+		(uuid "1238f9e0-7da6-43b4-ad05-3473246411f3")
+	)
 	(text "Base : 0x8"
 		(exclude_from_sim no)
 		(at 122.174 87.376 0)
@@ -6343,6 +6353,16 @@
 			)
 		)
 		(uuid "263a1ea9-6ab4-43ff-a916-36f226ff806b")
+	)
+	(text "8MHz clock source"
+		(exclude_from_sim no)
+		(at 62.23 247.396 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+			)
+		)
+		(uuid "3f5250d8-2ead-41b8-b463-885344b6344b")
 	)
 	(text "SS-30 Bus"
 		(exclude_from_sim no)
@@ -6354,6 +6374,46 @@
 		)
 		(uuid "55754469-78ec-492d-85ec-1f81a31a9ef4")
 	)
+	(text "SS30 8V to 5V power supply"
+		(exclude_from_sim no)
+		(at 104.902 37.084 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+			)
+		)
+		(uuid "7537fb99-a041-4f9b-aa79-03e73a975fb9")
+	)
+	(text "Incoming read data pulses\nduration correction/Standardization"
+		(exclude_from_sim no)
+		(at 246.38 267.97 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+			)
+		)
+		(uuid "81499a69-f9d0-46af-b445-9ff9687b7d04")
+	)
+	(text "Floppy interface drivers"
+		(exclude_from_sim no)
+		(at 298.704 204.216 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+			)
+		)
+		(uuid "b4637184-168d-4957-ba6c-76074c77af51")
+	)
+	(text "Drive, head \nand density \nselection port"
+		(exclude_from_sim no)
+		(at 165.354 32.512 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+			)
+		)
+		(uuid "d02c1ddd-783b-4f81-911a-ee4e82e6adc3")
+	)
 	(text "Base : 0x0"
 		(exclude_from_sim no)
 		(at 164.846 193.548 0)
@@ -6363,6 +6423,16 @@
 			)
 		)
 		(uuid "eaf1b611-c1cd-47c5-b70c-31d901c49d71")
+	)
+	(text "4,7Kohms × 100pF × 0,7 = 329 ns"
+		(exclude_from_sim no)
+		(at 240.03 260.858 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "f701790a-4cb9-445b-90fd-73a6070da3ea")
 	)
 	(junction
 		(at 67.31 121.92)
@@ -6473,7 +6543,7 @@
 		(uuid "72f683fd-7fb5-4431-81db-1fd6c499c7cd")
 	)
 	(junction
-		(at 143.51 132.08)
+		(at 143.51 143.51)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "76c72682-62d9-492c-b4ef-69deffa4b156")
@@ -7774,7 +7844,7 @@
 	)
 	(wire
 		(pts
-			(xy 140.97 132.08) (xy 143.51 132.08)
+			(xy 140.97 143.51) (xy 143.51 143.51)
 		)
 		(stroke
 			(width 0)
@@ -8064,7 +8134,7 @@
 	)
 	(wire
 		(pts
-			(xy 106.68 134.62) (xy 106.68 85.09)
+			(xy 106.68 146.05) (xy 106.68 85.09)
 		)
 		(stroke
 			(width 0)
@@ -8144,13 +8214,23 @@
 	)
 	(wire
 		(pts
-			(xy 109.22 129.54) (xy 125.73 129.54)
+			(xy 109.22 140.97) (xy 125.73 140.97)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "77667dc4-8c2f-4952-bc2c-68f09d5051e0")
+	)
+	(wire
+		(pts
+			(xy 109.22 140.97) (xy 109.22 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "789de659-f7e5-4a98-a761-8e785234a829")
 	)
 	(bus
 		(pts
@@ -8814,7 +8894,7 @@
 	)
 	(wire
 		(pts
-			(xy 158.75 132.08) (xy 158.75 196.85)
+			(xy 158.75 143.51) (xy 158.75 196.85)
 		)
 		(stroke
 			(width 0)
@@ -8934,7 +9014,7 @@
 	)
 	(wire
 		(pts
-			(xy 143.51 132.08) (xy 143.51 134.62)
+			(xy 143.51 143.51) (xy 143.51 146.05)
 		)
 		(stroke
 			(width 0)
@@ -9434,7 +9514,7 @@
 	)
 	(wire
 		(pts
-			(xy 143.51 129.54) (xy 143.51 132.08)
+			(xy 143.51 140.97) (xy 143.51 143.51)
 		)
 		(stroke
 			(width 0)
@@ -9444,7 +9524,7 @@
 	)
 	(wire
 		(pts
-			(xy 106.68 134.62) (xy 125.73 134.62)
+			(xy 106.68 146.05) (xy 125.73 146.05)
 		)
 		(stroke
 			(width 0)
@@ -10123,7 +10203,7 @@
 		(uuid "abb0dde2-5a46-4238-973d-f20f35b50266")
 	)
 	(label "~{IO_SELECT}"
-		(at 116.84 134.62 0)
+		(at 116.84 146.05 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11077,7 +11157,7 @@
 	)
 	(symbol
 		(lib_id "power:VSS")
-		(at 259.08 44.45 180)
+		(at 281.94 43.18 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11085,7 +11165,7 @@
 		(dnp no)
 		(uuid "1ce30636-efdb-49b2-8c59-9a83e8d267b0")
 		(property "Reference" "#PWR02"
-			(at 259.08 40.64 0)
+			(at 281.94 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11094,7 +11174,7 @@
 			)
 		)
 		(property "Value" "VSS"
-			(at 259.08 49.53 90)
+			(at 281.94 48.26 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11102,7 +11182,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 259.08 44.45 0)
+			(at 281.94 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11111,7 +11191,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 259.08 44.45 0)
+			(at 281.94 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11120,7 +11200,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VSS\""
-			(at 259.08 44.45 0)
+			(at 281.94 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11581,7 +11661,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 242.57 31.75 0)
+		(at 265.43 30.48 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11590,7 +11670,7 @@
 		(fields_autoplaced yes)
 		(uuid "30dfda1a-ecc4-4181-ada5-ca2d3f13d826")
 		(property "Reference" "C7"
-			(at 246.38 30.4799 0)
+			(at 269.24 29.2099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11599,7 +11679,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at 246.38 33.0199 0)
+			(at 269.24 31.7499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11608,7 +11688,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 243.5352 35.56 0)
+			(at 266.3952 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11617,7 +11697,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 242.57 31.75 0)
+			(at 265.43 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11626,7 +11706,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 242.57 31.75 0)
+			(at 265.43 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11651,7 +11731,7 @@
 	)
 	(symbol
 		(lib_id "power:VSS")
-		(at 275.59 27.94 0)
+		(at 298.45 26.67 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11659,7 +11739,7 @@
 		(dnp no)
 		(uuid "3185f9c3-e1b7-433f-bd3d-7c4839ab2523")
 		(property "Reference" "#PWR028"
-			(at 275.59 31.75 0)
+			(at 298.45 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11668,7 +11748,7 @@
 			)
 		)
 		(property "Value" "VCC5V"
-			(at 273.05 24.13 0)
+			(at 295.91 22.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11677,7 +11757,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 275.59 27.94 0)
+			(at 298.45 26.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11686,7 +11766,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 275.59 27.94 0)
+			(at 298.45 26.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11695,7 +11775,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VSS\""
-			(at 275.59 27.94 0)
+			(at 298.45 26.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11821,7 +11901,7 @@
 	)
 	(symbol
 		(lib_id "power:VSS")
-		(at 189.23 44.45 180)
+		(at 212.09 43.18 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11829,7 +11909,7 @@
 		(dnp no)
 		(uuid "3588ef03-fea0-469f-8a53-85113f95575a")
 		(property "Reference" "#PWR03"
-			(at 189.23 40.64 0)
+			(at 212.09 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11838,7 +11918,7 @@
 			)
 		)
 		(property "Value" "VSS"
-			(at 189.23 49.53 90)
+			(at 212.09 48.26 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11846,7 +11926,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 189.23 44.45 0)
+			(at 212.09 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11855,7 +11935,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 189.23 44.45 0)
+			(at 212.09 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11864,7 +11944,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VSS\""
-			(at 189.23 44.45 0)
+			(at 212.09 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12092,7 +12172,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 207.01 31.75 0)
+		(at 229.87 30.48 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -12101,7 +12181,7 @@
 		(fields_autoplaced yes)
 		(uuid "4c649cd0-25d0-4b8c-af1d-fceeb41432f5")
 		(property "Reference" "C6"
-			(at 210.82 30.4799 0)
+			(at 233.68 29.2099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12110,7 +12190,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at 210.82 33.0199 0)
+			(at 233.68 31.7499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12119,7 +12199,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 207.9752 35.56 0)
+			(at 230.8352 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12128,7 +12208,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 207.01 31.75 0)
+			(at 229.87 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12137,7 +12217,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 207.01 31.75 0)
+			(at 229.87 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12162,7 +12242,7 @@
 	)
 	(symbol
 		(lib_id "power:VSS")
-		(at 242.57 35.56 180)
+		(at 265.43 34.29 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -12170,7 +12250,7 @@
 		(dnp no)
 		(uuid "58655ccb-a721-4c93-b185-6448ce479d4a")
 		(property "Reference" "#PWR024"
-			(at 242.57 31.75 0)
+			(at 265.43 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12179,7 +12259,7 @@
 			)
 		)
 		(property "Value" "VSS"
-			(at 242.316 39.116 0)
+			(at 265.176 37.846 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12187,7 +12267,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 242.57 35.56 0)
+			(at 265.43 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12196,7 +12276,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 242.57 35.56 0)
+			(at 265.43 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12205,7 +12285,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VSS\""
-			(at 242.57 35.56 0)
+			(at 265.43 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12297,7 +12377,7 @@
 	)
 	(symbol
 		(lib_id "74xx:74LS02")
-		(at 133.35 132.08 0)
+		(at 133.35 143.51 0)
 		(unit 2)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -12306,7 +12386,7 @@
 		(fields_autoplaced yes)
 		(uuid "5ed55ef4-08c6-412d-abe0-41bda92c3044")
 		(property "Reference" "U3"
-			(at 133.35 123.19 0)
+			(at 133.35 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12314,7 +12394,7 @@
 			)
 		)
 		(property "Value" "74LS02"
-			(at 133.35 125.73 0)
+			(at 133.35 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12322,7 +12402,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 133.35 132.08 0)
+			(at 133.35 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12331,7 +12411,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/gpn/sn74ls02"
-			(at 133.35 132.08 0)
+			(at 133.35 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12340,7 +12420,7 @@
 			)
 		)
 		(property "Description" "quad 2-input NOR gate"
-			(at 133.35 132.08 0)
+			(at 133.35 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12471,7 +12551,7 @@
 	)
 	(symbol
 		(lib_id "74xx:74LS02")
-		(at 151.13 132.08 0)
+		(at 151.13 143.51 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -12480,7 +12560,7 @@
 		(fields_autoplaced yes)
 		(uuid "67730b5f-4d07-498b-a238-54269273a774")
 		(property "Reference" "U3"
-			(at 151.13 123.19 0)
+			(at 151.13 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12488,7 +12568,7 @@
 			)
 		)
 		(property "Value" "74LS02"
-			(at 151.13 125.73 0)
+			(at 151.13 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12496,7 +12576,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 151.13 132.08 0)
+			(at 151.13 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12505,7 +12585,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/gpn/sn74ls02"
-			(at 151.13 132.08 0)
+			(at 151.13 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12514,7 +12594,7 @@
 			)
 		)
 		(property "Description" "quad 2-input NOR gate"
-			(at 151.13 132.08 0)
+			(at 151.13 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12575,7 +12655,7 @@
 	)
 	(symbol
 		(lib_id "power:VSS")
-		(at 242.57 27.94 0)
+		(at 265.43 26.67 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -12583,7 +12663,7 @@
 		(dnp no)
 		(uuid "6992e297-0775-49b4-b549-7ea76bc0695e")
 		(property "Reference" "#PWR025"
-			(at 242.57 31.75 0)
+			(at 265.43 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12592,7 +12672,7 @@
 			)
 		)
 		(property "Value" "VCC5V"
-			(at 240.03 24.13 0)
+			(at 262.89 22.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12601,7 +12681,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 242.57 27.94 0)
+			(at 265.43 26.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12610,7 +12690,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 242.57 27.94 0)
+			(at 265.43 26.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12619,7 +12699,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VSS\""
-			(at 242.57 27.94 0)
+			(at 265.43 26.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12641,7 +12721,7 @@
 	)
 	(symbol
 		(lib_id "power:VSS")
-		(at 207.01 27.94 0)
+		(at 229.87 26.67 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -12649,7 +12729,7 @@
 		(dnp no)
 		(uuid "6c68216d-f40a-4971-a745-8afce0f19573")
 		(property "Reference" "#PWR026"
-			(at 207.01 31.75 0)
+			(at 229.87 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12658,7 +12738,7 @@
 			)
 		)
 		(property "Value" "VCC5V"
-			(at 204.47 24.13 0)
+			(at 227.33 22.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12667,7 +12747,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 207.01 27.94 0)
+			(at 229.87 26.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12676,7 +12756,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 207.01 27.94 0)
+			(at 229.87 26.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12685,7 +12765,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VSS\""
-			(at 207.01 27.94 0)
+			(at 229.87 26.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12707,7 +12787,7 @@
 	)
 	(symbol
 		(lib_id "74xx:74LS02")
-		(at 259.08 31.75 0)
+		(at 281.94 30.48 0)
 		(unit 5)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -12716,7 +12796,7 @@
 		(fields_autoplaced yes)
 		(uuid "72f88641-068b-47a2-affc-c408f4012eb8")
 		(property "Reference" "U3"
-			(at 265.43 30.4799 0)
+			(at 288.29 29.2099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12725,7 +12805,7 @@
 			)
 		)
 		(property "Value" "74LS02"
-			(at 265.43 33.0199 0)
+			(at 288.29 31.7499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12734,7 +12814,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 259.08 31.75 0)
+			(at 281.94 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12743,7 +12823,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/gpn/sn74ls02"
-			(at 259.08 31.75 0)
+			(at 281.94 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12752,7 +12832,7 @@
 			)
 		)
 		(property "Description" "quad 2-input NOR gate"
-			(at 259.08 31.75 0)
+			(at 281.94 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13047,7 +13127,7 @@
 	)
 	(symbol
 		(lib_id "power:VSS")
-		(at 259.08 19.05 0)
+		(at 281.94 17.78 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13055,7 +13135,7 @@
 		(dnp no)
 		(uuid "80805806-08a2-4611-822a-3e140a16b98b")
 		(property "Reference" "#PWR0163"
-			(at 259.08 22.86 0)
+			(at 281.94 21.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13064,7 +13144,7 @@
 			)
 		)
 		(property "Value" "VCC5V"
-			(at 256.54 15.24 0)
+			(at 279.4 13.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13073,7 +13153,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 259.08 19.05 0)
+			(at 281.94 17.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13082,7 +13162,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 259.08 19.05 0)
+			(at 281.94 17.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13091,7 +13171,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VSS\""
-			(at 259.08 19.05 0)
+			(at 281.94 17.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13283,7 +13363,7 @@
 	)
 	(symbol
 		(lib_id "74xx:74LS06")
-		(at 226.06 31.75 0)
+		(at 248.92 30.48 0)
 		(unit 7)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13292,7 +13372,7 @@
 		(fields_autoplaced yes)
 		(uuid "83256b36-f59e-4d9a-934e-4caa179e4ae0")
 		(property "Reference" "U5"
-			(at 232.41 30.4799 0)
+			(at 255.27 29.2099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13301,7 +13381,7 @@
 			)
 		)
 		(property "Value" "74LS06"
-			(at 232.41 33.0199 0)
+			(at 255.27 31.7499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13310,7 +13390,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 226.06 31.75 0)
+			(at 248.92 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13319,7 +13399,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/gpn/sn74LS06"
-			(at 226.06 31.75 0)
+			(at 248.92 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13328,7 +13408,7 @@
 			)
 		)
 		(property "Description" "Inverter Open Collect"
-			(at 226.06 31.75 0)
+			(at 248.92 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14081,7 +14161,7 @@
 	)
 	(symbol
 		(lib_id "power:VSS")
-		(at 207.01 35.56 180)
+		(at 229.87 34.29 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -14089,7 +14169,7 @@
 		(dnp no)
 		(uuid "94529faa-42c5-48b0-9ec9-fea5a5d11bc0")
 		(property "Reference" "#PWR027"
-			(at 207.01 31.75 0)
+			(at 229.87 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14098,7 +14178,7 @@
 			)
 		)
 		(property "Value" "VSS"
-			(at 206.756 39.116 0)
+			(at 229.616 37.846 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14106,7 +14186,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 207.01 35.56 0)
+			(at 229.87 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14115,7 +14195,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 207.01 35.56 0)
+			(at 229.87 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14124,7 +14204,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VSS\""
-			(at 207.01 35.56 0)
+			(at 229.87 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14315,7 +14395,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 275.59 31.75 0)
+		(at 298.45 30.48 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -14324,7 +14404,7 @@
 		(fields_autoplaced yes)
 		(uuid "9f5e7aea-a48d-4c58-8bd4-4e3040a15020")
 		(property "Reference" "C8"
-			(at 279.4 30.4799 0)
+			(at 302.26 29.2099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14333,7 +14413,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at 279.4 33.0199 0)
+			(at 302.26 31.7499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14342,7 +14422,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 276.5552 35.56 0)
+			(at 299.4152 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14351,7 +14431,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 275.59 31.75 0)
+			(at 298.45 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14360,7 +14440,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 275.59 31.75 0)
+			(at 298.45 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14385,7 +14465,7 @@
 	)
 	(symbol
 		(lib_id "74xx:74LS06")
-		(at 189.23 31.75 0)
+		(at 212.09 30.48 0)
 		(unit 7)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -14394,7 +14474,7 @@
 		(fields_autoplaced yes)
 		(uuid "a14a597e-976c-4028-a122-a79873262201")
 		(property "Reference" "U4"
-			(at 195.58 30.4799 0)
+			(at 218.44 29.2099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14403,7 +14483,7 @@
 			)
 		)
 		(property "Value" "74LS06"
-			(at 195.58 33.0199 0)
+			(at 218.44 31.7499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14412,7 +14492,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 189.23 31.75 0)
+			(at 212.09 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14421,7 +14501,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/gpn/sn74LS06"
-			(at 189.23 31.75 0)
+			(at 212.09 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14430,7 +14510,7 @@
 			)
 		)
 		(property "Description" "Inverter Open Collect"
-			(at 189.23 31.75 0)
+			(at 212.09 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14690,7 +14770,7 @@
 	)
 	(symbol
 		(lib_id "power:VSS")
-		(at 226.06 19.05 0)
+		(at 248.92 17.78 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -14698,7 +14778,7 @@
 		(dnp no)
 		(uuid "ae035ac3-351b-4ddb-8bc0-54497a050827")
 		(property "Reference" "#PWR08"
-			(at 226.06 22.86 0)
+			(at 248.92 21.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14707,7 +14787,7 @@
 			)
 		)
 		(property "Value" "VCC5V"
-			(at 223.52 15.24 0)
+			(at 246.38 13.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14716,7 +14796,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 226.06 19.05 0)
+			(at 248.92 17.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14725,7 +14805,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 226.06 19.05 0)
+			(at 248.92 17.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14734,7 +14814,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VSS\""
-			(at 226.06 19.05 0)
+			(at 248.92 17.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15310,7 +15390,7 @@
 	)
 	(symbol
 		(lib_id "power:VSS")
-		(at 275.59 35.56 180)
+		(at 298.45 34.29 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -15318,7 +15398,7 @@
 		(dnp no)
 		(uuid "ca12053d-05ee-4f09-9c2c-056c1a6954e8")
 		(property "Reference" "#PWR029"
-			(at 275.59 31.75 0)
+			(at 298.45 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15327,7 +15407,7 @@
 			)
 		)
 		(property "Value" "VSS"
-			(at 275.336 39.116 0)
+			(at 298.196 37.846 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15335,7 +15415,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 275.59 35.56 0)
+			(at 298.45 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15344,7 +15424,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 275.59 35.56 0)
+			(at 298.45 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15353,7 +15433,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VSS\""
-			(at 275.59 35.56 0)
+			(at 298.45 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15582,7 +15662,7 @@
 	)
 	(symbol
 		(lib_id "power:VSS")
-		(at 189.23 19.05 0)
+		(at 212.09 17.78 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -15590,7 +15670,7 @@
 		(dnp no)
 		(uuid "d4bb0c68-cd08-42e5-8e0b-b1e2cc3bc7a7")
 		(property "Reference" "#PWR07"
-			(at 189.23 22.86 0)
+			(at 212.09 21.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15599,7 +15679,7 @@
 			)
 		)
 		(property "Value" "VCC5V"
-			(at 186.69 15.24 0)
+			(at 209.55 13.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15608,7 +15688,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 189.23 19.05 0)
+			(at 212.09 17.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15617,7 +15697,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 189.23 19.05 0)
+			(at 212.09 17.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15626,7 +15706,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VSS\""
-			(at 189.23 19.05 0)
+			(at 212.09 17.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15818,7 +15898,7 @@
 	)
 	(symbol
 		(lib_id "power:VSS")
-		(at 226.06 44.45 180)
+		(at 248.92 43.18 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -15826,7 +15906,7 @@
 		(dnp no)
 		(uuid "dafc8fde-a7f8-4e48-aa4e-a43a361ed342")
 		(property "Reference" "#PWR09"
-			(at 226.06 40.64 0)
+			(at 248.92 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15835,7 +15915,7 @@
 			)
 		)
 		(property "Value" "VSS"
-			(at 226.06 49.53 90)
+			(at 248.92 48.26 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15843,7 +15923,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 226.06 44.45 0)
+			(at 248.92 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15852,7 +15932,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 226.06 44.45 0)
+			(at 248.92 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15861,7 +15941,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VSS\""
-			(at 226.06 44.45 0)
+			(at 248.92 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
