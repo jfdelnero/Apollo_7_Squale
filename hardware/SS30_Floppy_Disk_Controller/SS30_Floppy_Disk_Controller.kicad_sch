@@ -6404,9 +6404,9 @@
 		)
 		(uuid "b4637184-168d-4957-ba6c-76074c77af51")
 	)
-	(text "Drive, head \nand density \nselection port"
+	(text "Drive, head \nand density \nselectors register"
 		(exclude_from_sim no)
-		(at 165.354 32.512 0)
+		(at 169.418 32.766 0)
 		(effects
 			(font
 				(size 2.54 2.54)
